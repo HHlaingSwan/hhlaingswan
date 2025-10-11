@@ -39,7 +39,7 @@ const DATA = {
 		social: {
 			GitHub: {
 				name: "GitHub",
-				url: "#",
+				url: "https://github.com/HHlaingSwan",
 				icon: Icons.github,
 			},
 			LinkedIn: {
@@ -54,7 +54,7 @@ const DATA = {
 			},
 			Email: {
 				name: "Send Email",
-				url: "#",
+				url: "htethlaingswan@gmail.com",
 				icon: Icons.email,
 			},
 		},

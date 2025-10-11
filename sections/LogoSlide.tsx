@@ -10,7 +10,6 @@ import {
 	SiTypescript,
 	SiExpress,
 	SiMysql,
-	SiVite,
 	SiReactquery,
 	SiShadcnui,
 } from "react-icons/si";

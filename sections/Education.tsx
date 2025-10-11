@@ -98,31 +98,31 @@ const Education = () => {
 			id='about'
 			className='py-20 bg-background'>
 			<div className='container mx-auto px-4'>
-				<div className='text-center mb-20 text-foreground'>
-					<h2 className='md:text-4xl font-display text-2xl font-bold mb-3'>
+				<div className='text-center mb-16 md:mb-20 text-foreground'>
+					<h2 className='text-3xl md:text-4xl font-display font-bold mb-3'>
 						About My Education
 					</h2>
-					<p className='text-muted-foreground font-lora max-w-2xl text-sm md:text-base mx-auto'>
-						Explore my academic background and the skills I've gained throughout
-						my educational journey at Myanmar Technopreneur Academy.
+					<p className='text-muted-foreground font-lora max-w-2xl text-sm md:text-base mx-auto px-4 md:px-0'>
+						Explore my academic background and the skills I&apos;ve gained
+						throughout my educational journey at Myanmar Technopreneur Academy.
 					</p>
 				</div>
 
 				<div
-					className='max-w-4xl mx-auto relative [perspective:1000px]'
+					className='max-w-3xl mx-auto relative [perspective:1000px]'
 					ref={containerRef}>
 					{/* Main timeline line that grows with scroll using GSAP */}
 					<div
 						ref={timelineRef}
-						className='absolute left-[7px] top-[30px] bottom-0 w-1 bg-secondary origin-top'></div>
+						className='absolute left-3 md:left-[7px] top-2 bottom-0 w-0.5 md:w-1 bg-secondary origin-top'></div>
 
 					{educationData.map((item, index) => (
 						<div
 							key={index}
-							className='mb-12 pl-10 relative'>
+							className='mb-12 pl-10 md:pl-12 relative'>
 							{/* Timeline Dot */}
-							<div className='timeline-dot absolute -left-1 top-2 w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center bg-background'>
-								<div className='w-4 h-4 rounded-full bg-primary'></div>
+							<div className='timeline-dot absolute left-0 md:-left-1 top-2 w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center bg-background'>
+								<div className='w-3 h-3 md:w-4 md:h-4 rounded-full bg-primary'></div>
 							</div>
 
 							{/* Content Card */}
@@ -130,18 +130,18 @@ const Education = () => {
 								gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
 								className='p-1'>
 								<div className='education-card bg-card/80  p-6   '>
-									<div className='flex items-center mb-4'>
-										<div className='w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 text-primary text-xl'>
+									<div className='flex flex-col sm:flex-row items-start sm:items-center mb-4'>
+										<div className='w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 mb-3 sm:mb-0 text-primary text-xl flex-shrink-0'>
 											{item.icon}
 										</div>
-										<h3 className='md:text-2xl text-xl font-bold text-card-foreground'>
+										<h3 className='text-xl md:text-2xl font-bold text-card-foreground'>
 											{item.title}
 										</h3>
 									</div>
 
 									{item.subtitle && (
 										<div className='mb-4'>
-											<h4 className='md:text-lg text-base font-semibold text-primary'>
+											<h4 className='text-base md:text-lg font-semibold text-primary'>
 												{item.subtitle}
 											</h4>
 											{item.date && (

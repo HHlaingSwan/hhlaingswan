@@ -60,7 +60,7 @@ const ProjectShow = () => {
 						My Creative Workspace
 					</h2>
 					<p className='text-muted-foreground font-lora max-w-2xl text-sm md:text-base mx-auto'>
-						Here are some of the projects I've worked on. Each one was a
+						Here are some of the projects I&apos;ve worked on. Each one was a
 						learning experience and a step forward in my journey as a developer.
 					</p>
 				</motion.div>

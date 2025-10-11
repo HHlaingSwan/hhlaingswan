@@ -4,9 +4,7 @@ import { AuroraText } from "@/components/ui/aurora-text";
 import { Highlighter } from "@/components/ui/highlighter";
 import { Meteors } from "@/components/ui/meteors";
 import { Ripple } from "@/components/ui/ripple";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { TextAnimate } from "@/components/ui/text-animate";
-import { ArrowRight } from "lucide-react";
 import React from "react";
 
 const Hero = () => {
@@ -24,7 +22,7 @@ const Hero = () => {
 						Dynamic Web Magic With Next.js
 					</TextAnimate>
 				</h4>
-				<h1 className='text-4xl font-bold md:text-6xl'>
+				<h1 className='text-2xl font-bold md:text-6xl'>
 					Transforming Concepts into
 					<br className='hidden md:block' />
 					Seamless{" "}
@@ -32,7 +30,7 @@ const Hero = () => {
 						<TypeAnimation />
 					</AuroraText>
 				</h1>
-				<h3 className='mt-8 max-w-xl text-base font-semibold capitalize text-gray-400 md:text-xl'>
+				<h3 className='mt-8 max-w-xl text-xs font-semibold capitalize text-gray-400 md:text-xl'>
 					Hi! I&apos;m{" "}
 					<Highlighter
 						action='underline'
