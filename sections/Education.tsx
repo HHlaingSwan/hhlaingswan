@@ -3,8 +3,8 @@ import React, { useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Calendar, Code, GraduationCap, University } from "lucide-react";
-import { MagicCard } from "@/components/ui/magic-card";
 import { useTheme } from "next-themes";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,7 +114,7 @@ const Education = () => {
 					{/* Main timeline line that grows with scroll using GSAP */}
 					<div
 						ref={timelineRef}
-						className='absolute left-3 md:left-[7px] top-2 bottom-0 w-0.5 md:w-1 bg-secondary origin-top'></div>
+						className='absolute left-3 md:left-[7px] top-2 bottom-0 w-0.5 md:w-1 bg-foreground origin-top'></div>
 
 					{educationData.map((item, index) => (
 						<div
@@ -126,58 +126,59 @@ const Education = () => {
 							</div>
 
 							{/* Content Card */}
-							<MagicCard
-								gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
-								className='p-1'>
-								<div className='education-card bg-card/80  p-6   '>
-									<div className='flex flex-col sm:flex-row items-start sm:items-center mb-4'>
-										<div className='w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 mb-3 sm:mb-0 text-primary text-xl flex-shrink-0'>
-											{item.icon}
-										</div>
-										<h3 className='text-xl md:text-2xl font-bold text-card-foreground'>
-											{item.title}
-										</h3>
+
+							<div className='education-card bg-card/80  p-6   '>
+								<div className='flex flex-col sm:flex-row items-start sm:items-center mb-4'>
+									<div className='w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 mb-3 sm:mb-0 text-primary text-xl flex-shrink-0'>
+										{item.icon}
 									</div>
-
-									{item.subtitle && (
-										<div className='mb-4'>
-											<h4 className='text-base md:text-lg font-semibold text-primary'>
-												{item.subtitle}
-											</h4>
-											{item.date && (
-												<div className='flex items-center text-muted-foreground mt-1'>
-													<Calendar className='mr-2' />
-													<span>{item.date}</span>
-												</div>
-											)}
-										</div>
-									)}
-
-									{item.description && (
-										<p className='text-muted-foreground'>{item.description}</p>
-									)}
-
-									{item.courses && (
-										<ul className='grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4'>
-											{item.courses.map((course, i) => (
-												<li
-													key={i}
-													className='bg-secondary/50 p-3 rounded-md text-secondary-foreground text-sm'>
-													{course}
-												</li>
-											))}
-										</ul>
-									)}
-
-									{item.achievements && (
-										<ul className='list-disc list-inside text-muted-foreground space-y-2 mt-4'>
-											{item.achievements.map((achievement, i) => (
-												<li key={i}>{achievement}</li>
-											))}
-										</ul>
-									)}
+									<h3 className='text-xl md:text-2xl font-bold text-card-foreground'>
+										{item.title}
+									</h3>
 								</div>
-							</MagicCard>
+
+								{item.subtitle && (
+									<div className='mb-4'>
+										<h4 className='text-base md:text-lg font-semibold text-primary'>
+											{item.subtitle}
+										</h4>
+										{item.date && (
+											<div className='flex items-center text-muted-foreground mt-1'>
+												<Calendar className='mr-2' />
+												<span>{item.date}</span>
+											</div>
+										)}
+									</div>
+								)}
+
+								{item.description && (
+									<p className='text-muted-foreground'>{item.description}</p>
+								)}
+
+								{item.courses && (
+									<ul className='grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4'>
+										{item.courses.map((course, i) => (
+											<li
+												key={i}
+												className='bg-secondary/50 p-3 rounded-md text-secondary-foreground text-sm'>
+												{course}
+											</li>
+										))}
+									</ul>
+								)}
+
+								{item.achievements && (
+									<ul className='list-disc list-inside text-muted-foreground space-y-2 mt-4'>
+										{item.achievements.map((achievement, i) => (
+											<li key={i}>{achievement}</li>
+										))}
+									</ul>
+								)}
+								<BorderBeam
+									duration={8}
+									size={100}
+								/>
+							</div>
 						</div>
 					))}
 				</div>

@@ -9,11 +9,11 @@ const projects = [
 	{
 		title: "Arcane Animated Series",
 		description:
-			"A series of animated games built using Unity and C#. Each game features unique characters, levels, and environments, and is designed to be fun and engaging for players of all ages.",
+			"Fan website for the Arcane series with character profiles and interactive elements. The website features a user-friendly interface, secure payment system, and a wide selection of movies to choose from.",
 		image: "/projects/arcane.png",
 		tags: ["React", , "GSAP", "Tailwind CSS", "Game Concept"],
-		liveUrl: "#",
-		githubUrl: "#",
+		liveUrl: "https://arcane-game.vercel.app/",
+		githubUrl: "https://github.com/HHlaingSwan/Arcane-Game",
 	},
 	{
 		title: "Free Movie Channel ",
@@ -21,8 +21,8 @@ const projects = [
 			"A movie streaming website that allows users to watch movies online for free. The website features a user-friendly interface, secure payment system, and a wide selection of movies to choose from.",
 		image: "/projects/movie.png",
 		tags: ["Next.js", "TypeScript", "IMDB API", "Tailwind CSS"],
-		liveUrl: "#",
-		githubUrl: "#",
+		liveUrl: "https://imdb-next-h-hlaing-swans-projects.vercel.app/",
+		githubUrl: "https://github.com/HHlaingSwan/IMDB-Next",
 	},
 	{
 		title: "Snake Game",
@@ -30,8 +30,8 @@ const projects = [
 			"A classic snake game built using HTML, CSS, and JavaScript. The game features a user-friendly interface, secure payment system, and a wide selection of movies to choose from.",
 		image: "/projects/snake.png",
 		tags: ["React", "Fun", "Tailwind CSS", "Ai Learning"],
-		liveUrl: "#",
-		githubUrl: "#",
+		liveUrl: "https://snake-game-black-eight.vercel.app/",
+		githubUrl: "https://github.com/HHlaingSwan/Snake-Game",
 	},
 	{
 		title: "Chat App",
@@ -39,8 +39,8 @@ const projects = [
 			"A chat app built using React, Firebase, and Material UI. The app features a user-friendly interface, secure payment system, and a wide selection of movies to choose from.",
 		image: "/projects/unitChat.png",
 		tags: ["React", "Firebase", "Real-time Database", "Material UI"],
-		liveUrl: "#",
-		githubUrl: "#",
+		liveUrl: "https://unit-chat-seven.vercel.app/",
+		githubUrl: "https://github.com/HHlaingSwan/Unit-Chat",
 	},
 ];
 

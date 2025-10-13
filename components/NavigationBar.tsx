@@ -49,12 +49,12 @@ const DATA = {
 			},
 			Facebook: {
 				name: "Facebook",
-				url: "#",
+				url: "https://www.facebook.com/h.hlaing.swan/",
 				icon: Icons.facebook,
 			},
 			Email: {
 				name: "Send Email",
-				url: "htethlaingswan@gmail.com",
+				url: "#",
 				icon: Icons.email,
 			},
 		},
@@ -97,6 +97,8 @@ export function NavigationBar() {
 									<Link
 										href={social.url}
 										aria-label={social.name}
+										target='_blank'
+										rel='noopener noreferrer'
 										className={cn(
 											buttonVariants({ variant: "ghost", size: "icon" }),
 											"size-12 rounded-full"

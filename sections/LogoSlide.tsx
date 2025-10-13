@@ -20,8 +20,8 @@ const LogoSlide = () => {
 		{ icon: <SiTypescript size={44} />, name: "TypeScript", color: "#3178C6" }, // Blue
 		{ icon: <FaReact size={44} />, name: "React", color: "#61DAFB" }, // React Blue
 		{ icon: <SiNextdotjs size={44} />, name: "Next.js", color: "#FFFFFF" }, // White for dark backgrounds
-		{ icon: <FaNodeJs size={44} />, name: "Node.js", color: "#68A063" }, // Node Green
-		{ icon: <SiExpress size={44} />, name: "Express.js", color: "#FFFFFF" }, // White for dark backgrounds
+		// { icon: <FaNodeJs size={44} />, name: "Node.js", color: "#68A063" }, // Node Green
+		// { icon: <SiExpress size={44} />, name: "Express.js", color: "#FFFFFF" }, // White for dark backgrounds
 		{
 			icon: <SiTailwindcss size={44} />,
 			name: "Tailwind CSS",
@@ -29,7 +29,7 @@ const LogoSlide = () => {
 		}, // Tailwind Blue
 		{ icon: <SiShadcnui size={44} />, name: "Shadcn/UI", color: "#FFFFFF" }, // White for dark backgrounds
 		{ icon: <SiMongodb size={44} />, name: "MongoDB", color: "#47A248" }, // Mongo Green
-		{ icon: <SiMysql size={44} />, name: "MySQL", color: "#4479A1" }, // MySQL Blue
+		// { icon: <SiMysql size={44} />, name: "MySQL", color: "#4479A1" }, // MySQL Blue
 		{ icon: <SiPrisma size={44} />, name: "Prisma", color: "#2D3748" }, // Prisma Dark, but let's use a lighter one for visibility
 		{ icon: <FaGitAlt size={44} />, name: "Git", color: "#F05032" }, // Git Orange
 		{ icon: <FaJava size={44} />, name: "Java", color: "#007396" }, // Java Blue
