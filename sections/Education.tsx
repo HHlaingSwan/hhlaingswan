@@ -3,8 +3,7 @@ import React, { useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Calendar, Code, GraduationCap, University } from "lucide-react";
-import { useTheme } from "next-themes";
-import { BorderBeam } from "@/components/ui/border-beam";
+import { ShineBorder } from "@/components/ui/shine-border";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,7 +44,6 @@ const educationData = [
 ];
 
 const Education = () => {
-	const { theme } = useTheme();
 	const containerRef = useRef<HTMLDivElement>(null);
 	const timelineRef = useRef<HTMLDivElement>(null);
 
@@ -126,8 +124,9 @@ const Education = () => {
 							</div>
 
 							{/* Content Card */}
+							<div className='education-card bg-card/80  p-6 rounded-md  '>
+								<ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
 
-							<div className='education-card bg-card/80  p-6   '>
 								<div className='flex flex-col sm:flex-row items-start sm:items-center mb-4'>
 									<div className='w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 mb-3 sm:mb-0 text-primary text-xl flex-shrink-0'>
 										{item.icon}
@@ -174,10 +173,6 @@ const Education = () => {
 										))}
 									</ul>
 								)}
-								<BorderBeam
-									duration={8}
-									size={100}
-								/>
 							</div>
 						</div>
 					))}

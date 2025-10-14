@@ -10,6 +10,7 @@ const Education = dynamic(() => import("@/sections/Education"));
 const Experience = dynamic(() => import("@/sections/Experience"));
 const LogoSlide = dynamic(() => import("@/sections/LogoSlide"));
 const ProjectShow = dynamic(() => import("@/sections/ProjectShow"));
+const Footer = dynamic(() => import("@/sections/Footer"));
 
 const ClientWrapper = () => {
 	return (
@@ -32,9 +33,10 @@ const ClientWrapper = () => {
 				<div className='pointer-events-none absolute top-0 right-0 h-full w-32 z-20 bg-gradient-to-l from-[var(--color-bg-primary)] via-[var(--color-bg-primary)]/80 to-transparent' />
 			</section>
 			<ProjectShow />
-			<div className='w-full overflow-hidden h-32'>
+			{/* <div className='w-full overflow-hidden h-32'>
 				<FlyingLoading />
-			</div>
+			</div> */}
+			<Footer />
 			<div className='fixed bottom-10 md:bottom-14 left-1/2 -translate-x-1/2'>
 				<NavigationBar />
 			</div>
