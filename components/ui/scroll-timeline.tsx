@@ -358,7 +358,7 @@ export const ScrollTimeline = ({
 									whileInView='whileInView'
 									viewport={{ once: false, margin: "-100px" }}
 									style={parallaxIntensity > 0 ? { y: yOffset } : undefined}>
-									<Card className='bg-background  w-full border'>
+                    <Card className="bg-white/30 dark:bg-background border backdrop-blur-lg">
 										<CardContent className='p-6'>
 											{dateFormat === "badge" ? (
 												<div className='flex items-center mb-2'>

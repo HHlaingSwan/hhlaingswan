@@ -130,7 +130,7 @@ const Education = () => {
 							</div>
 
 							{/* Content Card */}
-							<div className='education-card bg-card/80  p-6 rounded-md  '>
+							<div className='education-card bg-white/30 dark:bg-card/80 p-6 rounded-md backdrop-blur-lg shadow-md '>
 								<ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
 
 								<div className='flex flex-col sm:flex-row items-start sm:items-center mb-4'>
