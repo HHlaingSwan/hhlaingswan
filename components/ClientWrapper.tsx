@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Hero from "@/sections/Hero";
 import { NavigationBar } from "./NavigationBar";
 import FlyingLoading from "./FlyingLoading";
+import ParticleOrbitEffect from "@/components/ui/particle-orbit-effect";
 
 // Lazy-load all sections that are "below the fold"
 const Education = dynamic(() => import("@/sections/Education"));
@@ -15,6 +16,7 @@ const Footer = dynamic(() => import("@/sections/Footer"));
 const ClientWrapper = () => {
 	return (
 		<div className='relative flex flex-col justify-center items-center pb-32'>
+			<ParticleOrbitEffect />
 			<Hero />
 			<Education />
 			{/* <Experience /> */}
@@ -33,9 +35,10 @@ const ClientWrapper = () => {
 				<div className='pointer-events-none absolute top-0 right-0 h-full w-32 z-20 bg-gradient-to-l from-[var(--color-bg-primary)] via-[var(--color-bg-primary)]/80 to-transparent' />
 			</section>
 			<ProjectShow />
-			{/* <div className='w-full overflow-hidden h-32'>
+			<div className='w-full overflow-hidden h-32'>
 				<FlyingLoading />
-			</div> */}
+			</div>
+			{/* <Experience /> */}
 			<Footer />
 			<div className='fixed bottom-10 md:bottom-14 left-1/2 -translate-x-1/2'>
 				<NavigationBar />

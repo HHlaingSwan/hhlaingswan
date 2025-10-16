@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Calendar, Code, GraduationCap, University } from "lucide-react";
 import { ShineBorder } from "@/components/ui/shine-border";
+import { TextAnimate } from "@/components/ui/text-animate";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,9 +98,13 @@ const Education = () => {
 			className='py-20 bg-background'>
 			<div className='container mx-auto px-4'>
 				<div className='text-center mb-16 md:mb-20 text-foreground'>
-					<h2 className='text-3xl md:text-4xl font-display font-bold mb-3'>
+					<TextAnimate
+						className='text-3xl md:text-4xl font-display font-bold mb-3'
+						animation='slideLeft'
+						by='character'>
 						About My Education
-					</h2>
+					</TextAnimate>
+
 					<p className='text-muted-foreground font-lora max-w-2xl text-sm md:text-base mx-auto px-4 md:px-0'>
 						Explore my academic background and the skills I&apos;ve gained
 						throughout my educational journey at Myanmar Technopreneur Academy.
@@ -112,15 +117,16 @@ const Education = () => {
 					{/* Main timeline line that grows with scroll using GSAP */}
 					<div
 						ref={timelineRef}
-						className='absolute left-3 md:left-[7px] top-2 bottom-0 w-0.5 md:w-1 bg-foreground origin-top'></div>
+						className='absolute left-3 md:left-[7px] top-2 bottom-0 w-0.5 md:w-1 bg-[linear-gradient(to_bottom,_#A07CFE,_#FE8FB5,_#FFBE7B)] origin-top'></div>
 
 					{educationData.map((item, index) => (
 						<div
 							key={index}
 							className='mb-12 pl-10 md:pl-12 relative'>
-							{/* Timeline Dot */}
+							{/* Timeline Dot - Outer circle is animated by GSAP */}
 							<div className='timeline-dot absolute left-0 md:-left-1 top-2 w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center bg-background'>
-								<div className='w-3 h-3 md:w-4 md:h-4 rounded-full bg-primary'></div>
+								{/* Inner dot with a subtle pulse animation */}
+								<div className='w-3 h-3 md:w-4 md:h-4 rounded-full bg-primary animate-pulse'></div>
 							</div>
 
 							{/* Content Card */}
