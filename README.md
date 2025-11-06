@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Hlaing Swan
+# 👋 Hi, I'm Htet Hlaing Swan
 
 I'm a **Full Stack Developer** who loves building clean, scalable, and user-friendly applications.  
 I specialize in creating modern web apps using **React**, **Node.js**, **MongoDB**, and **Java**.
