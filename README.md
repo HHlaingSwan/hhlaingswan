@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 👋 Hi, I'm Htet Hlaing Swan
 
-## Getting Started
+I'm a **Full Stack Developer** who loves building clean, scalable, and user-friendly applications.  
+I specialize in creating modern web apps using **React**, **Node.js**, **MongoDB**, and **Java**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 💻 Frontend
+- **React.js** (Hooks, Context API, Redux)
+- **Next.js** for server-side rendering and performance
+- **Tailwind CSS**, **Material UI**, **Framer Motion**
+- **Axios**, **React Query**, **TanStack Table**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🧠 Backend
+- **Node.js** & **Express.js**
+- **RESTful APIs** and **Authentication (JWT, OAuth)**
+- **MongoDB** with **Mongoose**
+- **File upload**, **Cloud storage**, and **Socket.io**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ☕ Java
+- **Java Core** and **OOP**
+- **Spring Boot** (REST APIs, JPA, MySQL/Mongo)
+- **Maven/Gradle**, **JUnit Testing**
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧩 What I Can Do
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✅ Build full-stack web applications from scratch  
+✅ Design and implement REST APIs  
+✅ Connect and manage MongoDB / MySQL databases  
+✅ Create responsive, modern UI with React  
+✅ Deploy applications on cloud platforms (Vercel, Render, or Railway)  
+✅ Integrate third-party APIs & authentication systems  
+✅ Write clean, maintainable, and reusable code  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧠 Currently Exploring
+- **TypeScript** for better code safety  
+- **Next.js 15** & **Server Components**  
+- **Microservices** and **Docker**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Tools & Workflow
+- **Git / GitHub** for version control  
+- **VS Code** & **IntelliJ IDEA**  
+- **Postman**, **MongoDB Compass**, **Figma**  
+- **Agile / Scrum** development approach
+
+---
+
+## 🌱 Projects You Might Like
+- 🔹 **MERN Dashboard** – Admin panel with charts and analytics  
+- 🔹 **Task Manager API** – Node + MongoDB CRUD REST API  
+- 🔹 **Chat App** – Real-time messaging with Socket.io  
+- 🔹 **Java Guessing Game** – Simple but fun console game  
+- 🔹 **Portfolio Website** – Personal site built with React + Tailwind
+
+---
+
+## 📫 Get In Touch
+- 💼 [LinkedIn](---)  
+- 🌐 [Portfolio](https://hhlaingswan.vercel.app/)  
+- 📧 Email: htethlaingswan@gmail.com  
+
+---
+
+⭐ **"Code. Create. Improve. Repeat."**
