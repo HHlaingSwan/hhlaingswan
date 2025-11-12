@@ -16,7 +16,7 @@ const Hero = () => {
 					number={50}
 					className='stroke-accent'
 				/>
-				<h4 className='mb-8 text-xs font-bold uppercase tracking-widest text-muted-foreground'>
+				<h4 className='mb-4 text-sm font-bold uppercase tracking-widest text-muted-foreground'>
 					<TextAnimate
 						animation='blurInUp'
 						by='character'
