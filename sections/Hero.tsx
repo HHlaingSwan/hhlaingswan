@@ -37,7 +37,7 @@ const Hero = () => {
 					<Highlighter
 						action='underline'
 						color='#FF9800'>
-						Htat Hlaing Swan
+						Htet Hlaing Swan
 					</Highlighter>
 					, a developer based in{" "}
 					<Highlighter
