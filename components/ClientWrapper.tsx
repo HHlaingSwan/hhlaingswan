@@ -19,7 +19,7 @@ const ClientWrapper = () => {
 			<ParticleOrbitEffect />
 			<Hero />
 			<Education />
-			{/* <Experience /> */}
+
 			<section className='py-20 bg-gradient-to-b from-background via-secondary to-background dark:via-slate-950 relative w-full overflow-hidden'>
 				<div className='container mx-auto mb-12 text-center'>
 					<h2 className='md:text-4xl font-display text-2xl font-extrabold text-[var(--color-text-primary)] mb-4 tracking-tight'>
@@ -38,7 +38,7 @@ const ClientWrapper = () => {
 			<div className='w-full overflow-hidden h-32'>
 				<FlyingLoading />
 			</div>
-			{/* <Experience /> */}
+			<Experience />
 			<Footer />
 			<div className='fixed bottom-10 md:bottom-14 left-1/2 -translate-x-1/2'>
 				<NavigationBar />

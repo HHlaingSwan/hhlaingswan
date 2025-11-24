@@ -15,7 +15,7 @@ export interface TimelineEvent {
 	year: string;
 	title: string;
 	subtitle?: string;
-	description: string;
+	description: React.ReactNode;
 	icon?: React.ReactNode;
 	color?: string;
 }
@@ -48,20 +48,24 @@ const DEFAULT_EVENTS: TimelineEvent[] = [
 		year: "2023",
 		title: "Major Achievement",
 		subtitle: "Organization Name",
-		description:
-			"Description of the achievement or milestone reached during this time period.",
+		description: (
+			<>
+				Description of the achievement or milestone reached during this time
+				period.
+			</>
+		),
 	},
 	{
 		year: "2022",
 		title: "Important Milestone",
 		subtitle: "Organization Name",
-		description: "Details about this significant milestone and its impact.",
+		description: <>Details about this significant milestone and its impact.</>,
 	},
 	{
 		year: "2021",
 		title: "Key Event",
 		subtitle: "Organization Name",
-		description: "Information about this key event in the timeline.",
+		description: <>Information about this key event in the timeline.</>,
 	},
 ];
 
@@ -386,9 +390,9 @@ export const ScrollTimeline = ({
 													{event.subtitle}
 												</p>
 											)}
-											<p className='text-muted-foreground'>
+											<div className='text-muted-foreground'>
 												{event.description}
-											</p>
+											</div>
 										</CardContent>
 									</Card>
 								</motion.div>
