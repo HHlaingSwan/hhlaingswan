@@ -1,13 +1,11 @@
 "use client";
-import React, { Suspense } from "react";
+import React from "react";
 import dynamic from "next/dynamic";
 import Hero from "@/sections/Hero";
 import { NavigationBar } from "./NavigationBar";
 import FlyingLoading from "./FlyingLoading";
-import ParticleOrbitEffect from "@/components/ui/particle-orbit-effect";
 
 // Lazy-load all sections that are "below the fold"
-const Education = dynamic(() => import("@/sections/Education"));
 const LogoSlide = dynamic(() => import("@/sections/LogoSlide"));
 const Footer = dynamic(() => import("@/sections/Footer"));
 const ProjectOverview = dynamic(() => import("@/sections/ProjectOverview"));
@@ -15,14 +13,11 @@ const ProjectOverview = dynamic(() => import("@/sections/ProjectOverview"));
 const ClientWrapper = () => {
   return (
     <div className="relative flex flex-col justify-center items-center pb-32">
-      {/* <ParticleOrbitEffect /> */}
       <Hero />
       <div className="w-full overflow-hidden h-32">
         <FlyingLoading />
       </div>
       <ProjectOverview />
-
-      {/* <Education /> */}
 
       <section className="py-20 bg-gradient-to-b from-background via-secondary to-background dark:via-slate-950 z-20 relative w-full overflow-hidden">
         <div className="container mx-auto mb-12 text-center">

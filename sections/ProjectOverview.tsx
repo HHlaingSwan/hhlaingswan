@@ -1,7 +1,10 @@
+"use client";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import React from "react";
 import { AuroraText } from "@/components/ui/aurora-text";
 import Image from "next/image";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { ShineBorder } from "@/components/ui/shine-border";
 
 import IntegrationAPI from "@/assets/images/IntegrationAPI.png";
 import shareLoc from "@/assets/images/shareLoc.png";
@@ -11,6 +14,7 @@ import cmtImageHoverView from "@/assets/images/cmtImageHoverView.png";
 import arcane from "@/assets/images/arcane.png";
 
 const ProjectOverview = () => {
+  const isMobile = useIsMobile();
   const content: any = [
     {
       title: "WeDay Page Login Api Integration",
@@ -20,8 +24,8 @@ const ProjectOverview = () => {
         <div className="flex h-full w-full items-center justify-center text-white">
           <Image
             src={IntegrationAPI}
-            width={300}
-            height={300}
+            width={1500}
+            height={1500}
             className="h-full w-full object-cover"
             alt=" login api demo"
           />
@@ -37,8 +41,8 @@ const ProjectOverview = () => {
         <div className="flex h-full w-full items-center justify-center text-white">
           <Image
             src={shareLoc}
-            width={300}
-            height={300}
+            width={1500}
+            height={1500}
             className="h-full w-full object-cover"
             alt="share location demo"
           />
@@ -54,8 +58,8 @@ const ProjectOverview = () => {
         <div className="flex h-full w-full items-center justify-center text-white">
           <Image
             src={canViewImage}
-            width={300}
-            height={300}
+            width={1500}
+            height={1500}
             className="h-full w-full object-cover"
             alt=" view Image demo"
           />
@@ -70,8 +74,8 @@ const ProjectOverview = () => {
         <div className="flex h-full w-full items-center justify-center text-white">
           <Image
             src={canPlayVd}
-            width={300}
-            height={300}
+            width={1500}
+            height={1500}
             className="h-full w-full object-cover"
             alt=" play video demo"
           />
@@ -86,8 +90,8 @@ const ProjectOverview = () => {
         <div className="flex h-full w-full items-center justify-center text-white">
           <Image
             src={cmtImageHoverView}
-            width={300}
-            height={300}
+            width={1500}
+            height={1500}
             className="h-full w-full object-cover"
             alt=" comment hover image view demo"
           />
@@ -102,8 +106,8 @@ const ProjectOverview = () => {
         <div className="flex h-full w-full items-center justify-center text-white">
           <Image
             src={arcane}
-            width={300}
-            height={300}
+            width={1500}
+            height={1500}
             className="h-full w-full object-cover"
             alt="  arcane demo"
           />
@@ -123,7 +127,33 @@ const ProjectOverview = () => {
         </div>
       </AuroraText>
       <div className="mt-8">
-        <StickyScroll content={content} />
+        {isMobile ? (
+          <div className="flex flex-col gap-8">
+            {content.map((item: any) => (
+              <div key={item.title} className="relative rounded-lg">
+                <ShineBorder
+                  className="rounded-lg"
+                  shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+                />
+                <div className="rounded-lg bg-neutral-900">
+                  <div className="overflow-hidden rounded-t-lg">
+                    {item.content}
+                  </div>
+                  <div className="p-4">
+                    <h2 className="text-2xl font-bold text-white">
+                      {item.title}
+                    </h2>
+                    <p className="mt-2 text-base text-gray-400">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <StickyScroll content={content} />
+        )}
       </div>
     </div>
   );
