@@ -16,8 +16,8 @@ export const content = [
         This is my first production static website for Global University,
         showcasing my ability to create professional and informative web pages.
         The site features a clean design, easy navigation, and essential
-        information about the university's programs and services. You can visit
-        the website at{" "}
+        information about the university&apos;s programs and services. You can
+        visit the website at{" "}
         <a
           href="https://www.gacportal.com"
           target="_blank"
@@ -33,10 +33,9 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={gac}
-          width={1500}
-          height={1500}
+
           className="h-full w-full object-cover"
-          alt="  arcane demo"
+          alt="global university website demo"
         />
       </div>
     ),
@@ -49,8 +48,7 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={IntegrationAPI}
-          width={1500}
-          height={1500}
+
           className="h-full w-full object-cover"
           alt=" login api demo"
         />
@@ -65,8 +63,7 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={shareLoc}
-          width={1500}
-          height={1500}
+
           className="h-full w-full object-cover"
           alt="share location demo"
         />
@@ -81,8 +78,7 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={canViewImage}
-          width={1500}
-          height={1500}
+
           className="h-full w-full object-cover"
           alt=" view Image demo"
         />
@@ -97,8 +93,7 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={canPlayVd}
-          width={1500}
-          height={1500}
+
           className="h-full w-full object-cover"
           alt=" play video demo"
         />
@@ -113,8 +108,7 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={cmtImageHoverView}
-          width={1500}
-          height={1500}
+
           className="h-full w-full object-cover"
           alt=" comment hover image view demo"
         />
@@ -122,15 +116,14 @@ export const content = [
     ),
   },
   {
-    title: "  Static Movie Fan Page  Base On Arcane Series",
+    title: "Static Movie Fan Page Base On Arcane Series",
     description:
       "Created a visually captivating static fan page dedicated to the Arcane series, showcasing key characters, episodes, and lore. The page features immersive design elements that celebrate the show's unique art style and storytelling.",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={arcane}
-          width={1500}
-          height={1500}
+
           className="h-full w-full object-cover"
           alt="  arcane demo"
         />
