@@ -18,9 +18,9 @@ const ProjectOverview = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="p-4 md:p-10">
+    <div className="p-4  md:p-10">
       <AuroraText>
-        <div className="text-center">
+        <div className="text-center ">
           <h1 className="text-3xl font-bold md:text-5xl">Project Highlights</h1>
           <p className="mx-auto mt-4 max-w-3xl text-sm md:text-lg">
             A showcase of my recent work and capabilities, demonstrating my
@@ -38,14 +38,14 @@ const ProjectOverview = () => {
                   shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
                 />
                 <div className="rounded-lg  dark:bg-neutral-900 bg-white">
-                  <div className="overflow-hidden rounded-t-lg">
+                  <div className="overflow-hidden  rounded-t-lg">
                     {item.content}
                   </div>
                   <div className="p-4">
-                    <h2 className="text-2xl font-bold  dark:text-white text-gray-800">
+                    <h2 className="md:text-2xl text-lg  font-bold  dark:text-white text-gray-800">
                       {item.title}
                     </h2>
-                    <p className="mt-2 text-base  dark:text-gray-400 text-gray-700">
+                    <p className="mt-6 md:text-base text-sm dark:text-gray-400 text-gray-700">
                       {item.description}
                     </p>
                   </div>

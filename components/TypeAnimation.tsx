@@ -5,7 +5,7 @@ export function TypeAnimation() {
 		<TypingAnimation
 			cursorStyle='underscore'
 			className='font-bold'
-			words={["Engaging Products", "Pixel-Perfect UIs", "Creative Solutions"]}
+			words={["Robust Backends", "Interactive UIs", "Complete Solutions"]}
 			loop
 		/>
 	);

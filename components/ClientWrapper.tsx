@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Hero from "@/sections/Hero";
 import { NavigationBar } from "./NavigationBar";
 import FlyingLoading from "./FlyingLoading";
+import About from "@/sections/About";
 
 // Lazy-load all sections that are "below the fold"
 const LogoSlide = dynamic(() => import("@/sections/LogoSlide"));
@@ -18,9 +19,9 @@ const ClientWrapper = () => {
       <div className="w-full overflow-hidden h-32">
         <FlyingLoading />
       </div>
+      <About />
       <Education />
       <ProjectOverview />
-
       <section className="py-20 bg-gradient-to-b from-background via-secondary to-background dark:via-slate-950 z-20 relative w-full overflow-hidden">
         <div className="container mx-auto mb-12 text-center">
           <h2 className="md:text-4xl font-display text-2xl font-extrabold text-[var(--color-text-primary)] mb-4 tracking-tight">
