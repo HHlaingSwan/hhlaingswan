@@ -10,7 +10,7 @@ export const StickyScroll = ({
 }: {
   content: {
     title: string;
-    description: string;
+    description: React.ReactNode;
     content?: React.ReactNode;
   }[];
   contentClassName?: string;
@@ -37,27 +37,6 @@ export const StickyScroll = ({
     );
     setActiveCard(closestBreakpointIndex);
   });
-
-  const backgroundColors = [
-    "#0f172a", // slate-900
-    "#000000", // black
-    "#171717", // neutral-900
-  ];
-  const linearGradients = [
-    "linear-gradient(to bottom right, #06b6d4, #10b981)", // cyan-500 to emerald-500
-    "linear-gradient(to bottom right, #ec4899, #6366f1)", // pink-500 to indigo-500
-    "linear-gradient(to bottom right, #f97316, #eab308)", // orange-500 to yellow-500
-  ];
-
-  const [backgroundGradient, setBackgroundGradient] = useState(
-    linearGradients[0]
-  );
-
-  useEffect(() => {
-    setBackgroundGradient(
-      linearGradients[Math.floor(activeCard / 2) % linearGradients.length]
-    );
-  }, [activeCard]);
 
   return (
     <motion.div

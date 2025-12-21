@@ -9,6 +9,7 @@ import FlyingLoading from "./FlyingLoading";
 const LogoSlide = dynamic(() => import("@/sections/LogoSlide"));
 const Footer = dynamic(() => import("@/sections/Footer"));
 const ProjectOverview = dynamic(() => import("@/sections/ProjectOverview"));
+const Education = dynamic(() => import("@/sections/Education"));
 
 const ClientWrapper = () => {
   return (
@@ -17,6 +18,7 @@ const ClientWrapper = () => {
       <div className="w-full overflow-hidden h-32">
         <FlyingLoading />
       </div>
+      <Education />
       <ProjectOverview />
 
       <section className="py-20 bg-gradient-to-b from-background via-secondary to-background dark:via-slate-950 z-20 relative w-full overflow-hidden">
