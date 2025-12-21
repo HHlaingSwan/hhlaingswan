@@ -3,7 +3,6 @@ import React from "react";
 import dynamic from "next/dynamic";
 import Hero from "@/sections/Hero";
 import { NavigationBar } from "./NavigationBar";
-import FlyingLoading from "./FlyingLoading";
 import About from "@/sections/About";
 
 // Lazy-load all sections that are "below the fold"
@@ -16,9 +15,7 @@ const ClientWrapper = () => {
   return (
     <div className="relative flex flex-col justify-center items-center pb-32">
       <Hero />
-      <div className="w-full overflow-hidden h-32">
-        <FlyingLoading />
-      </div>
+
       <About />
       <Education />
       <ProjectOverview />
