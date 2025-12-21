@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-8 bg-background border-t border-border/50">
+    <footer className="py-8 z-30 bg-background border-t border-border/50">
       <div className="container mx-auto md:max-w-7xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,9 +43,15 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground">Home</a>
-            <a href="#about" className="hover:text-foreground">About</a>
-            <a href="#projects" className="hover:text-foreground">Projects</a>
+            <a href="#" className="hover:text-foreground">
+              Home
+            </a>
+            <a href="#about" className="hover:text-foreground">
+              About
+            </a>
+            <a href="#projects" className="hover:text-foreground">
+              Projects
+            </a>
           </div>
           <p className="text-sm text-muted-foreground">
             &copy; {currentYear} Htat Hlaing Swan. All rights reserved.

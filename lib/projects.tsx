@@ -33,8 +33,7 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={gac}
-
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           alt="global university website demo"
         />
       </div>
@@ -48,8 +47,7 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={IntegrationAPI}
-
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           alt=" login api demo"
         />
       </div>
@@ -63,8 +61,7 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={shareLoc}
-
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           alt="share location demo"
         />
       </div>
@@ -78,8 +75,7 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={canViewImage}
-
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           alt=" view Image demo"
         />
       </div>
@@ -93,8 +89,7 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={canPlayVd}
-
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           alt=" play video demo"
         />
       </div>
@@ -108,8 +103,7 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={cmtImageHoverView}
-
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           alt=" comment hover image view demo"
         />
       </div>
@@ -123,8 +117,7 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={arcane}
-
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           alt="  arcane demo"
         />
       </div>

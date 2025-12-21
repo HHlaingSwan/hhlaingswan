@@ -37,15 +37,15 @@ const ProjectOverview = () => {
                   className="rounded-lg"
                   shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
                 />
-                <div className="rounded-lg bg-neutral-900 dark:bg-neutral-900 bg-white">
+                <div className="rounded-lg  dark:bg-neutral-900 bg-white">
                   <div className="overflow-hidden rounded-t-lg">
                     {item.content}
                   </div>
                   <div className="p-4">
-                    <h2 className="text-2xl font-bold text-white dark:text-white text-gray-800">
+                    <h2 className="text-2xl font-bold  dark:text-white text-gray-800">
                       {item.title}
                     </h2>
-                    <p className="mt-2 text-base text-gray-400 dark:text-gray-400 text-gray-700">
+                    <p className="mt-2 text-base  dark:text-gray-400 text-gray-700">
                       {item.description}
                     </p>
                   </div>
