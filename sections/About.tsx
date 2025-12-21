@@ -16,8 +16,8 @@ const About = () => {
           <Image
             src="/personal.jpg"
             alt="Htet Hlaing Swan's Photo"
-            width={768} // Actual width of the image
-            height={1024} // Actual height of the image (3:4 aspect ratio)
+            width={1024} // Actual width of the image
+            height={1366} // Actual height of the image (3:4 aspect ratio)
             className="rounded-lg shadow-lg object-cover w-full h-auto" // Use h-auto to respect aspect ratio with given width
           />
         </div>
@@ -35,28 +35,18 @@ const About = () => {
           </p>
 
           <div>
-            <h3 className="text-2xl font-semibold mb-2 text-primary text-center md:text-left">
-              In My Element
-            </h3>
-            <p className="text-muted-foreground">
-              I thrive on solving complex problems, whether it's optimizing
-              database queries, crafting scalable APIs, or designing intuitive
-              user interfaces. I believe in writing clean, maintainable code and
-              continuously learning new technologies to deliver high-quality
-              solutions.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-semibold mb-2 text-primary text-center md:text-left">
-              Beyond the Code
-            </h3>
-            <p className="text-muted-foreground">
-              When I&apos;m not immersed in code, you can find me exploring new
-              hiking trails, experimenting with photography, or diving into a
-              good book. I believe a balanced life fuels creativity and
-              innovation in my professional work.
-            </p>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2">
+              <li>Actively seeking out new technologies and best practices.</li>
+              <li>
+                Constantly striving to deepen my understanding and expand my
+                skill set.
+              </li>
+              <li>Embracing challenges as opportunities for growth.</li>
+              <li>
+                Eager to tackle complex problems with innovative solutions.
+              </li>
+              <li>Dedicated to continuous learning and self-improvement.</li>
+            </ul>
           </div>
 
           <div className="mt-8 flex justify-center md:justify-start">

@@ -1,5 +1,5 @@
 "use client";
-import { TypeAnimation } from "@/components/TypeAnimation";
+import { TypingAnimation } from "@/components/ui/typing-animation";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { Meteors } from "@/components/ui/meteors";
 import { TextAnimate } from "@/components/ui/text-animate";
@@ -15,14 +15,29 @@ const Hero = () => {
       <div className="flex flex-col  items-center text-center">
         <Meteors number={50} className="stroke-accent" />
 
-        <h1 className="text-2xl font-bold md:text-5xl">
-          Transforming Concepts <br className="md:hidden block" />
-          into
-          <br className="hidden md:block" /> Seamless{" "}
+        <p className="mb-4 text-lg text-muted-foreground">
+          Hi, I&apos;m Htet Hlaing Swan. Welcome to my digital playground.
+        </p>
+
+        <h1 className="text-3xl font-bold md:text-6xl">
+          I&apos;m a{" "}
           <AuroraText>
-            <TypeAnimation />
+            <TypingAnimation
+              cursorStyle="underscore"
+              words={[
+                "Backend Engineer",
+                "Frontend Architect",
+                "Full-Stack Developer",
+              ]}
+              loop
+            />
           </AuroraText>
         </h1>
+
+        <p className="mt-6 max-w-2xl text-md text-muted-foreground">
+          I specialize in building exceptional digital experiences, turning
+          complex ideas into beautiful and intuitive applications.
+        </p>
       </div>
       <div className="flex w-full  items-center  justify-center">
         <div className="w-[250px] h-[250px] mt-10 md:w-[400px] md:h-[400px]">
