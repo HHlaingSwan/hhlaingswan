@@ -75,7 +75,7 @@ export const content = [
       <>
         Created a visually captivating static fan page dedicated to the Arcane
         series, showcasing key characters, episodes, and lore. The page features
-        immersive design elements that celebrate the show's unique art style and
+        immersive design elements that celebrate the show&apos;s unique art style and
         storytelling.
         <a
           href="https://arcane-game.vercel.app"
@@ -131,9 +131,8 @@ export const content = [
       <>
         User can send messages, images and receive real-time
         notifications.Images Are Stored in Cloudinary. Active users are updated
-        in real-time.But you have to login first if not i protected route you
-        will be redirected to login page without token exist.
-        <a
+                 in real-time. But you have to login first; if not, I&apos;m a protected route and you
+                 will be redirected to the login page without a token.        <a
           href="https://unit-chat-five.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
