@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import shareLoc from "@/assets/images/shareLoc.png";
 import canPlayVd from "@/assets/images/canPlayVd.png";
-import arcane from "@/assets/images/arcane.png";
+import arcane from "@/assets/images/arcaneImage.png";
 import gac from "@/assets/images/gac.png";
 import loginChat from "@/assets/images/loginChatApp.png";
 import demoChat from "@/assets/images/demoChatApp.png";
@@ -11,7 +11,7 @@ import perTest from "@/assets/images/performanceTest.png";
 
 export const content = [
   {
-    title: "Global University Website",
+    title: "Global University Website (Freelance)",
     description: (
       <>
         This is my first production static website for Global University,
@@ -41,7 +41,7 @@ export const content = [
     ),
   },
   {
-    title: "Advanced Sharing & Tagging",
+    title: "Advanced Sharing & Tagging (React)",
     description:
       "Introduced comprehensive sharing functionalities, allowing users to share posts, broadcast their location, and tag friends. This fosters deeper connections and community interaction, making content sharing more dynamic and personalized.",
     content: (
@@ -55,7 +55,7 @@ export const content = [
     ),
   },
   {
-    title: "Rich Media Viewing - Videos",
+    title: "Rich Media Viewing - Videos (React)",
     description:
       "Implemented a seamless video playback experience within the application, enabling users to watch videos without leaving the platform. Features include responsive playback controls and optimized streaming for various devices and network conditions.",
     content: (
@@ -70,13 +70,13 @@ export const content = [
   },
 
   {
-    title: "Static Movie Fan Page Base On Arcane Series",
+    title: "Static Movie Fan Page Base On Arcane Series ",
     description: (
       <>
         Created a visually captivating static fan page dedicated to the Arcane
         series, showcasing key characters, episodes, and lore. The page features
-        immersive design elements that celebrate the show&apos;s unique art style and
-        storytelling.
+        immersive design elements that celebrate the show&apos;s unique art
+        style and storytelling.
         <a
           href="https://arcane-game.vercel.app"
           target="_blank"
@@ -98,7 +98,7 @@ export const content = [
     ),
   },
   {
-    title: "About Authentication & Authorization",
+    title: "About Authentication & Authorization (MERN Stack)",
     description: (
       <>
         Password is not stored in plain text. Instead, it is hashed using a
@@ -126,13 +126,14 @@ export const content = [
     ),
   },
   {
-    title: "Demo Chat Style",
+    title: "Demo Chat Style (MERN Stack)",
     description: (
       <>
         User can send messages, images and receive real-time
         notifications.Images Are Stored in Cloudinary. Active users are updated
-                 in real-time. But you have to login first; if not, I&apos;m a protected route and you
-                 will be redirected to the login page without a token.        <a
+        in real-time. But you have to login first; if not, I&apos;m a protected
+        route and you will be redirected to the login page without a token.{" "}
+        <a
           href="https://unit-chat-five.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
@@ -153,7 +154,7 @@ export const content = [
     ),
   },
   {
-    title: "Responsive Design Like Mobile App",
+    title: "Responsive Design Like Mobile App (MERN Stack)",
     description:
       "Engineered a fully responsive chat application with a mobile-first design philosophy, ensuring a seamless and intuitive user experience across all devices, from smartphones to desktops. The interface adapts fluidly to different screen sizes, providing an experience so cohesive that it feels like a native mobile app, even on the web.",
     content: (
@@ -167,7 +168,8 @@ export const content = [
     ),
   },
   {
-    title: "This is Performance, Accessibility, Best Practices and SEO Testing",
+    title:
+      "This is Performance, Accessibility, Best Practices and SEO Testing (MERN Stack)",
     description:
       "Tested the chat application for performance, accessibility, best practices, and SEO. Ensured optimal loading times, compatibility with various browsers and devices, and adherence to web standards. Conducted thorough testing to identify and address any potential issues, resulting in a highly performant and user-friendly application.",
     content: (
