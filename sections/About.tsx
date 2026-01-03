@@ -18,7 +18,7 @@ const About = () => {
       title: "Junior Developer",
       company: "Freelance Projects",
       description:
-        "Developed 15+ client projects including e-commerce platforms, SaaS applications, and mobile-responsive websites.",
+        "Developed and maintained a variety of client projects, including the Global University Website, a movie fan page, and a real-time chat application.",
     },
     {
       year: "2022 - 2023",

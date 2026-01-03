@@ -10,6 +10,7 @@ const LogoSlide = dynamic(() => import("@/sections/LogoSlide"));
 const Footer = dynamic(() => import("@/sections/Footer"));
 const ProjectOverview = dynamic(() => import("@/sections/ProjectOverview"));
 const Education = dynamic(() => import("@/sections/Education"));
+const Contact = dynamic(() => import("@/sections/Contact"));
 
 const ClientWrapper = () => {
   return (
@@ -19,6 +20,7 @@ const ClientWrapper = () => {
       <About />
       <Education />
       <ProjectOverview />
+      <Contact />
       <Footer />
       <div className="fixed bottom-10 md:bottom-14  left-1/2 -translate-x-1/2">
         <NavigationBar />
