@@ -5,13 +5,6 @@ import { AuroraText } from "@/components/ui/aurora-text";
 import Image from "next/image";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { ShineBorder } from "@/components/ui/shine-border";
-
-import IntegrationAPI from "@/assets/images/IntegrationAPI.png";
-import shareLoc from "@/assets/images/shareLoc.png";
-import canViewImage from "@/assets/images/canViewImage.png";
-import canPlayVd from "@/assets/images/canPlayVd.png";
-import cmtImageHoverView from "@/assets/images/cmtImageHoverView.png";
-import arcane from "@/assets/images/arcane.png";
 import { content } from "@/lib/projects";
 
 const ProjectOverview = () => {

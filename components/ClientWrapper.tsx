@@ -33,7 +33,7 @@ const ClientWrapper = () => {
         <div className="pointer-events-none absolute top-0 left-0 h-full w-32 z-20 bg-gradient-to-r from-[var(--color-bg-primary)] via-[var(--color-bg-primary)]/80 to-transparent" />
         <div className="pointer-events-none absolute top-0 right-0 h-full w-32 z-20 bg-gradient-to-l  from-[var(--color-bg-primary)] via-[var(--color-bg-primary)]/80 to-transparent" />
       </section>
-      <Footer />
+      {/* <Footer /> */}
       <div className="fixed bottom-10 md:bottom-14  left-1/2 -translate-x-1/2">
         <NavigationBar />
       </div>

@@ -21,7 +21,6 @@ const LogoSlide = () => {
     { icon: <SiTypescript size={44} />, name: "TypeScript", color: "#3178C6" }, // Blue
     { icon: <FaReact size={44} />, name: "React", color: "#61DAFB" }, // React Blue
     { icon: <FaNodeJs size={44} />, name: "Node.js", color: "#68A063" }, // Node Green
-    // { icon: <SiExpress size={44} />, name: "Express.js", color: "#FFFFFF" }, // White for dark backgrounds
 
     { icon: <SiMongodb size={44} />, name: "MongoDB", color: "#47A248" }, // Mongo Green
     // { icon: <SiMysql size={44} />, name: "MySQL", color: "#4479A1" }, // MySQL Blue

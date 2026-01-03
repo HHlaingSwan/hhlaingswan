@@ -15,8 +15,10 @@ const Hero = () => {
       <div className="flex flex-col  items-center text-center">
         <Meteors number={50} className="stroke-accent" />
 
-        <p className="mb-4 text-lg text-muted-foreground">
-          Hi, I&apos;m Htet Hlaing Swan. Welcome to my digital playground.
+        <p className=" md:text-lg text-md text-muted-foreground">
+          Hi, I&apos;m{" "}
+          <span className="font-bold text-blue-600">Htet Hlaing Swan</span>.
+          Welcome to my playground.
         </p>
 
         <h1 className="text-3xl font-bold md:text-6xl">
@@ -26,7 +28,8 @@ const Hero = () => {
               cursorStyle="underscore"
               words={[
                 "Backend Engineer",
-                "Frontend Architect",
+                "Frontend Architect ",
+                "Database Specialist",
                 "Full-Stack Developer",
               ]}
               loop
@@ -34,7 +37,7 @@ const Hero = () => {
           </AuroraText>
         </h1>
 
-        <p className="mt-6 max-w-2xl text-md text-muted-foreground">
+        <p className="mt-4 max-w-2xl md:text-md text-sm text-muted-foreground">
           I specialize in building exceptional digital experiences, turning
           complex ideas into beautiful and intuitive applications.
         </p>
