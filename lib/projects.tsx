@@ -11,7 +11,7 @@ import perTest from "@/assets/images/performanceTest.png";
 
 export const content = [
   {
-    title: "Global University Website (Freelance)",
+    title: `Global University Website (Freelance)`,
     description: (
       <>
         This is my first production static website for Global University,
@@ -56,7 +56,7 @@ export const content = [
       <div className="flex h-full w-full items-center justify-center text-white relative">
         <Image
           src={canPlayVd}
-          className="h-full w-full object-contain opacity-50"
+          className="h-full w-full object-contain"
           alt=" play video demo"
         />
       </div>

@@ -78,7 +78,9 @@ export const StickyScroll = ({
                   animate={{ opacity: activeCard === index ? 1 : 0.3 }}
                   className="mt-4 inline-flex items-center gap-2 text-amber-500 text-sm font-medium"
                 >
-                  <span className="px-2 py-1 bg-amber-500/10 rounded-full">Coming Soon</span>
+                  <span className="px-2 py-1 bg-amber-500/10 rounded-full">
+                    Coming Soon
+                  </span>
                 </motion.div>
               ) : item.url && item.url !== "#projects" ? (
                 <motion.a
