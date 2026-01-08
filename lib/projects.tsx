@@ -6,8 +6,9 @@ import arcane from "@/assets/images/arcaneImage.png";
 import gac from "@/assets/images/gac.png";
 import loginChat from "@/assets/images/loginChatApp.png";
 import demoChat from "@/assets/images/demoChatApp.png";
-import mobileView from "@/assets/images/mobileView.png";
 import perTest from "@/assets/images/performanceTest.png";
+import welcomeBot from "@/assets/images/welcome.png";
+import functionallityBot from "@/assets/images/function.png";
 
 export const content = [
   {
@@ -85,13 +86,14 @@ export const content = [
     ),
   },
   {
-    title: "Authentication & Authorization (MERN Stack)",
+    title: "Secure Authentication (MERN Stack)",
     description: (
       <>
-        Password is not stored in plain text. Instead, it is hashed using a
-        secure algorithm (e.g., bcrypt) before being stored in the database.
-        This ensures that even if the database is compromised, the actual
-        passwords remain protected.
+        Implemented JWT-based authentication with bcrypt password hashing and
+        cookie-based session management. Features include secure 7-day persistent
+        sessions, protected routes, guest route guards, and welcome email delivery
+        via Resend API. User credentials are never stored in plain text, ensuring
+        maximum security for all user accounts.
       </>
     ),
     url: "https://unit-chat-five.vercel.app/",
@@ -106,17 +108,14 @@ export const content = [
     ),
   },
   {
-    title: "Demo Chat Style (MERN Stack)",
+    title: "Real-Time Chat Application (MERN Stack)",
     description: (
       <>
-        User can send messages, images and receive real-time
-        notifications.Images Are Stored in Cloudinary. Active users are updated
-        in real-time.{" "}
-        <span className="text-amber-400">
-          {" "}
-          But you have to login first if not, I&apos;m a protected route{" "}
-        </span>
-        and you will be redirected to the login page without a token.{" "}
+        Built a full-featured real-time messaging platform with Socket.IO for
+        instant message delivery. Users can send text and share images via
+        Cloudinary, view online status indicators, track last seen timestamps,
+        and manage contacts with add/block functionality. Features responsive
+        design with smooth Framer Motion animations and skeleton loading states.
       </>
     ),
     url: "https://unit-chat-five.vercel.app/",
@@ -131,25 +130,9 @@ export const content = [
     ),
   },
   {
-    title: "Responsive Design Like Mobile App (MERN Stack)",
+    title: "Performance & Security Optimization",
     description:
-      "Engineered a fully responsive chat application with a mobile-first design philosophy, ensuring a seamless and intuitive user experience across all devices, from smartphones to desktops. The interface adapts fluidly to different screen sizes, providing an experience so cohesive that it feels like a native mobile app, even on the web.",
-    url: "#projects",
-    content: (
-      <div className="flex h-full w-full items-center justify-center text-white">
-        <Image
-          src={mobileView}
-          className="h-full w-full object-contain"
-          alt="  chat application demo"
-        />
-      </div>
-    ),
-  },
-  {
-    title:
-      "This is Performance, Accessibility, Best Practices and SEO Testing (MERN Stack)",
-    description:
-      "Tested the chat application for performance, accessibility, best practices, and SEO. Ensured optimal loading times, compatibility with various browsers and devices, and adherence to web standards. Conducted thorough testing to identify and address any potential issues, resulting in a highly performant and user-friendly application.",
+      "Optimized the chat application for peak performance and security. Achieved excellent Lighthouse scores across performance, accessibility, best practices, and SEO. Implemented Arcjet bot protection, efficient database queries, and responsive UI for all devices. Rigorous testing ensured fast loading times and seamless user experience across browsers.",
     url: "#projects",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
@@ -157,6 +140,56 @@ export const content = [
           src={perTest}
           className="h-full w-full object-contain"
           alt="  chat application demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Myanmar Expense Tracker Telegram Bot",
+    description: (
+      <>
+        A Telegram bot for tracking daily expenses with Myanmar language support.
+        Features include breakfast/lunch/dinner tracking, monthly spending overview,
+        and automatic Myanmar holiday detection from Calendarific API. Supports both
+        Burmese and English inputs for seamless expense logging.{" "}
+        <a
+          className="text-amber-400"
+          href="https://t.me/gogoTimeBot"
+          target="_blank"
+        >
+          @gogoTimeBot
+        </a>
+      </>
+    ),
+    url: "https://t.me/gogoTimeBot",
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        <Image
+          src={welcomeBot}
+          className="h-full w-full object-contain"
+          alt="  expense tracker bot demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Bot Features & Daily Usage Guide",
+    description: (
+      <>
+        Use natural language commands like <code className="text-amber-400">breakfast 1000</code> or
+        <code className="text-amber-400"> ညနေစာ 5000</code> to log expenses instantly. View today&apos;s spending with
+        <code className="text-amber-400">/today</code>, get monthly summaries with <code className="text-amber-400">/thismonth</code>,
+        and check Myanmar holidays with <code className="text-amber-400">/holidays</code>. The bot automatically categorizes
+        expenses by keywords and syncs holidays for better financial planning.
+      </>
+    ),
+    url: "https://t.me/gogoTimeBot",
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        <Image
+          src={functionallityBot}
+          className="h-full w-full object-contain"
+          alt="  expense tracker bot demo"
         />
       </div>
     ),
