@@ -4,11 +4,10 @@ import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import React from "react";
 import { motion } from "framer-motion";
 import { AuroraText } from "@/components/ui/aurora-text";
-import Image from "next/image";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { ShineBorder } from "@/components/ui/shine-border";
 import { content } from "@/lib/projects";
-import { ExternalLink, Github, Star, Clock } from "lucide-react";
+import type { Project } from "@/types";
+import { ExternalLink, Github, Star } from "lucide-react";
 
 const ProjectOverview = () => {
   const isMobile = useIsMobile();
@@ -54,7 +53,7 @@ const ProjectOverview = () => {
           variants={containerVariants}
           className="flex flex-col gap-6"
         >
-          {content.map((item: any, index: number) => (
+          {content.map((item: Project, index: number) => (
             <motion.div
               key={item.title}
               variants={cardVariants}
@@ -62,7 +61,7 @@ const ProjectOverview = () => {
               className="group relative"
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-purple-500 to-pink-500 rounded-2xl opacity-30 blur-xl group-hover:opacity-60 transition-opacity duration-500" />
-              
+
               <div className="relative bg-card rounded-2xl overflow-hidden border border-border/50">
                 <div className="relative h-48 overflow-hidden bg-gradient-to-br from-muted to-card">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
@@ -97,19 +96,29 @@ const ProjectOverview = () => {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {index % 2 === 0 ? (
                       <>
-                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">React</span>
-                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Tailwind</span>
+                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
+                          React
+                        </span>
+                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
+                          Tailwind
+                        </span>
                       </>
                     ) : (
                       <>
-                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">MERN</span>
-                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Node.js</span>
+                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
+                          MERN
+                        </span>
+                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
+                          Node.js
+                        </span>
                       </>
                     )}
                   </div>
 
                   <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">
-                    {typeof item.description === 'string' ? item.description : 'Click to view details'}
+                    {typeof item.description === "string"
+                      ? item.description
+                      : "Click to view details"}
                   </p>
 
                   <motion.button
@@ -133,7 +142,9 @@ const ProjectOverview = () => {
           transition={{ delay: 0.8 }}
           className="mt-12 text-center"
         >
-          <p className="text-sm text-muted-foreground mb-2">Want to see more?</p>
+          <p className="text-sm text-muted-foreground mb-2">
+            Want to see more?
+          </p>
           <a
             href="https://github.com/HHlaingSwan"
             target="_blank"

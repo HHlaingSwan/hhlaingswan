@@ -4,13 +4,28 @@ import dynamic from "next/dynamic";
 import Hero from "@/sections/Hero";
 import { NavigationBar } from "./NavigationBar";
 import About from "@/sections/About";
+import {
+  SectionSkeleton,
+  FormSkeleton,
+  TimelineSkeleton,
+  CardSkeleton,
+} from "./ui/skeleton";
 
-// Lazy-load all sections that are "below the fold"
-const LogoSlide = dynamic(() => import("@/sections/LogoSlide"));
-const Footer = dynamic(() => import("@/sections/Footer"));
-const ProjectOverview = dynamic(() => import("@/sections/ProjectOverview"));
-const Education = dynamic(() => import("@/sections/Education"));
-const Contact = dynamic(() => import("@/sections/Contact"));
+const LogoSlide = dynamic(() => import("@/sections/LogoSlide"), {
+  loading: () => <SectionSkeleton />,
+});
+const Footer = dynamic(() => import("@/sections/Footer"), {
+  loading: () => <SectionSkeleton />,
+});
+const ProjectOverview = dynamic(() => import("@/sections/ProjectOverview"), {
+  loading: () => <SectionSkeleton />,
+});
+const Education = dynamic(() => import("@/sections/Education"), {
+  loading: () => <TimelineSkeleton />,
+});
+const Contact = dynamic(() => import("@/sections/Contact"), {
+  loading: () => <FormSkeleton />,
+});
 
 const ClientWrapper = () => {
   return (

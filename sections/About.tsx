@@ -63,7 +63,7 @@ const About = () => {
               About <span className="text-primary">Me</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              I'm a passionate full-stack developer from Myanmar with 3+ years
+              I&apos;m a passionate full-stack developer from Myanmar with 3+ years
               of experience building digital products. I love turning complex
               problems into simple, beautiful solutions.
             </p>
@@ -190,7 +190,7 @@ const About = () => {
             className="text-center"
           >
             <p className="text-muted-foreground mb-6">
-              Let's work together on your next project
+              Let&apos;s work together on your next project
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

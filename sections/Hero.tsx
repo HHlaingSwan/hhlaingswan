@@ -2,14 +2,15 @@
 import { TypingAnimation } from "@/components/ui/typing-animation";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { Meteors } from "@/components/ui/meteors";
+import { StatGrid } from "@/components/ui/stat-card";
 import React from "react";
 import Image from "next/image";
 import { Code2, Briefcase, Calendar } from "lucide-react";
 
 const stats = [
-  { icon: Calendar, value: "3+", label: "Years" },
-  { icon: Briefcase, value: "15+", label: "Projects" },
-  { icon: Code2, value: "10+", label: "Tech" },
+  { icon: <Calendar className="size-4 md:size-5 text-primary" />, value: "3+", label: "Years" },
+  { icon: <Briefcase className="size-4 md:size-5 text-primary" />, value: "15+", label: "Projects" },
+  { icon: <Code2 className="size-4 md:size-5 text-primary" />, value: "10+", label: "Tech" },
 ];
 
 const Hero = () => {
@@ -33,7 +34,7 @@ const Hero = () => {
               cursorStyle="underscore"
               words={[
                 "Backend Engineer",
-                "Frontend Architect ",
+                "Frontend Architect",
                 "Database Specialist",
                 "Full-Stack Developer",
               ]}
@@ -51,30 +52,16 @@ const Hero = () => {
         <div className="w-[180px] h-[180px] md:w-[400px] md:h-[400px]">
           <Image
             src="/Man-thinking.png"
-            alt="Htet Hlaing Swan"
+            alt="Htet Hlaing Swan - Full-Stack Developer"
             width={500}
             height={500}
             className="object-contain"
+            priority
           />
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-3 mt-6 w-full max-w-md z-10">
-        {stats.map((stat, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center gap-1 px-3 py-4 bg-card/60 backdrop-blur-sm rounded-xl border border-border/50 hover:border-primary/50 hover:bg-card/80 transition-all duration-300"
-          >
-            <div className="p-2 bg-primary/10 rounded-lg">
-              <stat.icon className="size-4 md:size-5 text-primary" />
-            </div>
-            <p className="text-lg md:text-2xl font-bold">{stat.value}</p>
-            <p className="text-[10px] md:text-xs text-muted-foreground">
-              {stat.label}
-            </p>
-          </div>
-        ))}
-      </div>
+      <StatGrid stats={stats} />
     </section>
   );
 };

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send, User, MessageSquare, Loader2 } from "lucide-react";
 import { AuroraText } from "@/components/ui/aurora-text";
+import { env } from "@/lib/env";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,11 +15,11 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+    const formspreeId = env.NEXT_PUBLIC_FORMSPREE_ID;
     const formspreeEndpoint = formspreeId
       ? `https://formspree.io/f/${formspreeId}`
       : null;
@@ -74,17 +75,17 @@ const Contact = () => {
               Get In <span className="text-primary">Touch</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Have a project in mind or want to collaborate? I'd love to hear
-              from you. Send me a message and I'll get back to you as soon as
+              Have a project in mind or want to collaborate? I&apos;d love to hear
+              from you. Send me a message and I&apos;ll get to you as soon as
               possible.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-8">
-              <h3 className="text-2xl font-bold">Let's Connect</h3>
+              <h3 className="text-2xl font-bold">Let&apos;s Connect</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm currently available for freelance projects and full-time
+                 I&apos;m currently available for freelance projects and full-time
                 opportunities. Whether you have a question or just want to say
                 hi, feel free to reach out!
               </p>
@@ -97,7 +98,7 @@ const Contact = () => {
                   transition={{ delay: 0.2, duration: 0.6 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0" aria-hidden="true">
                     <Mail className="size-5 text-primary" />
                   </div>
                   <div>
@@ -105,6 +106,7 @@ const Contact = () => {
                     <a
                       href="mailto:htethlaingswan@gmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
+                      aria-label="Send email to htethlaingswan@gmail.com"
                     >
                       htethlaingswan@gmail.com
                     </a>
@@ -118,12 +120,14 @@ const Contact = () => {
                   transition={{ delay: 0.3, duration: 0.6 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0" aria-hidden="true">
                     <MapPin className="size-5 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Location</h4>
-                    <p className="text-muted-foreground">Yangon, Myanmar</p>
+                    <p className="text-muted-foreground" aria-label="Current location">
+                      Yangon, Myanmar
+                    </p>
                   </div>
                 </motion.div>
               </div>
@@ -147,7 +151,7 @@ const Contact = () => {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Message Sent!</h3>
                   <p className="text-muted-foreground mb-4">
-                    Thank you for reaching out. I'll get back to you soon!
+                    Thank you for reaching out. I&apos;ll get to you soon!
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -157,7 +161,7 @@ const Contact = () => {
                   </button>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
                   <div>
                     <label
                       htmlFor="name"
@@ -166,11 +170,15 @@ const Contact = () => {
                       Your Name
                     </label>
                     <div className="relative">
-                      <User className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-muted-foreground" />
+                      <span className="sr-only">Name icon</span>
+                      <User className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-muted-foreground" aria-hidden="true" />
                       <input
                         type="text"
                         id="name"
+                        name="name"
+                        autoComplete="name"
                         required
+                        aria-required="true"
                         value={formData.name}
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
@@ -189,11 +197,15 @@ const Contact = () => {
                       Email Address
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-muted-foreground" />
+                      <span className="sr-only">Email icon</span>
+                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-muted-foreground" aria-hidden="true" />
                       <input
                         type="email"
                         id="email"
+                        name="email"
+                        autoComplete="email"
                         required
+                        aria-required="true"
                         value={formData.email}
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
@@ -212,10 +224,13 @@ const Contact = () => {
                       Message
                     </label>
                     <div className="relative">
-                      <MessageSquare className="absolute left-3 top-3 size-5 text-muted-foreground" />
+                      <span className="sr-only">Message icon</span>
+                      <MessageSquare className="absolute left-3 top-3 size-5 text-muted-foreground" aria-hidden="true" />
                       <textarea
                         id="message"
+                        name="message"
                         required
+                        aria-required="true"
                         rows={5}
                         value={formData.message}
                         onChange={(e) =>
@@ -232,17 +247,18 @@ const Contact = () => {
                     whileTap={{ scale: 0.98 }}
                     type="submit"
                     disabled={isSubmitting}
+                    aria-busy={isSubmitting}
                     className="w-full py-3 px-6 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>
-                        <Loader2 className="size-5 animate-spin" />
-                        Sending...
+                        <Loader2 className="size-5 animate-spin" aria-hidden="true" />
+                        <span>Sending...</span>
                       </>
                     ) : (
                       <>
-                        <Send className="size-5" />
-                        Send Message
+                        <Send className="size-5" aria-hidden="true" />
+                        <span>Send Message</span>
                       </>
                     )}
                   </motion.button>

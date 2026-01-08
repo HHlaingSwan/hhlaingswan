@@ -64,7 +64,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <Terminal className="size-5 text-primary" />
-                <h3 className="text-lg font-semibold">Let's Build Together</h3>
+                <h3 className="text-lg font-semibold">Let&apos;s Build Together</h3>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Transforming ideas into elegant, scalable solutions through

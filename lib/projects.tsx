@@ -9,8 +9,9 @@ import demoChat from "@/assets/images/demoChatApp.png";
 import perTest from "@/assets/images/performanceTest.png";
 import welcomeBot from "@/assets/images/welcome.png";
 import functionallityBot from "@/assets/images/function.png";
+import type { Project } from "@/types";
 
-export const content = [
+export const content: Project[] = [
   {
     title: `Global University Website (Freelance)`,
     description: (
