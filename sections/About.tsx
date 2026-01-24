@@ -7,25 +7,18 @@ import { Code, Database, Globe, Terminal, Cpu, Layers } from "lucide-react";
 const About = () => {
   const timeline = [
     {
-      year: "2024 - Present",
-      title: "Full-Stack Developer",
-      company: "Myanmar Technopreneur Academy",
-      description:
-        "Building modern web applications with React, Node.js, and TypeScript. Leading development of scalable solutions.",
-    },
-    {
-      year: "2023 - 2024",
+      year: "2025 - Present",
       title: "Junior Developer",
-      company: "Freelance Projects",
+      company: "WeDay Social E commerce Platform",
       description:
-        "Developed and maintained a variety of client projects, including the Global University Website, a movie fan page, and a real-time chat application.",
+        "Contributed to frontend and backend development of an e-commerce platform using Next.js and Express.",
     },
     {
-      year: "2022 - 2023",
+      year: "2024 - 2025",
       title: "Web Development Student",
       company: "Self-Learning",
       description:
-        "Mastered frontend technologies (React, Vue) and backend development (Node.js, Python, databases).",
+        "Mastered frontend technologies React and backend development (Node.js, databases).",
     },
   ];
 
@@ -63,9 +56,9 @@ const About = () => {
               About <span className="text-primary">Me</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              I&apos;m a passionate full-stack developer from Myanmar with 3+ years
-              of experience building digital products. I love turning complex
-              problems into simple, beautiful solutions.
+              I&apos;m a passionate full-stack developer from Myanmar with 2+
+              years of experience building digital products. I love turning
+              complex problems into simple, beautiful solutions.
             </p>
           </div>
 

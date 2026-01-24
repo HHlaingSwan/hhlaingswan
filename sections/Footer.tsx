@@ -12,6 +12,7 @@ import {
   Code2,
   Database,
   Layout,
+  Phone,
 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
@@ -21,6 +22,7 @@ const Footer = () => {
   const contactInfo = {
     email: "htethlaingswan@gmail.com",
     location: "Yangon, Myanmar",
+    phone: "+95 995 464 1112",
   };
 
   const socialLinks = [
@@ -64,7 +66,9 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <Terminal className="size-5 text-primary" />
-                <h3 className="text-lg font-semibold">Let&apos;s Build Together</h3>
+                <h3 className="text-lg font-semibold">
+                  Let&apos;s Build Together
+                </h3>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Transforming ideas into elegant, scalable solutions through
@@ -89,19 +93,27 @@ const Footer = () => {
                 Available for Work
               </h3>
               <p className="text-sm text-muted-foreground">
-                Currently open to freelance projects and full-time opportunities.
+                Currently open to freelance projects and full-time
+                opportunities.
               </p>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <a
                   href={`mailto:${contactInfo.email}`}
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group"
                 >
-                  <Mail size={16} className="group-hover:scale-110 transition-transform" />
+                  <Mail
+                    size={16}
+                    className="group-hover:scale-110 transition-transform"
+                  />
                   <span className="font-mono">{contactInfo.email}</span>
                 </a>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <MapPin size={16} />
                   <span>{contactInfo.location}</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Phone size={16} />
+                  <span>{contactInfo.phone}</span>
                 </div>
               </div>
             </div>
@@ -130,12 +142,10 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
             <p className="font-mono">
-              &lt;/&gt; with <span className="text-red-500">♥</span> by Htat Hlaing
-              Swan
+              &lt;/&gt; with <span className="text-red-500">♥</span> by Htat
+              Hlaing Swan
             </p>
-            <p>
-              &copy; {currentYear} Htat Hlaing Swan. All rights reserved.
-            </p>
+            <p>&copy; {currentYear} Htat Hlaing Swan. All rights reserved.</p>
           </div>
         </motion.div>
       </div>

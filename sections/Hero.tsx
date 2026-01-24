@@ -10,17 +10,17 @@ import { Code2, Briefcase, Calendar } from "lucide-react";
 const stats = [
   {
     icon: <Calendar className="size-4 md:size-5 text-primary" />,
-    value: "3+",
+    value: "2+",
     label: "Years",
   },
   {
     icon: <Briefcase className="size-4 md:size-5 text-primary" />,
-    value: "15+",
+    value: "11+",
     label: "Projects",
   },
   {
     icon: <Code2 className="size-4 md:size-5 text-primary" />,
-    value: "10+",
+    value: "5+",
     label: "Tech",
   },
 ];
