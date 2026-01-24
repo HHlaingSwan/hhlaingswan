@@ -23,6 +23,9 @@ const ProjectOverview = dynamic(() => import("@/sections/ProjectOverview"), {
 const Education = dynamic(() => import("@/sections/Education"), {
   loading: () => <TimelineSkeleton />,
 });
+const Achievements = dynamic(() => import("@/sections/Achievements"), {
+  loading: () => <SectionSkeleton />,
+});
 const Contact = dynamic(() => import("@/sections/Contact"), {
   loading: () => <FormSkeleton />,
 });
@@ -34,6 +37,7 @@ const ClientWrapper = () => {
 
       <About />
       <Education />
+      <Achievements />
       <ProjectOverview />
       <Contact />
       <Footer />

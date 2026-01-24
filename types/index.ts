@@ -52,3 +52,16 @@ export interface ContactFormData {
   email: string;
   message: string;
 }
+
+export interface Certificate {
+  id: string;
+  title: string;
+  institution: string;
+  date: string;
+  category: "degree" | "diploma" | "honor" | "certification";
+  description: string;
+  image: string;
+  pdf?: string;
+  skills: string[];
+  credentialId?: string;
+}
