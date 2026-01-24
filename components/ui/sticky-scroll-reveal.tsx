@@ -36,7 +36,7 @@ export const StickyScroll = ({
         }
         return acc;
       },
-      0
+      0,
     );
     setActiveCard(closestBreakpointIndex);
   });
@@ -102,8 +102,8 @@ export const StickyScroll = ({
       </div>
       <div
         className={cn(
-          "sticky top-1/2 -translate-y-1/2 hidden h-96 w-[30rem] overflow-hidden rounded-md  lg:block",
-          contentClassName
+          "sticky top-1/2 -translate-y-1/2 hidden h-96 w-[35rem] overflow-hidden rounded-md  lg:block",
+          contentClassName,
         )}
       >
         {content[activeCard].content ?? null}

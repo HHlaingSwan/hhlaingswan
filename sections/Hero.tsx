@@ -8,9 +8,21 @@ import Image from "next/image";
 import { Code2, Briefcase, Calendar } from "lucide-react";
 
 const stats = [
-  { icon: <Calendar className="size-4 md:size-5 text-primary" />, value: "3+", label: "Years" },
-  { icon: <Briefcase className="size-4 md:size-5 text-primary" />, value: "15+", label: "Projects" },
-  { icon: <Code2 className="size-4 md:size-5 text-primary" />, value: "10+", label: "Tech" },
+  {
+    icon: <Calendar className="size-4 md:size-5 text-primary" />,
+    value: "3+",
+    label: "Years",
+  },
+  {
+    icon: <Briefcase className="size-4 md:size-5 text-primary" />,
+    value: "15+",
+    label: "Projects",
+  },
+  {
+    icon: <Code2 className="size-4 md:size-5 text-primary" />,
+    value: "10+",
+    label: "Tech",
+  },
 ];
 
 const Hero = () => {
@@ -24,7 +36,7 @@ const Hero = () => {
 
         <p className="text-sm md:text-lg text-muted-foreground">
           Hi, I&apos;m{" "}
-          <span className="font-bold text-indigo-600">Htet Hlaing Swan</span>.
+          <span className="font-bold text-indigo-500">Htet Hlaing Swan</span>.
         </p>
 
         <h1 className="text-2xl font-bold md:text-6xl mt-2">

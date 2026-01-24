@@ -2,13 +2,16 @@ import React from "react";
 import Image from "next/image";
 import shareLoc from "@/assets/images/shareLoc.png";
 import canPlayVd from "@/assets/images/canPlayVd.png";
-import arcane from "@/assets/images/arcaneImage.png";
+import arcane from "@/assets/images/arcane/arcaneImage.png";
 import gac from "@/assets/images/gac.png";
-import loginChat from "@/assets/images/loginChatApp.png";
-import demoChat from "@/assets/images/demoChatApp.png";
-import perTest from "@/assets/images/performanceTest.png";
-import welcomeBot from "@/assets/images/welcome.png";
-import functionallityBot from "@/assets/images/function.png";
+import loginChat from "@/assets/images/chatApp/loginChatApp.png";
+import demoChat from "@/assets/images/chatApp/demoChatApp.png";
+import perTest from "@/assets/images/chatApp/performanceTest.png";
+import welcomeBot from "@/assets/images/tgBot/welcome.png";
+import functionallityBot from "@/assets/images/tgBot/function.png";
+import homeView from "@/assets/images/masterProject/homeView.png";
+import adminView from "@/assets/images/masterProject/AdminView.png";
+import orderView from "@/assets/images/masterProject/orderView.png";
 import type { Project } from "@/types";
 
 export const content: Project[] = [
@@ -91,10 +94,10 @@ export const content: Project[] = [
     description: (
       <>
         Implemented JWT-based authentication with bcrypt password hashing and
-        cookie-based session management. Features include secure 7-day persistent
-        sessions, protected routes, guest route guards, and welcome email delivery
-        via Resend API. User credentials are never stored in plain text, ensuring
-        maximum security for all user accounts.
+        cookie-based session management. Features include secure 7-day
+        persistent sessions, protected routes, guest route guards, and welcome
+        email delivery via Resend API. User credentials are never stored in
+        plain text, ensuring maximum security for all user accounts.
       </>
     ),
     url: "https://unit-chat-five.vercel.app/",
@@ -149,10 +152,11 @@ export const content: Project[] = [
     title: "Myanmar Expense Tracker Telegram Bot",
     description: (
       <>
-        A Telegram bot for tracking daily expenses with Myanmar language support.
-        Features include breakfast/lunch/dinner tracking, monthly spending overview,
-        and automatic Myanmar holiday detection from Calendarific API. Supports both
-        Burmese and English inputs for seamless expense logging.{" "}
+        A Telegram bot for tracking daily expenses with Myanmar language
+        support. Features include breakfast/lunch/dinner tracking, monthly
+        spending overview, and automatic Myanmar holiday detection from
+        Calendarific API. Supports both Burmese and English inputs for seamless
+        expense logging.{" "}
         <a
           className="text-amber-400"
           href="https://t.me/gogoTimeBot"
@@ -177,11 +181,15 @@ export const content: Project[] = [
     title: "Bot Features & Daily Usage Guide",
     description: (
       <>
-        Use natural language commands like <code className="text-amber-400">breakfast 1000</code> or
-        <code className="text-amber-400"> ညနေစာ 5000</code> to log expenses instantly. View today&apos;s spending with
-        <code className="text-amber-400">/today</code>, get monthly summaries with <code className="text-amber-400">/thismonth</code>,
-        and check Myanmar holidays with <code className="text-amber-400">/holidays</code>. The bot automatically categorizes
-        expenses by keywords and syncs holidays for better financial planning.
+        Use natural language commands like{" "}
+        <code className="text-amber-400">breakfast 1000</code> or
+        <code className="text-amber-400"> ညနေစာ 5000</code> to log expenses
+        instantly. View today&apos;s spending with
+        <code className="text-amber-400">/today</code>, get monthly summaries
+        with <code className="text-amber-400">/thismonth</code>, and check
+        Myanmar holidays with <code className="text-amber-400">/holidays</code>.
+        The bot automatically categorizes expenses by keywords and syncs
+        holidays for better financial planning.
       </>
     ),
     url: "https://t.me/gogoTimeBot",
@@ -189,6 +197,69 @@ export const content: Project[] = [
       <div className="flex h-full w-full items-center justify-center text-white">
         <Image
           src={functionallityBot}
+          className="h-full w-full object-contain"
+          alt="  expense tracker bot demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Home View of Master Project E-Commerce Site",
+    description: (
+      <>
+        The main shopping interface showcasing our product catalog with
+        responsive grid layout, filtering options, and intuitive navigation.
+        Features dynamic product cards with images, pricing, ratings, and quick
+        add-to-cart functionality for seamless shopping experience.
+      </>
+    ),
+    url: "https://master-project-sable.vercel.app",
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        <Image
+          src={homeView}
+          className="h-full w-full object-contain"
+          alt="  expense tracker bot demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Admin View of Master Project E-Commerce Site",
+    description: (
+      <>
+        Comprehensive admin dashboard with full CRUD operations for products,
+        user management, order tracking, and analytics visualization. Features
+        real-time data insights, inventory management, and streamlined
+        administrative controls for efficient business operations.
+      </>
+    ),
+    url: "https://master-project-sable.vercel.app",
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        <Image
+          src={adminView}
+          className="h-full w-full object-contain"
+          alt="  expense tracker bot demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Order View of Master Project E-Commerce Site",
+    description: (
+      <>
+        User order management interface displaying comprehensive order history,
+        status tracking, and detailed order information. Features real-time
+        order status updates, filtering capabilities, and intuitive order
+        management for complete customer control over purchase lifecycle.
+      </>
+    ),
+    url: "https://master-project-sable.vercel.app/",
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        <Image
+          src={orderView}
           className="h-full w-full object-contain"
           alt="  expense tracker bot demo"
         />
