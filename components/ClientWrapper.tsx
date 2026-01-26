@@ -8,12 +8,9 @@ import {
   SectionSkeleton,
   FormSkeleton,
   TimelineSkeleton,
-  CardSkeleton,
 } from "./ui/skeleton";
 
-const LogoSlide = dynamic(() => import("@/sections/LogoSlide"), {
-  loading: () => <SectionSkeleton />,
-});
+
 const Footer = dynamic(() => import("@/sections/Footer"), {
   loading: () => <SectionSkeleton />,
 });

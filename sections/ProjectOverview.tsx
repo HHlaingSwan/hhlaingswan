@@ -1,16 +1,23 @@
 "use client";
 
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { AuroraText } from "@/components/ui/aurora-text";
-import { useIsMobile } from "@/hooks/use-mobile";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 import { content } from "@/lib/projects";
 import type { Project } from "@/types";
 import { ExternalLink, Github, Star } from "lucide-react";
 
 const ProjectOverview = () => {
-  const isMobile = useIsMobile();
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -33,147 +40,153 @@ const ProjectOverview = () => {
     },
   };
 
-  if (isMobile) {
-    return (
-      <section id="projects" className="py-20 px-4">
-        <div className="mb-12 text-center">
-          <h1 className="text-3xl font-bold mb-4">
-            <AuroraText>Project Highlights</AuroraText>
-          </h1>
-          <p className="max-w-2xl mx-auto text-sm md:text-base text-muted-foreground">
-            A showcase of my recent work and capabilities, demonstrating my
-            skills in creating modern web applications.
-          </p>
-        </div>
+  return (
+    <section id="projects" className="py-20 px-4">
+      <div className="mb-12 text-center">
+        <h1 className="text-3xl font-bold mb-4">
+          <AuroraText>Project Highlights</AuroraText>
+        </h1>
+        <p className="max-w-2xl mx-auto text-sm md:text-base text-muted-foreground">
+          A showcase of my recent work and capabilities, demonstrating my skills
+          in creating modern web applications.
+        </p>
+      </div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={containerVariants}
-          className="flex flex-col gap-6"
-        >
-          {content.map((item: Project, index: number) => (
-            <motion.div
-              key={item.title}
-              variants={cardVariants}
-              whileTap={{ scale: 0.98 }}
-              className="group relative"
-            >
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-purple-500 to-pink-500 rounded-2xl opacity-30 blur-xl group-hover:opacity-60 transition-opacity duration-500" />
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
+        className="space-y-12"
+      >
+        {content.map((item: Project, index: number) => (
+          <motion.div
+            key={item.title}
+            variants={cardVariants}
+            className={`group relative md:py-16 py-12 flex flex-col ${
+              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+            } gap-20 items-center max-w-6xl mx-auto`}
+          >
+            <div className="relative w-full md:w-1/2">
+              <div className="relative h-64 md:h-96 overflow-hidden rounded-2xl border border-border/20 shadow-xl">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10" />
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-full w-full"
+                >
+                  {item.content}
+                </motion.div>
+              </div>
+            </div>
 
-              <div className="relative bg-card rounded-2xl overflow-hidden border border-border/50">
-                <div className="relative h-48 overflow-hidden bg-gradient-to-br from-muted to-card">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                    className="h-full w-full"
-                  >
-                    {item.content}
-                  </motion.div>
-                  <div className="absolute top-3 right-3 z-20">
-                    <motion.button
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="bg-primary/90 backdrop-blur-sm p-2 rounded-full text-white shadow-lg"
-                    >
-                      <ExternalLink size={16} />
-                    </motion.button>
-                  </div>
-                </div>
+            <div className="relative w-full md:w-1/2 space-y-6 p-6">
+              <div className="flex items-start justify-between gap-4">
+                <h2 className="text-lg md:text-2xl font-bold line-clamp-2 flex-1">
+                  {item.title}
+                </h2>
+              </div>
 
-                <div className="p-5">
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <h2 className="text-xl font-bold line-clamp-2 flex-1">
-                      {item.title}
-                    </h2>
-                    <div className="flex items-center gap-1 text-yellow-500 shrink-0">
-                      <Star size={16} fill="currentColor" />
-                    </div>
-                  </div>
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                {item.description}
+              </p>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {index % 2 === 0 ? (
-                      <>
-                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
-                          React
-                        </span>
-                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
-                          Tailwind
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
-                          MERN
-                        </span>
-                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
-                          Node.js
-                        </span>
-                      </>
-                    )}
-                  </div>
-
-                  <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">
-                    {typeof item.description === "string"
-                      ? item.description
-                      : "Click to view details"}
-                  </p>
-
+              <div className="flex gap-3">
+                {item.details && (
                   <motion.button
                     whileHover={{ x: 5 }}
                     whileTap={{ x: 0 }}
-                    className="mt-4 flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+                    onClick={() => setSelectedProject(item)}
+                    className="inline-flex items-center gap-3 px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary font-semibold rounded-full border border-primary/20 transition-all"
                   >
-                    View Project
-                    <ExternalLink size={14} />
+                    View Details
+                    <ExternalLink size={16} />
                   </motion.button>
-                </div>
+                )}
+                <motion.a
+                  whileHover={{ x: 5 }}
+                  whileTap={{ x: 0 }}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-6 py-3 bg-secondary hover:bg-secondary/80 text-secondary-foreground font-semibold rounded-full border border-secondary/20 transition-all"
+                >
+                  Live Demo
+                  <ExternalLink size={16} />
+                </motion.a>
               </div>
-            </motion.div>
-          ))}
-        </motion.div>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.8 }}
-          className="mt-12 text-center"
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.8 }}
+        className="mt-12 text-center"
+      >
+        <p className="text-sm text-muted-foreground mb-2">Want to see more?</p>
+        <a
+          href="https://github.com/HHlaingSwan"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-secondary hover:bg-secondary/80 rounded-lg font-medium transition-colors"
         >
-          <p className="text-sm text-muted-foreground mb-2">
-            Want to see more?
-          </p>
-          <a
-            href="https://github.com/HHlaingSwan"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-secondary hover:bg-secondary/80 rounded-lg font-medium transition-colors"
-          >
-            <Github size={18} />
-            View All on GitHub
-          </a>
-        </motion.div>
-      </section>
-    );
-  }
+          <Github size={18} />
+          View All on GitHub
+        </a>
+      </motion.div>
 
-  return (
-    <div id="projects" className="p-4 md:p-10">
-      <AuroraText>
-        <div className="text-center">
-          <h1 className="text-3xl font-bold md:text-5xl">Project Highlights</h1>
-          <p className="mx-auto mt-4 max-w-3xl text-sm md:text-lg">
-            A showcase of my recent work and capabilities, demonstrating my
-            skills in creating modern web applications.
-          </p>
-        </div>
-      </AuroraText>
-      <div className="mt-8">
-        <StickyScroll content={content} />
-      </div>
-    </div>
+      {/* Project Detail Dialog */}
+      <Dialog
+        open={!!selectedProject}
+        onOpenChange={(open) => !open && setSelectedProject(null)}
+      >
+        <DialogContent className=" min-w-[70vw] max-h-[90vh] p-0 overflow-hidden flex flex-col">
+          {/* Header with gradient background */}
+          <div className="relative p-8  border-b border-border/20   flex-shrink-0">
+            <div className="absolute top-6 right-6">
+              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+            </div>
+
+            <DialogHeader className="pr-16">
+              <DialogTitle className="text-3xl md:text-4xl font-bold  text-white  leading-tight text-left">
+                {selectedProject?.title}
+              </DialogTitle>
+            </DialogHeader>
+          </div>
+
+          {/* Scrollable content area */}
+          <div className="flex-1 overflow-y-auto px-8 py-6 min-h-0">
+            <div className="space-y-8 pb-4">{selectedProject?.details}</div>
+          </div>
+
+          {/* Footer */}
+          <div className="p-6 border-t border-border/20 bg-gradient-to-t from-background/90 to-background flex-shrink-0">
+            <div className="flex items-center justify-between w-full">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                <span>Live Project</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <a
+                  href={selectedProject?.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-primary-foreground font-semibold rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
+                >
+                  Visit Live Site
+                  <ExternalLink size={18} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </section>
   );
 };
 

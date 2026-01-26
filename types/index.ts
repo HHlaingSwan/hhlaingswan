@@ -3,6 +3,7 @@ export interface Project {
   description: React.ReactNode;
   url: string;
   content: React.ReactNode;
+  details?: React.ReactNode;
   status?: "in-progress" | "completed";
 }
 
