@@ -2,7 +2,15 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Send, User, MessageSquare, Loader2 } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Send,
+  User,
+  MessageSquare,
+  Loader2,
+  PhoneCall,
+} from "lucide-react";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { env } from "@/lib/env";
 
@@ -46,14 +54,14 @@ const Contact = () => {
       const subject = `Portfolio Contact: ${formData.name}`;
       const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0D%0AMessage:%0D%0A${formData.message}`;
       window.open(
-        `mailto:htethlaingswan@gmail.com?subject=${subject}&body=${body}`
+        `mailto:htethlaingswan@gmail.com?subject=${subject}&body=${body}`,
       );
     } catch (error) {
       // Fallback: mailto link
       const subject = `Portfolio Contact: ${formData.name}`;
       const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0D%0AMessage:%0D%0A${formData.message}`;
       window.open(
-        `mailto:htethlaingswan@gmail.com?subject=${subject}&body=${body}`
+        `mailto:htethlaingswan@gmail.com?subject=${subject}&body=${body}`,
       );
     }
 
@@ -72,12 +80,12 @@ const Contact = () => {
         >
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Get In <span className="text-primary">Touch</span>
+              <AuroraText>Get In Touch</AuroraText>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Have a project in mind or want to collaborate? I&apos;d love to hear
-              from you. Send me a message and I&apos;ll get to you as soon as
-              possible.
+              Have a project in mind or want to collaborate? I&apos;d love to
+              hear from you. Send me a message and I&apos;ll get to you as soon
+              as possible.
             </p>
           </div>
 
@@ -85,9 +93,9 @@ const Contact = () => {
             <div className="space-y-8">
               <h3 className="text-2xl font-bold">Let&apos;s Connect</h3>
               <p className="text-muted-foreground leading-relaxed">
-                 I&apos;m currently available for freelance projects and full-time
-                opportunities. Whether you have a question or just want to say
-                hi, feel free to reach out!
+                I&apos;m currently available for freelance projects and
+                full-time opportunities. Whether you have a question or just
+                want to say hi, feel free to reach out!
               </p>
 
               <div className="space-y-6">
@@ -98,7 +106,10 @@ const Contact = () => {
                   transition={{ delay: 0.2, duration: 0.6 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0" aria-hidden="true">
+                  <div
+                    className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0"
+                    aria-hidden="true"
+                  >
                     <Mail className="size-5 text-primary" />
                   </div>
                   <div>
@@ -120,13 +131,43 @@ const Contact = () => {
                   transition={{ delay: 0.3, duration: 0.6 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0" aria-hidden="true">
+                  <div
+                    className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0"
+                    aria-hidden="true"
+                  >
                     <MapPin className="size-5 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Location</h4>
-                    <p className="text-muted-foreground" aria-label="Current location">
+                    <p
+                      className="text-muted-foreground"
+                      aria-label="Current location"
+                    >
                       Yangon, Myanmar
+                    </p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                  className="flex items-start gap-4"
+                >
+                  <div
+                    className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0"
+                    aria-hidden="true"
+                  >
+                    <PhoneCall className="size-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Phone No</h4>
+                    <p
+                      className="text-muted-foreground"
+                      aria-label="Phone number"
+                    >
+                      +95 995 464 1112
                     </p>
                   </div>
                 </motion.div>
@@ -161,7 +202,11 @@ const Contact = () => {
                   </button>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                  aria-label="Contact form"
+                >
                   <div>
                     <label
                       htmlFor="name"
@@ -171,7 +216,10 @@ const Contact = () => {
                     </label>
                     <div className="relative">
                       <span className="sr-only">Name icon</span>
-                      <User className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-muted-foreground" aria-hidden="true" />
+                      <User
+                        className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-muted-foreground"
+                        aria-hidden="true"
+                      />
                       <input
                         type="text"
                         id="name"
@@ -198,7 +246,10 @@ const Contact = () => {
                     </label>
                     <div className="relative">
                       <span className="sr-only">Email icon</span>
-                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-muted-foreground" aria-hidden="true" />
+                      <Mail
+                        className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-muted-foreground"
+                        aria-hidden="true"
+                      />
                       <input
                         type="email"
                         id="email"
@@ -225,7 +276,10 @@ const Contact = () => {
                     </label>
                     <div className="relative">
                       <span className="sr-only">Message icon</span>
-                      <MessageSquare className="absolute left-3 top-3 size-5 text-muted-foreground" aria-hidden="true" />
+                      <MessageSquare
+                        className="absolute left-3 top-3 size-5 text-muted-foreground"
+                        aria-hidden="true"
+                      />
                       <textarea
                         id="message"
                         name="message"
@@ -252,7 +306,10 @@ const Contact = () => {
                   >
                     {isSubmitting ? (
                       <>
-                        <Loader2 className="size-5 animate-spin" aria-hidden="true" />
+                        <Loader2
+                          className="size-5 animate-spin"
+                          aria-hidden="true"
+                        />
                         <span>Sending...</span>
                       </>
                     ) : (

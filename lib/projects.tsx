@@ -1,11 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import shareLoc from "@/assets/images/shareLoc.png";
-import arcane from "@/assets/images/arcane/arcaneImage.png";
-import gac from "@/assets/images/gac.png";
-import demoChat from "@/assets/images/chatApp/demoChatApp.png";
-import functionallityBot from "@/assets/images/tgBot/function.png";
-import homeView from "@/assets/images/masterProject/homeView.png";
 import type { Project } from "@/types";
 
 export const content: Project[] = [
@@ -21,12 +15,59 @@ export const content: Project[] = [
     ),
     url: "https://www.gacportal.com",
     content: (
-      <div className="flex h-full w-full items-center justify-center text-white">
+      <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image
-          src={gac}
-          className="h-full w-full object-contain"
+          src="/images/gac.png"
+          fill
+          className="object-contain"
           alt="global university website demo"
         />
+      </div>
+    ),
+    details: (
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Overview</h3>
+          <p className="text-sm text-muted-foreground">
+            A professional static website for Global University featuring clean
+            design, easy navigation, and comprehensive information about
+            university programs and services. Built as a freelance project to
+            showcase web development capabilities.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Key Features</h3>
+          <ul className="text-sm text-muted-foreground space-y-2">
+            <li>• Clean, professional design</li>
+            <li>• Easy navigation structure</li>
+            <li>• Responsive layout for all devices</li>
+            <li>• Comprehensive program information</li>
+            <li>• Service descriptions and contact details</li>
+            <li>• Fast loading static pages</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Tech Stack</h3>
+          <ul className="text-sm text-muted-foreground space-y-1">
+            <li>• HTML5 semantic markup</li>
+            <li>• CSS3 with modern layout techniques</li>
+            <li>• JavaScript for interactivity</li>
+            <li>• Responsive design principles</li>
+            <li>• Performance optimization</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Project Highlights</h3>
+          <ul className="text-sm text-muted-foreground space-y-2">
+            <li>• First production freelance project</li>
+            <li>• Client satisfaction and professional delivery</li>
+            <li>• Attention to accessibility standards</li>
+            <li>• Cross-browser compatibility testing</li>
+          </ul>
+        </div>
       </div>
     ),
   },
@@ -36,12 +77,62 @@ export const content: Project[] = [
       "Introduced comprehensive sharing functionalities, allowing users to share posts, broadcast their location, and tag friends. This fosters deeper connections and community interaction, making content sharing more dynamic and personalized.",
     url: "#projects",
     content: (
-      <div className="flex h-full w-full items-center justify-center text-white">
+      <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image
-          src={shareLoc}
-          className="h-full w-full object-contain"
+          src="/images/shareLoc.png"
+          fill
+          className="object-contain"
           alt="share location demo"
         />
+      </div>
+    ),
+    details: (
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Overview</h3>
+          <p className="text-sm text-muted-foreground">
+            An advanced social sharing system that enhances user interaction
+            through comprehensive sharing features including post sharing,
+            location broadcasting, and friend tagging. Designed to foster deeper
+            community connections and make content sharing more dynamic.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Core Features</h3>
+          <ul className="text-sm text-muted-foreground space-y-2">
+            <li>• Post sharing with customizable privacy settings</li>
+            <li>• Real-time location broadcasting</li>
+            <li>• Friend tagging in posts and comments</li>
+            <li>• Rich media sharing support</li>
+            <li>• Activity feed and notifications</li>
+            <li>• Social interaction analytics</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">
+            Technical Implementation
+          </h3>
+          <ul className="text-sm text-muted-foreground space-y-1">
+            <li>• React component architecture</li>
+            <li>• State management for sharing features</li>
+            <li>• Geolocation API integration</li>
+            <li>• Real-time updates and notifications</li>
+            <li>• User permission management</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">User Experience</h3>
+          <ul className="text-sm text-muted-foreground space-y-2">
+            <li>• Intuitive sharing interface</li>
+            <li>• One-click location sharing</li>
+            <li>• Smart friend suggestions for tagging</li>
+            <li>• Privacy controls for shared content</li>
+            <li>• Seamless social media integration</li>
+          </ul>
+        </div>
       </div>
     ),
   },
@@ -58,12 +149,70 @@ export const content: Project[] = [
     ),
     url: "https://arcane-game.vercel.app",
     content: (
-      <div className="flex h-full w-full items-center justify-center text-white">
+      <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image
-          src={arcane}
-          className="h-full w-full object-contain"
+          src="/images/arcaneImage.png"
+          fill
+          className="object-contain"
           alt="  arcane demo"
         />
+      </div>
+    ),
+    details: (
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Overview</h3>
+          <p className="text-sm text-muted-foreground">
+            A visually stunning static fan page dedicated to the Arcane series,
+            featuring immersive design elements that showcase key characters,
+            episodes, and lore. The site celebrates the show&apos;s unique art style
+            and compelling storytelling.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Design Features</h3>
+          <ul className="text-sm text-muted-foreground space-y-2">
+            <li>• Arcane-inspired color palette and typography</li>
+            <li>• Immersive visual effects and animations</li>
+            <li>• Character gallery with detailed profiles</li>
+            <li>• Episode guide with synopsis</li>
+            <li>• Interactive lore sections</li>
+            <li>• Responsive gallery layouts</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Content Sections</h3>
+          <ul className="text-sm text-muted-foreground space-y-2">
+            <li>• Main character showcase</li>
+            <li>• Episode breakdown and timeline</li>
+            <li>• Story background and mythology</li>
+            <li>• Visual art and design gallery</li>
+            <li>• Fan community integration</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Technical Stack</h3>
+          <ul className="text-sm text-muted-foreground space-y-1">
+            <li>• HTML5 semantic structure</li>
+            <li>• CSS3 with advanced animations</li>
+            <li>• JavaScript for interactive elements</li>
+            <li>• Responsive design techniques</li>
+            <li>• Performance optimization</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Design Philosophy</h3>
+          <ul className="text-sm text-muted-foreground space-y-2">
+            <li>• Capture Arcane&apos;s unique visual identity</li>
+            <li>• Create immersive fan experience</li>
+            <li>• Balance aesthetics with usability</li>
+            <li>• Mobile-first responsive approach</li>
+          </ul>
+        </div>
       </div>
     ),
   },
@@ -80,205 +229,110 @@ export const content: Project[] = [
     ),
     url: "https://unit-chat-five.vercel.app/",
     content: (
-      <div className="flex h-full w-full items-center justify-center text-white">
+      <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image
-          src={demoChat}
-          className="h-full w-full object-contain"
+          src="/images/demoChatApp.png"
+          fill
+          className="object-contain"
           alt="  chat application demo"
         />
       </div>
     ),
     details: (
-      <div className="space-y-8">
-        {/* Tech Stack Section */}
-        <div className="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl p-6 border border-primary/10">
-          <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-            Tech Stack
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-background/50 rounded-xl p-4 border border-border/30">
-              <h4 className="font-semibold text-primary mb-4 flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                Backend
-              </h4>
-              <ul className="text-sm text-muted-foreground space-y-2">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▸</span>
-                  <span>Node.js 18+ with Express.js 5.x</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▸</span>
-                  <span>MongoDB with Mongoose ODM</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▸</span>
-                  <span>Socket.IO 4.x for real-time messaging</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▸</span>
-                  <span>JWT authentication with cookie support</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▸</span>
-                  <span>Cloudinary for image storage</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▸</span>
-                  <span>Arcjet for security & rate limiting</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-background/50 rounded-xl p-4 border border-border/30">
-              <h4 className="font-semibold text-primary mb-4 flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                Frontend
-              </h4>
-              <ul className="text-sm text-muted-foreground space-y-2">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▸</span>
-                  <span>React 19 with TypeScript</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▸</span>
-                  <span>Vite 7.x build tool</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▸</span>
-                  <span>Zustand 5.x for state management</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▸</span>
-                  <span>Tailwind CSS 4.x for styling</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▸</span>
-                  <span>Radix UI components</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">▸</span>
-                  <span>Framer Motion for animations</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Overview</h3>
+          <p className="text-sm text-muted-foreground">
+            A production-ready real-time chat application built with the MERN
+            stack (MongoDB, Express, React, Node.js). It features secure JWT
+            authentication, instant messaging with Socket.IO, image sharing via
+            Cloudinary, and a polished, responsive UI with Framer Motion
+            animations.
+          </p>
         </div>
-        
-        {/* Key Features Section */}
-        <div className="bg-gradient-to-br from-green-500/5 to-transparent rounded-2xl p-6 border border-green-500/10">
-          <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-green-600 to-green-500/70 bg-clip-text text-transparent">
-            Key Features
-          </h3>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Key Features</h3>
+          <ul className="text-sm text-muted-foreground space-y-2">
+            <li>• Real-time Messaging via WebSocket</li>
+            <li>• Image Sharing with Cloudinary</li>
+            <li>• Secure JWT Authentication & 7-day sessions</li>
+            <li>• Online Presence & Last Seen Timestamps</li>
+            <li>• Contact Management (Add/Block Users)</li>
+            <li>• Responsive Design for Mobile Devices</li>
+            <li>• Smooth Animations with Framer Motion</li>
+            <li>• Skeleton Loading States for better UX</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Tech Stack</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-3">
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-background/50 border border-border/30">
-                <div className="w-5 h-5 rounded bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-green-600 text-xs">✓</span>
-                </div>
-                <span className="text-sm">Real-time messaging via WebSocket</span>
-              </div>
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-background/50 border border-border/30">
-                <div className="w-5 h-5 rounded bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-green-600 text-xs">✓</span>
-                </div>
-                <span className="text-sm">Image sharing with Cloudinary integration</span>
-              </div>
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-background/50 border border-border/30">
-                <div className="w-5 h-5 rounded bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-green-600 text-xs">✓</span>
-                </div>
-                <span className="text-sm">Secure JWT authentication with 7-day sessions</span>
-              </div>
+            <div>
+              <h4 className="font-medium text-primary mb-2">Backend</h4>
+              <ul className="text-sm text-muted-foreground space-y-1">
+                <li>• Node.js & Express.js</li>
+                <li>• MongoDB & Mongoose</li>
+                <li>• Socket.IO for real-time communication</li>
+                <li>• JWT for authentication</li>
+                <li>• Cloudinary for file storage</li>
+                <li>• Arcjet for security</li>
+              </ul>
             </div>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-background/50 border border-border/30">
-                <div className="w-5 h-5 rounded bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-green-600 text-xs">✓</span>
-                </div>
-                <span className="text-sm">Online presence and last seen timestamps</span>
-              </div>
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-background/50 border border-border/30">
-                <div className="w-5 h-5 rounded bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-green-600 text-xs">✓</span>
-                </div>
-                <span className="text-sm">Contact management with add/block functionality</span>
-              </div>
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-background/50 border border-border/30">
-                <div className="w-5 h-5 rounded bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-green-600 text-xs">✓</span>
-                </div>
-                <span className="text-sm">Responsive design with skeleton loading states</span>
-              </div>
+            <div>
+              <h4 className="font-medium text-primary mb-2">Frontend</h4>
+              <ul className="text-sm text-muted-foreground space-y-1">
+                <li>• React 19 & TypeScript</li>
+                <li>• Vite build tool</li>
+                <li>• Tailwind CSS for styling</li>
+                <li>• Zustand for state management</li>
+                <li>• React Router for routing</li>
+                <li>• Radix UI for components</li>
+                <li>• Framer Motion for animations</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        {/* API Endpoints Section */}
-        <div className="bg-gradient-to-br from-purple-500/5 to-transparent rounded-2xl p-6 border border-purple-500/10">
-          <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-purple-500/70 bg-clip-text text-transparent">
-            API Endpoints
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="font-semibold text-purple-600 mb-4 flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                Authentication
-              </h4>
-              <div className="space-y-3">
-                <div className="bg-background/50 rounded-lg p-3 border border-border/30">
-                  <code className="text-xs font-mono bg-purple-500/10 text-purple-700 px-3 py-2 rounded-md block">
-                    POST /api/auth/signup
-                  </code>
-                  <span className="text-xs text-muted-foreground mt-1 block">Register new user</span>
-                </div>
-                <div className="bg-background/50 rounded-lg p-3 border border-border/30">
-                  <code className="text-xs font-mono bg-purple-500/10 text-purple-700 px-3 py-2 rounded-md block">
-                    POST /api/auth/login
-                  </code>
-                  <span className="text-xs text-muted-foreground mt-1 block">User login</span>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold text-purple-600 mb-4 flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                Messages
-              </h4>
-              <div className="space-y-3">
-                <div className="bg-background/50 rounded-lg p-3 border border-border/30">
-                  <code className="text-xs font-mono bg-purple-500/10 text-purple-700 px-3 py-2 rounded-md block">
-                    GET /api/message/contacts
-                  </code>
-                  <span className="text-xs text-muted-foreground mt-1 block">Get chat partners</span>
-                </div>
-                <div className="bg-background/50 rounded-lg p-3 border border-border/30">
-                  <code className="text-xs font-mono bg-purple-500/10 text-purple-700 px-3 py-2 rounded-md block">
-                    POST /api/message/:id
-                  </code>
-                  <span className="text-xs text-muted-foreground mt-1 block">Send message/image</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Project Structure Section */}
-        <div className="bg-gradient-to-br from-blue-500/5 to-transparent rounded-2xl p-6 border border-blue-500/10">
-          <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-500/70 bg-clip-text text-transparent">
-            Project Structure
-          </h3>
-          <pre className="text-sm font-mono bg-background/70 border border-border/30 rounded-xl p-5 overflow-x-auto leading-relaxed">
-{`Unit-Chat/
-├── backend/src/
-│   ├── controllers/    # Request handlers
-│   ├── models/         # Mongoose schemas  
-│   ├── routes/         # API routes
-│   ├── socket/         # Socket.IO setup
-│   └── server.js       # Entry point
-└── frontend/src/
-    ├── components/     # React components
-    ├── store/          # Zustand state
-    └── types/          # TypeScript types`}
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Project Structure</h3>
+          <pre className="text-xs bg-muted p-3 rounded overflow-x-auto">
+            {`Unit-Chat/
+├── backend/                 # Express.js server
+│   └── src/
+│       ├── controllers/     # Request handlers
+│       ├── db/              # Database configurations
+│       ├── emails/          # Email templates
+│       ├── middleware/      # Auth, file upload, security
+│       ├── models/          # Mongoose schemas
+│       ├── routes/          # API routes
+│       ├── socket/          # Socket.IO setup
+│       └── server.js        # Entry point
+├── frontend/                # React + TypeScript app
+│   └── src/
+│       ├── components/      # React components
+│       │   ├── auth/        # Login/Signup
+│       │   ├── Chat/        # Chat UI
+│       │   └── ui/          # Reusable UI
+│       ├── lib/             # Utilities
+│       ├── store/           # Zustand state
+│       └── types/           # TypeScript types
+└── render.yaml              # Deployment config`}
           </pre>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">API Endpoints</h3>
+          <div className="space-y-2 text-xs">
+            <div>
+              <span className="font-medium">Auth:</span> POST /api/auth/signup |
+              POST /api/auth/login
+            </div>
+            <div>
+              <span className="font-medium">Messages:</span> GET
+              /api/message/contacts | POST /api/message/:id
+            </div>
+          </div>
         </div>
       </div>
     ),
@@ -294,17 +348,18 @@ export const content: Project[] = [
         instantly. View today&apos;s spending with
         <code className="text-amber-400">/today</code>, get monthly summaries
         with <code className="text-amber-400">/thismonth</code>, and check
-        Myanmar holidays with <code className="text-amber-400">/holidays</code>.
+        Myanmar&apos;s holidays with <code className="text-amber-400">/holidays</code>.
         The bot automatically categorizes expenses by keywords and syncs
         holidays for better financial planning.
       </>
     ),
     url: "https://t.me/gogoTimeBot",
     content: (
-      <div className="flex h-full w-full items-center justify-center text-white">
+      <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image
-          src={functionallityBot}
-          className="h-full w-full object-contain"
+          src="/images/function.png"
+          fill
+          className="object-contain"
           alt="  expense tracker bot demo"
         />
       </div>
@@ -314,8 +369,9 @@ export const content: Project[] = [
         <div>
           <h3 className="text-xl font-semibold mb-3">Overview</h3>
           <p className="text-sm text-muted-foreground">
-            A simple Telegram bot for tracking daily expenses with Myanmar holiday integration. 
-            Supports both Burmese and English natural language commands for expense logging.
+            A simple Telegram bot for tracking daily expenses with Myanmar
+            holiday integration. Supports both Burmese and English natural
+            language commands for expense logging.
           </p>
         </div>
 
@@ -336,18 +392,41 @@ export const content: Project[] = [
             <div className="space-y-2">
               <h4 className="font-medium text-primary">Expense Logging</h4>
               <ul className="text-xs space-y-1">
-                <li><code className="bg-muted px-2 py-1 rounded">breakfast 1000</code> - Add expense</li>
-                <li><code className="bg-muted px-2 py-1 rounded">lunch 3000</code> - Add expense</li>
-                <li><code className="bg-muted px-2 py-1 rounded">ညနေစာ 5000</code> - Add expense (Burmese)</li>
+                <li>
+                  <code className="bg-muted px-2 py-1 rounded">
+                    breakfast 1000
+                  </code>{" "}
+                  - Add expense
+                </li>
+                <li>
+                  <code className="bg-muted px-2 py-1 rounded">lunch 3000</code>{" "}
+                  - Add expense
+                </li>
+                <li>
+                  <code className="bg-muted px-2 py-1 rounded">ညနေစာ 5000</code>{" "}
+                  - Add expense (Burmese)
+                </li>
               </ul>
             </div>
             <div className="space-y-2">
               <h4 className="font-medium text-primary">View Data</h4>
               <ul className="text-xs space-y-1">
-                <li><code className="bg-muted px-2 py-1 rounded">/today</code> - Today&apos;s expenses</li>
-                <li><code className="bg-muted px-2 py-1 rounded">/thismonth</code> - Monthly overview</li>
-                <li><code className="bg-muted px-2 py-1 rounded">/holidays</code> - Myanmar holidays</li>
-                <li><code className="bg-muted px-2 py-1 rounded">/settings</code> - Bot settings</li>
+                <li>
+                  <code className="bg-muted px-2 py-1 rounded">/today</code> -
+                  Today&apos;s expenses
+                </li>
+                <li>
+                  <code className="bg-muted px-2 py-1 rounded">/thismonth</code>{" "}
+                  - Monthly overview
+                </li>
+                <li>
+                  <code className="bg-muted px-2 py-1 rounded">/holidays</code>{" "}
+                  - Myanmar holidays
+                </li>
+                <li>
+                  <code className="bg-muted px-2 py-1 rounded">/settings</code>{" "}
+                  - Bot settings
+                </li>
               </ul>
             </div>
           </div>
@@ -356,12 +435,30 @@ export const content: Project[] = [
         <div>
           <h3 className="text-xl font-semibold mb-3">Auto Categories</h3>
           <div className="grid grid-cols-2 gap-2 text-xs">
-            <div><span className="font-medium">Keyword:</span> breakfast, မနက်စာ → <span className="text-primary">Breakfast</span></div>
-            <div><span className="font-medium">Keyword:</span> lunch, နေ့လည်စာ → <span className="text-primary">Lunch</span></div>
-            <div><span className="font-medium">Keyword:</span> dinner, ညနေစာ → <span className="text-primary">Dinner</span></div>
-            <div><span className="font-medium">Keyword:</span> coffee, ကော်ဖီ → <span className="text-primary">Coffee</span></div>
-            <div><span className="font-medium">Keyword:</span> transport, ကားခ → <span className="text-primary">Transport</span></div>
-            <div><span className="font-medium">Keyword:</span> grocery, ဈေး → <span className="text-primary">Grocery</span></div>
+            <div>
+              <span className="font-medium">Keyword:</span> breakfast, မနက်စာ →{" "}
+              <span className="text-primary">Breakfast</span>
+            </div>
+            <div>
+              <span className="font-medium">Keyword:</span> lunch, နေ့လည်စာ →{" "}
+              <span className="text-primary">Lunch</span>
+            </div>
+            <div>
+              <span className="font-medium">Keyword:</span> dinner, ညနေစာ →{" "}
+              <span className="text-primary">Dinner</span>
+            </div>
+            <div>
+              <span className="font-medium">Keyword:</span> coffee, ကော်ဖီ →{" "}
+              <span className="text-primary">Coffee</span>
+            </div>
+            <div>
+              <span className="font-medium">Keyword:</span> transport, ကားခ →{" "}
+              <span className="text-primary">Transport</span>
+            </div>
+            <div>
+              <span className="font-medium">Keyword:</span> grocery, ဈေး →{" "}
+              <span className="text-primary">Grocery</span>
+            </div>
           </div>
         </div>
 
@@ -378,7 +475,7 @@ export const content: Project[] = [
         <div>
           <h3 className="text-xl font-semibold mb-3">Project Structure</h3>
           <pre className="text-xs bg-muted p-3 rounded overflow-x-auto">
-{`telegram-bot/
+            {`telegram-bot/
 ├── bot/
 │   ├── bot.js           # Telegram bot setup
 │   ├── command.js       # All commands
@@ -400,18 +497,19 @@ export const content: Project[] = [
     title: "Master Project E-Commerce Platform",
     description: (
       <>
-        A full-stack e-commerce application with comprehensive product management,
-        secure authentication, shopping cart, order tracking, and admin dashboard.
-        Features role-based access control, real-time inventory management, and 
-        responsive design with modern UI/UX.
+        A full-stack e-commerce application with comprehensive product
+        management, secure authentication, shopping cart, order tracking, and
+        admin dashboard. Features role-based access control, real-time inventory
+        management, and responsive design with modern UI/UX.
       </>
     ),
     url: "https://master-project-sable.vercel.app",
     content: (
-      <div className="flex h-full w-full items-center justify-center text-white">
+      <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image
-          src={homeView}
-          className="h-full w-full object-contain"
+          src="/images/homeView.png"
+          fill
+          className="object-contain"
           alt="e-commerce platform demo"
         />
       </div>
@@ -459,7 +557,9 @@ export const content: Project[] = [
               </ul>
             </div>
             <div>
-              <h4 className="font-medium text-primary mb-2">Role-Based Access</h4>
+              <h4 className="font-medium text-primary mb-2">
+                Role-Based Access
+              </h4>
               <ul className="text-sm text-muted-foreground space-y-1">
                 <li>• Regular users: Browse & shop</li>
                 <li>• Admin users: Full dashboard access</li>
@@ -473,7 +573,10 @@ export const content: Project[] = [
         <div>
           <h3 className="text-xl font-semibold mb-3">Product Management</h3>
           <ul className="text-sm text-muted-foreground space-y-2">
-            <li>• Product catalog with categories (Watch, Mac, Phone, Earphone, iPad, Accessories)</li>
+            <li>
+              • Product catalog with categories (Watch, Mac, Phone, Earphone,
+              iPad, Accessories)
+            </li>
             <li>• Product variants (colors with hex codes, sizes)</li>
             <li>• Product badges (Sale, New, Popular)</li>
             <li>• Stock management and validation</li>
@@ -488,7 +591,10 @@ export const content: Project[] = [
             <li>• Shopping cart with variant selection</li>
             <li>• Automatic stock validation</li>
             <li>• Order creation with shipping address</li>
-            <li>• Order status tracking (pending, processing, shipped, delivered, cancelled)</li>
+            <li>
+              • Order status tracking (pending, processing, shipped, delivered,
+              cancelled)
+            </li>
             <li>• Order history and filtering</li>
           </ul>
         </div>
@@ -506,10 +612,22 @@ export const content: Project[] = [
         <div>
           <h3 className="text-xl font-semibold mb-3">API Endpoints</h3>
           <div className="space-y-2 text-xs">
-            <div><span className="font-medium">Auth:</span> POST /api/register | POST /api/log-in | POST /api/forgot-password</div>
-            <div><span className="font-medium">Products:</span> GET /api/products | POST /api/products | PUT /api/products/:id</div>
-            <div><span className="font-medium">Orders:</span> POST /api/orders | GET /api/orders | PUT /api/orders/:id/status</div>
-            <div><span className="font-medium">Users:</span> GET /api/users | PUT /api/users/:id/role</div>
+            <div>
+              <span className="font-medium">Auth:</span> POST /api/register |
+              POST /api/log-in | POST /api/forgot-password
+            </div>
+            <div>
+              <span className="font-medium">Products:</span> GET /api/products |
+              POST /api/products | PUT /api/products/:id
+            </div>
+            <div>
+              <span className="font-medium">Orders:</span> POST /api/orders |
+              GET /api/orders | PUT /api/orders/:id/status
+            </div>
+            <div>
+              <span className="font-medium">Users:</span> GET /api/users | PUT
+              /api/users/:id/role
+            </div>
           </div>
         </div>
       </div>

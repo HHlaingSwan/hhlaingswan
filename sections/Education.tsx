@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Calendar, Code, GraduationCap, University } from "lucide-react";
 import { ShineBorder } from "@/components/ui/shine-border";
 import { TextAnimate } from "@/components/ui/text-animate";
+import { AuroraText } from "@/components/ui/aurora-text";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,7 +76,7 @@ const Education = () => {
           y: 50,
           stagger: 0.2,
         },
-        "<0.2"
+        "<0.2",
       ); // Start 0.2s after the timeline animation starts
 
       // Animate the timeline dots with a stagger
@@ -85,7 +86,7 @@ const Education = () => {
           scale: 0,
           stagger: 0.2,
         },
-        "<" // Start at the same time as the card animation
+        "<", // Start at the same time as the card animation
       ); // Start 0.2s after the timeline animation starts
     }, container);
 
@@ -96,13 +97,9 @@ const Education = () => {
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 md:mb-20 text-foreground">
-          <TextAnimate
-            className="text-3xl md:text-4xl font-display font-bold mb-3"
-            animation="slideLeft"
-            by="character"
-          >
-            About My Education
-          </TextAnimate>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">
+            <AuroraText>About My Education</AuroraText>
+          </h2>
 
           <p className="text-muted-foreground font-lora max-w-2xl text-sm md:text-base mx-auto px-4 md:px-0">
             Explore my academic background and the skills I&apos;ve gained

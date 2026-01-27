@@ -3,18 +3,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Code, Database, Globe, Terminal, Cpu, Layers } from "lucide-react";
+import { AuroraText } from "@/components/ui/aurora-text";
 
 const About = () => {
   const timeline = [
     {
-      year: "2025 - Present",
+      year: "2024 - 2025",
       title: "Junior Developer",
       company: "WeDay Social E commerce Platform",
       description:
         "Contributed to frontend and backend development of an e-commerce platform using Next.js and Express.",
     },
     {
-      year: "2024 - 2025",
+      year: "2023 - 2024",
       title: "Web Development Student",
       company: "Self-Learning",
       description:
@@ -53,7 +54,7 @@ const About = () => {
         >
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              About <span className="text-primary">Me</span>
+              <AuroraText>About Me</AuroraText>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               I&apos;m a passionate full-stack developer from Myanmar with 2+

@@ -43,7 +43,7 @@ const ProjectOverview = () => {
   return (
     <section id="projects" className="py-20 px-4">
       <div className="mb-12 text-center">
-        <h1 className="text-3xl font-bold mb-4">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">
           <AuroraText>Project Highlights</AuroraText>
         </h1>
         <p className="max-w-2xl mx-auto text-sm md:text-base text-muted-foreground">
@@ -82,7 +82,7 @@ const ProjectOverview = () => {
 
             <div className="relative w-full md:w-1/2 space-y-6 p-6">
               <div className="flex items-start justify-between gap-4">
-                <h2 className="text-lg md:text-2xl font-bold line-clamp-2 flex-1">
+                <h2 className="text-lg md:text-2xl text-indigo-300 font-bold line-clamp-2 flex-1">
                   {item.title}
                 </h2>
               </div>
