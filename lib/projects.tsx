@@ -4,6 +4,74 @@ import type { Project } from "@/types";
 
 export const content: Project[] = [
   {
+    title: "Retro Snake Game (React)",
+    description: (
+      <>
+        A modern, responsive Snake game built with React and Vite featuring a
+        retro arcade aesthetic. It includes progressive difficulty, score
+        tracking, and works seamlessly on both desktop and mobile devices with
+        optimized controls.
+      </>
+    ),
+    url: "https://snake-game-black-eight.vercel.app/",
+    content: (
+      <div className="relative flex h-full w-full items-center justify-center text-white">
+        <Image
+          src="/images/snake-game.png"
+          fill
+          className="object-contain"
+          alt="snake game demo"
+        />
+      </div>
+    ),
+    details: (
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Overview</h3>
+          <p className="text-sm text-muted-foreground">
+            A classic Snake game reimagined with modern web technologies.
+            Featuring a minimalist black & white retro aesthetic, this game
+            offers a responsive experience across all devices with dedicated
+            control schemes for both desktop (keyboard) and mobile (touch).
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Key Features</h3>
+          <ul className="text-sm text-muted-foreground space-y-2">
+            <li>• Classic gameplay with progressive difficulty</li>
+            <li>• Responsive design for desktop, tablet, and mobile</li>
+            <li>• Touch controls (D-pad) for mobile devices</li>
+            <li>• Keyboard controls for desktop users</li>
+            <li>• Real-time score tracking and game states</li>
+            <li>• Retro CRT screen aesthetic</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Tech Stack</h3>
+          <ul className="text-sm text-muted-foreground space-y-1">
+            <li>• React 18 for component-based UI</li>
+            <li>• Vite for fast development and building</li>
+            <li>• CSS3 for retro styling and animations</li>
+            <li>• Modern JavaScript (ES6+)</li>
+            <li>• Responsive design principles</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Game Mechanics</h3>
+          <ul className="text-sm text-muted-foreground space-y-2">
+            <li>• 20x20 Grid System with pixel-perfect rendering</li>
+            <li>• Collision detection (walls and self)</li>
+            <li>• Dynamic speed progression based on score</li>
+            <li>• Random food generation algorithm</li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
+  {
     title: `Global University Website (Freelance)`,
     description: (
       <>
@@ -165,8 +233,8 @@ export const content: Project[] = [
           <p className="text-sm text-muted-foreground">
             A visually stunning static fan page dedicated to the Arcane series,
             featuring immersive design elements that showcase key characters,
-            episodes, and lore. The site celebrates the show&apos;s unique art style
-            and compelling storytelling.
+            episodes, and lore. The site celebrates the show&apos;s unique art
+            style and compelling storytelling.
           </p>
         </div>
 
@@ -348,9 +416,10 @@ export const content: Project[] = [
         instantly. View today&apos;s spending with
         <code className="text-amber-400">/today</code>, get monthly summaries
         with <code className="text-amber-400">/thismonth</code>, and check
-        Myanmar&apos;s holidays with <code className="text-amber-400">/holidays</code>.
-        The bot automatically categorizes expenses by keywords and syncs
-        holidays for better financial planning.
+        Myanmar&apos;s holidays with{" "}
+        <code className="text-amber-400">/holidays</code>. The bot automatically
+        categorizes expenses by keywords and syncs holidays for better financial
+        planning.
       </>
     ),
     url: "https://t.me/gogoTimeBot",

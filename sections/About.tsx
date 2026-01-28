@@ -8,7 +8,7 @@ import { AuroraText } from "@/components/ui/aurora-text";
 const About = () => {
   const timeline = [
     {
-      year: "2024 - 2025",
+      year: "2024 - 2026",
       title: "Junior Developer",
       company: "WeDay Social E commerce Platform",
       description:

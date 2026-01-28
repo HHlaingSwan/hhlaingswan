@@ -63,11 +63,11 @@ const ProjectOverview = () => {
           <motion.div
             key={item.title}
             variants={cardVariants}
-            className={`group relative md:py-16 py-12 flex flex-col ${
-              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            } gap-20 items-center max-w-6xl mx-auto`}
+            className={`group relative lg:py-16 py-8 flex flex-col ${
+              index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+            } gap-0 md:gap-18 items-center max-w-6xl mx-auto`}
           >
-            <div className="relative w-full md:w-1/2">
+            <div className="relative  w-full lg:w-1/2">
               <div className="relative h-64 md:h-96 overflow-hidden rounded-2xl border border-border/20 shadow-xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10" />
                 <motion.div
@@ -80,14 +80,14 @@ const ProjectOverview = () => {
               </div>
             </div>
 
-            <div className="relative w-full md:w-1/2 space-y-6 p-6">
+            <div className="relative  w-full lg:w-1/2 space-y-6 p-2 md:px-18 lg:p-8">
               <div className="flex items-start justify-between gap-4">
                 <h2 className="text-lg md:text-2xl text-indigo-300 font-bold line-clamp-2 flex-1">
                   {item.title}
                 </h2>
               </div>
 
-              <p className="text-muted-foreground leading-relaxed text-lg">
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                 {item.description}
               </p>
 
@@ -97,7 +97,7 @@ const ProjectOverview = () => {
                     whileHover={{ x: 5 }}
                     whileTap={{ x: 0 }}
                     onClick={() => setSelectedProject(item)}
-                    className="inline-flex items-center gap-3 px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary font-semibold rounded-full border border-primary/20 transition-all"
+                    className="inline-flex items-center text-sm lg:text-base gap-3  px-5 py-4  bg-primary/10 hover:bg-primary/20 text-primary font-semibold rounded-full border border-primary/20 transition-all"
                   >
                     View Details
                     <ExternalLink size={16} />
@@ -109,7 +109,7 @@ const ProjectOverview = () => {
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-6 py-3 bg-secondary hover:bg-secondary/80 text-secondary-foreground font-semibold rounded-full border border-secondary/20 transition-all"
+                  className="inline-flex items-center text-sm lg:text-base gap-3 px-5 py-4 bg-secondary hover:bg-secondary/80 text-secondary-foreground font-semibold rounded-full border border-secondary/20 transition-all"
                 >
                   Live Demo
                   <ExternalLink size={16} />
@@ -147,12 +147,8 @@ const ProjectOverview = () => {
         <DialogContent className=" min-w-[70vw] max-h-[90vh] p-0 overflow-hidden flex flex-col">
           {/* Header with gradient background */}
           <div className="relative p-8  border-b border-border/20   flex-shrink-0">
-            <div className="absolute top-6 right-6">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-            </div>
-
             <DialogHeader className="pr-16">
-              <DialogTitle className="text-3xl md:text-4xl font-bold  text-white  leading-tight text-left">
+              <DialogTitle className="text-3xl md:text-4xl font-bold    leading-tight text-left">
                 {selectedProject?.title}
               </DialogTitle>
             </DialogHeader>
