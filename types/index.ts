@@ -5,6 +5,7 @@ export interface Project {
   content: React.ReactNode;
   details?: React.ReactNode;
   status?: "in-progress" | "completed";
+  images?: string[];
 }
 
 export interface StatItem {

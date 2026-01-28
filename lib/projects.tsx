@@ -24,6 +24,7 @@ export const content: Project[] = [
         />
       </div>
     ),
+    images: ["/images/snake-game.png"],
     details: (
       <div className="space-y-6">
         <div>
