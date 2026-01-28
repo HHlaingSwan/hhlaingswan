@@ -61,9 +61,11 @@ const ProjectOverview = () => {
           <motion.div
             key={item.title}
             variants={cardVariants}
+            whileHover={{ y: -5, boxShadow: "0 10px 15px rgba(0, 0, 0, 0.2)" }}
+            transition={{ duration: 0.3 }}
             className={`group relative lg:py-16 py-8 flex flex-col ${
               index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-            } gap-0 md:gap-18 items-center max-w-6xl mx-auto`}
+            } gap-0 md:gap-18 items-center max-w-6xl mx-auto rounded-xl`}
           >
             <div className="relative  w-full lg:w-1/2">
               <div className="relative h-64 md:h-96 overflow-hidden rounded-2xl border border-border/20 shadow-xl">
