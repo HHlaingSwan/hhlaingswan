@@ -80,7 +80,7 @@ const ProjectOverview = () => {
 
             <div className="relative  w-full lg:w-1/2 space-y-6 p-2 md:px-18 lg:p-8">
               <div className="flex items-start justify-between gap-4">
-                <h2 className="text-lg md:text-2xl text-indigo-300 font-bold line-clamp-2 flex-1">
+                <h2 className="text-lg md:text-2xl text-indigo-500 font-bold line-clamp-2 flex-1">
                   {item.title}
                 </h2>
               </div>
@@ -144,16 +144,16 @@ const ProjectOverview = () => {
       >
         <DialogContent className=" min-w-[70vw] max-h-[90vh] p-0 overflow-hidden flex flex-col">
           {/* Header with gradient background */}
-          <div className="relative p-8  border-b border-border/20   flex-shrink-0">
+          <div className="relative p-6  border-b border-border/20   flex-shrink-0">
             <DialogHeader className="pr-16">
-              <DialogTitle className="text-3xl md:text-4xl font-bold    leading-tight text-left">
-                {selectedProject?.title}
+              <DialogTitle className="text-xl md:text-3xl font-bold    leading-tight text-left">
+                <AuroraText>{selectedProject?.title}</AuroraText>
               </DialogTitle>
             </DialogHeader>
           </div>
 
           {/* Scrollable content area */}
-          <div className="flex-1 overflow-y-auto px-8 py-6 min-h-0">
+          <div className="flex-1 overflow-y-auto px-8 py-6  min-h-0">
             {selectedProject?.images && selectedProject.images.length > 0 && (
               <div className="mb-6 rounded-lg overflow-hidden border border-border/20 shadow-lg">
                 <Image
@@ -166,7 +166,7 @@ const ProjectOverview = () => {
                 />
               </div>
             )}
-            <div className="space-y-8 pb-4">{selectedProject?.details}</div>
+            <div className="space-y-8 p-3">{selectedProject?.details}</div>
           </div>
 
           {/* Footer */}

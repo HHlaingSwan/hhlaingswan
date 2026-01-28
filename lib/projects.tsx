@@ -93,6 +93,8 @@ export const content: Project[] = [
         />
       </div>
     ),
+    images: ["/images/gac.png"],
+
     details: (
       <div className="space-y-6">
         <div>
@@ -155,6 +157,8 @@ export const content: Project[] = [
         />
       </div>
     ),
+    images: ["/images/shareLoc.png"],
+
     details: (
       <div className="space-y-6">
         <div>
@@ -227,6 +231,8 @@ export const content: Project[] = [
         />
       </div>
     ),
+    images: ["/images/arcaneImage.png"],
+
     details: (
       <div className="space-y-6">
         <div>
@@ -307,6 +313,8 @@ export const content: Project[] = [
         />
       </div>
     ),
+    images: ["/images/demoChatApp.png"],
+
     details: (
       <div className="space-y-6">
         <div>
@@ -412,15 +420,15 @@ export const content: Project[] = [
     description: (
       <>
         Use natural language commands like{" "}
-        <code className="text-amber-400">breakfast 1000</code> or
-        <code className="text-amber-400"> ညနေစာ 5000</code> to log expenses
+        <code className="text-indigo-400">breakfast 1000</code> or
+        <code className="text-indigo-400"> ညနေစာ 5000</code> to log expenses
         instantly. View today&apos;s spending with
-        <code className="text-amber-400">/today</code>, get monthly summaries
-        with <code className="text-amber-400">/thismonth</code>, and check
+        <code className="text-indigo-400">/today</code>, get monthly summaries
+        with <code className="text-indigo-400">/thismonth</code>, and check
         Myanmar&apos;s holidays with{" "}
-        <code className="text-amber-400">/holidays</code>. The bot automatically
-        categorizes expenses by keywords and syncs holidays for better financial
-        planning.
+        <code className="text-indigo-400">/holidays</code>. The bot
+        automatically categorizes expenses by keywords and syncs holidays for
+        better financial planning.
       </>
     ),
     url: "https://t.me/gogoTimeBot",
@@ -434,6 +442,8 @@ export const content: Project[] = [
         />
       </div>
     ),
+    images: ["/images/function.png"],
+
     details: (
       <div className="space-y-6">
         <div>
@@ -584,6 +594,8 @@ export const content: Project[] = [
         />
       </div>
     ),
+    images: ["/images/homeView.png"],
+
     details: (
       <div className="space-y-6">
         <div>
