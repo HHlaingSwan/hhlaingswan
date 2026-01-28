@@ -8,13 +8,11 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
-  DialogFooter,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 import { content } from "@/lib/projects";
 import type { Project } from "@/types";
-import { ExternalLink, Github, Star } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image"; // Keep this import
 
 const ProjectOverview = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -156,6 +154,18 @@ const ProjectOverview = () => {
 
           {/* Scrollable content area */}
           <div className="flex-1 overflow-y-auto px-8 py-6 min-h-0">
+            {selectedProject?.images && selectedProject.images.length > 0 && (
+              <div className="mb-6 rounded-lg overflow-hidden border border-border/20 shadow-lg">
+                <Image
+                  src={selectedProject.images[0]}
+                  alt={`${selectedProject.title} demo`}
+                  width={1200}
+                  height={800}
+                  layout="responsive"
+                  className="object-cover"
+                />
+              </div>
+            )}
             <div className="space-y-8 pb-4">{selectedProject?.details}</div>
           </div>
 
