@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Database, Globe, Terminal, Cpu, Layers } from "lucide-react";
+import { Code, Database, Globe, Smartphone, Cpu, Layers } from "lucide-react";
 import { AuroraText } from "@/components/ui/aurora-text";
 
 const About = () => {
@@ -30,16 +30,16 @@ const About = () => {
       items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
+      icon: Smartphone, // Using Briefcase or another suitable icon if Smartphone isn't imported. Let's check imports.
+      title: "Mobile",
+      items: ["React Native", "Expo", "React Navigation"],
+    },
+    {
       icon: Database,
       title: "Backend",
-      items: ["Node.js", "Express", "MongoDB", "PostgreSQL"],
+      items: ["Node.js", "Express", "MongoDB", "Java (Learning)"],
     },
     { icon: Globe, title: "DevOps", items: ["Docker", "Git", "CI/CD", "AWS"] },
-    {
-      icon: Terminal,
-      title: "Tools",
-      items: ["VS Code", "Figma", "Postman", "Chrome DevTools"],
-    },
   ];
 
   return (
@@ -58,8 +58,10 @@ const About = () => {
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               I&apos;m a passionate full-stack developer from Myanmar with 2+
-              years of experience building digital products. I love turning
-              complex problems into simple, beautiful solutions.
+              years of experience building digital products. I specialize in
+              creating modern web and mobile apps using React, React Native,
+              Node.js, and MongoDB. Currently, I am also learning Java to expand
+              my backend capabilities.
             </p>
           </div>
 

@@ -1,7 +1,7 @@
 # 👋 Hi, I'm Htet Hlaing Swan
 
 I'm a **Full Stack Developer** who loves building clean, scalable, and user-friendly applications.  
-I specialize in creating modern web apps using **React**, **Node.js**, **MongoDB**, and **Java**.
+I specialize in creating modern web and mobile apps using **React**, **React Native**, **Node.js**, and **MongoDB**. Currently, I am also learning **Java**.
 
 ---
 
@@ -14,6 +14,12 @@ I specialize in creating modern web apps using **React**, **Node.js**, **MongoDB
 - **Tailwind CSS**, **Material UI**, **Framer Motion**
 - **Axios**, **React Query**, **TanStack Table**
 
+### 📱 Mobile
+
+- **React Native** (iOS & Android)
+- **Expo**
+- **React Navigation**
+
 ### 🧠 Backend
 
 - **Node.js** & **Express.js**
@@ -21,7 +27,7 @@ I specialize in creating modern web apps using **React**, **Node.js**, **MongoDB
 - **MongoDB** with **Mongoose**
 - **File upload**, **Cloud storage**, and **Socket.io**
 
-### ☕ Java
+### ☕ Java (Learning)
 
 - **Java Core** and **OOP**
 - **Spring Boot** (REST APIs, JPA, MySQL/Mongo)

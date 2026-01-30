@@ -45,10 +45,10 @@ const Hero = () => {
             <TypingAnimation
               cursorStyle="underscore"
               words={[
+                "DevOps Student",
                 "Backend Engineer",
                 "Frontend Architect",
                 "Database Specialist",
-                "Full-Stack Developer",
               ]}
               loop
             />
