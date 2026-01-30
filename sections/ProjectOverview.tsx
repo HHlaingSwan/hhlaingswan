@@ -162,9 +162,9 @@ const ProjectOverview = () => {
                   src={selectedProject.images[0]}
                   alt={`${selectedProject.title} demo`}
                   width={1200}
-                  height={800}
+                  height={600}
                   layout="responsive"
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             )}

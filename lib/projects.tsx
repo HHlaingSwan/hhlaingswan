@@ -715,4 +715,72 @@ export const content: Project[] = [
       </div>
     ),
   },
+  {
+    title: "Movie Discovery App (React Native)",
+    description: (
+      <>
+        A beautiful React Native app for browsing, searching, and saving your
+        favorite movies. Built using Expo and powered by the TMDB API, it
+        features infinite scrolling, local persistence, and a clean,
+        context-aware UI.
+      </>
+    ),
+    url: "#",
+    content: (
+      <div className="relative flex h-full w-full items-center justify-center text-white">
+        <Image
+          src="/images/movie-demo.png"
+          fill
+          className="object-contain"
+          alt="movie app demo"
+        />
+      </div>
+    ),
+    images: ["/images/movie-demo.png"],
+    details: (
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Overview</h3>
+          <p className="text-sm text-muted-foreground">
+            A beautiful React Native app for browsing, searching, and saving
+            your favorite movies. Built using Expo and powered by the TMDB (The
+            Movie Database) API, MovieAppRN is the perfect starting point for
+            mobile movie discovery.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Key Features</h3>
+          <ul className="text-sm text-muted-foreground space-y-2">
+            <li>• Browse trending and popular movies</li>
+            <li>• Search for movies by title or keyword</li>
+            <li>• Detailed information with save/unsave functionality</li>
+            <li>• Local persistence for favorites using AsyncStorage</li>
+            <li>• Infinite scrolling for seamless browsing</li>
+            <li>• Clean UI with dynamic headers</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Tech Stack</h3>
+          <ul className="text-sm text-muted-foreground space-y-1">
+            <li>• Expo & React Native</li>
+            <li>• TMDB API Integration</li>
+            <li>• React Navigation</li>
+            <li>• React Hooks & AsyncStorage</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-3">Functionalities</h3>
+          <ul className="text-sm text-muted-foreground space-y-2">
+            <li>• Infinite Scrolling</li>
+            <li>• Dynamic Headers</li>
+            <li>• Context-Aware UI</li>
+            <li>• Optimized Search with debouncing</li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
 ];
