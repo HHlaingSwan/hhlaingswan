@@ -15,7 +15,7 @@ const stats = [
   },
   {
     icon: <Briefcase className="size-4 md:size-5 text-primary" />,
-    value: "11+",
+    value: "10+",
     label: "Projects",
   },
   {

@@ -17,6 +17,9 @@ const Footer = dynamic(() => import("@/sections/Footer"), {
 const ProjectOverview = dynamic(() => import("@/sections/ProjectOverview"), {
   loading: () => <SectionSkeleton />,
 });
+const ToolsMarquee = dynamic(() => import("@/sections/ToolsMarquee"), {
+  loading: () => <SectionSkeleton />,
+});
 const Education = dynamic(() => import("@/sections/Education"), {
   loading: () => <TimelineSkeleton />,
 });
@@ -33,6 +36,7 @@ const ClientWrapper = () => {
       <Hero />
 
       <About />
+      <ToolsMarquee />
       <Education />
       <Achievements />
       <ProjectOverview />

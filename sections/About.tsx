@@ -9,7 +9,7 @@ const About = () => {
   const timeline = [
     {
       year: "2024 - 2026",
-      title: "Junior Developer",
+      title: "React Frontend Developer",
       company: "WeDay Social E commerce Platform",
       description:
         "Contributed to frontend and backend development of an e-commerce platform using Next.js and Express.",
