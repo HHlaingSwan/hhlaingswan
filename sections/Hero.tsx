@@ -36,14 +36,17 @@ const Hero = () => {
 
         <p className="text-sm md:text-lg text-muted-foreground">
           Hi, I&apos;m{" "}
-          <span className="font-bold text-indigo-500">Htet Hlaing Swan</span>.
+          <span className="font-bold text-muted-foreground">
+            Htet Hlaing Swan
+          </span>
+          .
         </p>
 
         <h1 className="text-2xl font-bold md:text-6xl mt-2">
           I&apos;m a{" "}
           <AuroraText>
             <TypingAnimation
-              cursorStyle="underscore"
+              cursorStyle="block"
               words={[
                 "DevOps Student",
                 "Backend Engineer",
@@ -55,8 +58,8 @@ const Hero = () => {
           </AuroraText>
         </h1>
 
-        <p className="mt-3 max-w-lg mx-auto text-xs md:text-md text-muted-foreground">
-          I transform complex ideas into seamless digital realities.
+        <p className="mt-4 max-w-lg  mx-auto text-xs md:text-base text-muted-foreground">
+          I build scalable systems that power modern applications.
         </p>
       </div>
 

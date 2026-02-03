@@ -17,7 +17,7 @@ const About = () => {
     {
       year: "2023 - 2024",
       title: "Web Development Student",
-      company: "Self-Learning",
+      company: "Self-Learning | Education",
       description:
         "Mastered frontend technologies React and backend development (Node.js, databases).",
     },
@@ -30,7 +30,7 @@ const About = () => {
       items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
-      icon: Smartphone, // Using Briefcase or another suitable icon if Smartphone isn't imported. Let's check imports.
+      icon: Smartphone,
       title: "Mobile",
       items: ["React Native", "Expo", "React Navigation"],
     },
@@ -43,7 +43,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-background">
+    <section id="about" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 md:px-8 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -57,11 +57,9 @@ const About = () => {
               <AuroraText>About Me</AuroraText>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              I&apos;m a passionate full-stack developer from Myanmar with 2+
-              years of experience building digital products. I specialize in
-              creating modern web and mobile apps using React, React Native,
-              Node.js, and MongoDB. Currently, I am also learning Java to expand
-              my backend capabilities.
+              I turn coffee into code and ideas into reality. Based in Myanmar,
+              I craft digital experiences with React, Node.js, and a lot of
+              determination. When I&apos;m not building, I&apos;m learning.
             </p>
           </div>
 

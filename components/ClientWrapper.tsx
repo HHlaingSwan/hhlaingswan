@@ -4,37 +4,18 @@ import dynamic from "next/dynamic";
 import Hero from "@/sections/Hero";
 import { NavigationBar } from "./NavigationBar";
 import About from "@/sections/About";
-import {
-  SectionSkeleton,
-  FormSkeleton,
-  TimelineSkeleton,
-} from "./ui/skeleton";
 
-
-const Footer = dynamic(() => import("@/sections/Footer"), {
-  loading: () => <SectionSkeleton />,
-});
-const ProjectOverview = dynamic(() => import("@/sections/ProjectOverview"), {
-  loading: () => <SectionSkeleton />,
-});
-const ToolsMarquee = dynamic(() => import("@/sections/ToolsMarquee"), {
-  loading: () => <SectionSkeleton />,
-});
-const Education = dynamic(() => import("@/sections/Education"), {
-  loading: () => <TimelineSkeleton />,
-});
-const Achievements = dynamic(() => import("@/sections/Achievements"), {
-  loading: () => <SectionSkeleton />,
-});
-const Contact = dynamic(() => import("@/sections/Contact"), {
-  loading: () => <FormSkeleton />,
-});
+const Footer = dynamic(() => import("@/sections/Footer"));
+const ProjectOverview = dynamic(() => import("@/sections/ProjectOverview"));
+const ToolsMarquee = dynamic(() => import("@/sections/ToolsMarquee"));
+const Education = dynamic(() => import("@/sections/Education"));
+const Achievements = dynamic(() => import("@/sections/Achievements"));
+const Contact = dynamic(() => import("@/sections/Contact"));
 
 const ClientWrapper = () => {
   return (
     <div className="relative flex flex-col justify-center items-center pb-32">
       <Hero />
-
       <About />
       <ToolsMarquee />
       <Education />

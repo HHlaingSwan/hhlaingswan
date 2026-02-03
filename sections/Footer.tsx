@@ -14,7 +14,6 @@ import {
   Layout,
   Phone,
 } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -137,8 +136,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          <Separator />
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
             <p className="font-mono">

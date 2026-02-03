@@ -56,7 +56,8 @@ const Contact = () => {
       window.open(
         `mailto:htethlaingswan@gmail.com?subject=${subject}&body=${body}`,
       );
-    } catch (error) {
+    } catch (err) {
+      console.error(err);
       // Fallback: mailto link
       const subject = `Portfolio Contact: ${formData.name}`;
       const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0D%0AMessage:%0D%0A${formData.message}`;
@@ -64,7 +65,6 @@ const Contact = () => {
         `mailto:htethlaingswan@gmail.com?subject=${subject}&body=${body}`,
       );
     }
-
     setIsSubmitting(false);
   };
 

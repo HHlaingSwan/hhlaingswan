@@ -54,8 +54,7 @@ const ProjectOverview = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        variants={containerVariants}
-        className="space-y-12"
+        className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto"
       >
         {content.map((item: Project, index: number) => (
           <motion.div
@@ -63,56 +62,50 @@ const ProjectOverview = () => {
             variants={cardVariants}
             whileHover={{ y: -5, boxShadow: "0 10px 15px rgba(0, 0, 0, 0.2)" }}
             transition={{ duration: 0.3 }}
-            className={`group relative lg:py-16 py-8 flex flex-col ${
-              index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-            } gap-0 md:gap-18 items-center max-w-6xl mx-auto rounded-xl`}
+            className="group relative flex flex-col bg-card rounded-xl border border-border/50 overflow-hidden hover:border-primary/50 transition-all"
           >
-            <div className="relative  w-full lg:w-1/2">
-              <div className="relative h-64 md:h-96 overflow-hidden rounded-2xl border border-border/20 shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10" />
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                  className="h-full w-full"
-                >
-                  {item.content}
-                </motion.div>
-              </div>
+            <div className="relative h-48 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+                className="h-full w-full"
+              >
+                {item.content}
+              </motion.div>
             </div>
 
-            <div className="relative  w-full lg:w-1/2 space-y-6 p-2 md:px-18 lg:p-8">
-              <div className="flex items-start justify-between gap-4">
-                <h2 className="text-lg md:text-2xl text-indigo-500 font-bold line-clamp-2 flex-1">
-                  {item.title}
-                </h2>
-              </div>
+            <div className="relative p-5 flex flex-col flex-1">
+              <h2 className="text-lg font-bold text-indigo-500 mb-2 line-clamp-1">
+                {item.title}
+              </h2>
 
-              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+              <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2 mb-4 flex-1">
                 {item.description}
               </p>
 
-              <div className="flex gap-3">
+              <div className="flex gap-2 mt-auto">
                 {item.details && (
                   <motion.button
-                    whileHover={{ x: 5 }}
+                    whileHover={{ x: 3 }}
                     whileTap={{ x: 0 }}
                     onClick={() => setSelectedProject(item)}
-                    className="inline-flex items-center text-sm lg:text-base gap-3  px-5 py-4  bg-primary/10 hover:bg-primary/20 text-primary font-semibold rounded-full border border-primary/20 transition-all"
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-sm font-semibold rounded-lg border border-primary/20 transition-all"
                   >
-                    View Details
-                    <ExternalLink size={16} />
+                    Details
+                    <ExternalLink size={14} />
                   </motion.button>
                 )}
                 <motion.a
-                  whileHover={{ x: 5 }}
+                  whileHover={{ x: 3 }}
                   whileTap={{ x: 0 }}
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-sm lg:text-base gap-3 px-5 py-4 bg-secondary hover:bg-secondary/80 text-secondary-foreground font-semibold rounded-full border border-secondary/20 transition-all"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-secondary hover:bg-secondary/80 text-secondary-foreground text-sm font-semibold rounded-lg border border-secondary/20 transition-all"
                 >
-                  Live Demo
-                  <ExternalLink size={16} />
+                  Demo
+                  <ExternalLink size={14} />
                 </motion.a>
               </div>
             </div>
