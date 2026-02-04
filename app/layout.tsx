@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Htet Hlaing Swan | Full-Stack Developer",
+    default: "Htet Hlaing Swan | Developer",
     template: "%s | Htet Hlaing Swan",
   },
   description:
@@ -19,7 +19,9 @@ export const metadata: Metadata = {
     "Portfolio",
     "Myanmar",
   ],
-  authors: [{ name: "Htet Hlaing Swan", url: "https://hhlaingswan.vercel.app" }],
+  authors: [
+    { name: "Htet Hlaing Swan", url: "https://hhlaingswan.vercel.app" },
+  ],
   creator: "Htet Hlaing Swan",
   publisher: "Htet Hlaing Swan",
   formatDetection: {
@@ -74,7 +76,11 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
         <a
