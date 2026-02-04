@@ -12,14 +12,14 @@ const About = () => {
       title: "React Frontend Developer",
       company: "WeDay Social E commerce Platform",
       description:
-        "Contributed to frontend and backend development of an e-commerce platform using Next.js and Express.",
+        "Built and shipped storefront features in Next.js and collaborated on Express APIs for a social e‑commerce platform.",
     },
     {
       year: "2023 - 2024",
       title: "Web Development Student",
       company: "Self-Learning | Education",
       description:
-        "Mastered frontend technologies React and backend development (Node.js, databases).",
+        "Completed a self‑guided curriculum in React, Node.js, and databases while shipping multiple projects.",
     },
   ];
 
@@ -186,22 +186,6 @@ const About = () => {
             <p className="text-muted-foreground mb-6">
               Let&apos;s work together on your next project
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="px-8 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
-              >
-                View Resume
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="px-8 py-3 border border-border text-foreground font-medium rounded-lg hover:bg-secondary transition-colors"
-              >
-                Contact Me
-              </motion.button>
-            </div>
           </motion.div>
         </motion.div>
       </div>

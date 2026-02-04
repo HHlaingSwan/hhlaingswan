@@ -51,16 +51,20 @@ const Hero = () => {
                 "DevOps Student",
                 "Backend Engineer",
                 "Frontend Architect",
-                "Database Specialist",
               ]}
               loop
             />
           </AuroraText>
         </h1>
 
-        <p className="mt-4 max-w-lg  mx-auto text-xs md:text-base text-muted-foreground">
-          I build scalable systems that power modern applications.
-        </p>
+        <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
+          <a
+            href="#projects"
+            className="px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
+          >
+            View Projects
+          </a>
+        </div>
       </div>
 
       <div className="flex w-full items-center justify-center mt-6 z-10">

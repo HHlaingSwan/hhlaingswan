@@ -4,16 +4,12 @@ import type { Project } from "@/types";
 
 export const content: Project[] = [
   {
-    title: "Retro Snake Game (React)",
-    description: (
-      <>
-        A modern, responsive Snake game built with React and Vite featuring a
-        retro arcade aesthetic. It includes progressive difficulty, score
-        tracking, and works seamlessly on both desktop and mobile devices with
-        optimized controls.
-      </>
-    ),
+    title: "Retro Snake Game",
+    description:
+      "Modern Snake game with retro styling, progressive difficulty, and smooth touch + keyboard controls.",
     url: "https://snake-game-black-eight.vercel.app/",
+    tags: ["React", "Vite", "CSS", "Game"],
+    impact: "Retro arcade gameplay with responsive keyboard + touch controls.",
     content: (
       <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image
@@ -73,16 +69,12 @@ export const content: Project[] = [
     ),
   },
   {
-    title: `Global University Website (Freelance)`,
-    description: (
-      <>
-        This is my first production static website for Global University,
-        showcasing my ability to create professional and informative web pages.
-        The site features a clean design, easy navigation, and essential
-        information about the university&apos;s programs and services.
-      </>
-    ),
+    title: "Global University Website",
+    description:
+      "Production‑ready university site with clean navigation, responsive layout, and fast load times.",
     url: "https://www.gacportal.com",
+    tags: ["HTML", "CSS", "JavaScript", "Responsive"],
+    impact: "Clean, professional university site optimized for fast loading.",
     content: (
       <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image
@@ -143,10 +135,12 @@ export const content: Project[] = [
     ),
   },
   {
-    title: "Advanced Sharing & Tagging (React)",
+    title: "Social Sharing & Tagging",
     description:
-      "Introduced comprehensive sharing functionalities, allowing users to share posts, broadcast their location, and tag friends. This fosters deeper connections and community interaction, making content sharing more dynamic and personalized.",
+      "Feature set for posts, friend tagging, and location sharing to boost engagement and community interaction.",
     url: "#projects",
+    tags: ["React", "Geolocation", "Social", "UI"],
+    impact: "Enhanced social posting with tagging, sharing, and location.",
     content: (
       <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image
@@ -211,16 +205,12 @@ export const content: Project[] = [
   },
 
   {
-    title: "Static Movie Fan Page Base On Arcane Series ",
-    description: (
-      <>
-        Created a visually captivating static fan page dedicated to the Arcane
-        series, showcasing key characters, episodes, and lore. The page features
-        immersive design elements that celebrate the show&apos;s unique art
-        style and storytelling.
-      </>
-    ),
+    title: "Arcane Fan Page",
+    description:
+      "Immersive static fan page with character highlights, episode sections, and Arcane‑inspired visuals.",
     url: "https://arcane-game.vercel.app",
+    tags: ["HTML", "CSS", "JavaScript", "Animation"],
+    impact: "Immersive fan experience with character gallery and lore.",
     content: (
       <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image
@@ -292,17 +282,12 @@ export const content: Project[] = [
     ),
   },
   {
-    title: "Real-Time Chat Application (MERN Stack)",
-    description: (
-      <>
-        Built a full-featured real-time messaging platform with Socket.IO for
-        instant message delivery. Users can send text and share images via
-        Cloudinary, view online status indicators, track last seen timestamps,
-        and manage contacts with add/block functionality. Features responsive
-        design with smooth Framer Motion animations and skeleton loading states.
-      </>
-    ),
+    title: "Real-Time Chat App",
+    description:
+      "Full‑stack chat with real‑time messaging, media sharing, presence, and JWT auth.",
     url: "https://unit-chat-five.vercel.app/",
+    tags: ["MERN", "Socket.IO", "JWT", "Cloudinary"],
+    impact: "Real-time messaging with auth, media sharing, and presence.",
     content: (
       <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image
@@ -416,22 +401,12 @@ export const content: Project[] = [
   },
 
   {
-    title: "Myanmar Expense Tracker Bot",
-    description: (
-      <>
-        Use natural language commands like{" "}
-        <code className="text-indigo-400">breakfast 1000</code> or
-        <code className="text-indigo-400"> ညနေစာ 5000</code> to log expenses
-        instantly. View today&apos;s spending with
-        <code className="text-indigo-400">/today</code>, get monthly summaries
-        with <code className="text-indigo-400">/thismonth</code>, and check
-        Myanmar&apos;s holidays with{" "}
-        <code className="text-indigo-400">/holidays</code>. The bot
-        automatically categorizes expenses by keywords and syncs holidays for
-        better financial planning.
-      </>
-    ),
+    title: "Expense Tracker Bot (Myanmar)",
+    description:
+      "Telegram bot for Burmese/English expense logging, monthly summaries, and holiday sync.",
     url: "https://t.me/gogoTimeBot",
+    tags: ["Node.js", "Telegram Bot", "MongoDB", "API"],
+    impact: "Burmese/English expense logging with holiday sync.",
     content: (
       <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image
@@ -574,16 +549,12 @@ export const content: Project[] = [
     ),
   },
   {
-    title: "Master Project E-Commerce Platform",
-    description: (
-      <>
-        A full-stack e-commerce application with comprehensive product
-        management, secure authentication, shopping cart, order tracking, and
-        admin dashboard. Features role-based access control, real-time inventory
-        management, and responsive design with modern UI/UX.
-      </>
-    ),
+    title: "E-Commerce Platform",
+    description:
+      "Full‑stack shop with product management, secure auth, cart/checkout, and admin dashboard.",
     url: "https://master-project-sable.vercel.app",
+    tags: ["MERN", "E-Commerce", "Admin", "Cloudinary"],
+    impact: "Full-stack shop with role-based admin and order tracking.",
     content: (
       <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image
@@ -716,16 +687,12 @@ export const content: Project[] = [
     ),
   },
   {
-    title: "Movie Discovery App (React Native)",
-    description: (
-      <>
-        A beautiful React Native app for browsing, searching, and saving your
-        favorite movies. Built using Expo and powered by the TMDB API, it
-        features infinite scrolling, local persistence, and a clean,
-        context-aware UI.
-      </>
-    ),
+    title: "Movie Discovery App",
+    description:
+      "React Native app for browsing, searching, and saving movies with infinite scrolling.",
     url: "#",
+    tags: ["React Native", "Expo", "TMDB", "Mobile"],
+    impact: "Browse/search/save movies with infinite scrolling.",
     content: (
       <div className="relative flex h-full w-full items-center justify-center text-white">
         <Image

@@ -1,23 +1,64 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaGitAlt, FaDocker } from "react-icons/fa";
-import { SiNextdotjs, SiMongodb, SiTailwindcss, SiTypescript, SiXcode, SiExpo, SiPostgresql } from "react-icons/si";
-import { TbBrandVscode } from "react-icons/tb";
+import { FaReact, FaNodeJs, FaDocker } from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiMongodb,
+  SiTypescript,
+  SiExpo,
+  SiPostgresql,
+} from "react-icons/si";
 
 const tools = [
-  { icon: <TbBrandVscode size={34} />, name: "VS Code", color: "#007ACC", bg: "rgba(0, 122, 204, 0.1)" },
-  { icon: <SiXcode size={34} />, name: "Xcode", color: "#1575F9", bg: "rgba(21, 117, 249, 0.1)" },
-  { icon: <SiTypescript size={34} />, name: "TypeScript", color: "#3178C6", bg: "rgba(49, 120, 198, 0.1)" },
-  { icon: <FaReact size={34} />, name: "React", color: "#61DAFB", bg: "rgba(97, 218, 251, 0.1)" },
-  { icon: <SiNextdotjs size={34} />, name: "Next.js", color: "#FFFFFF", bg: "rgba(255, 255, 255, 0.1)" },
-  { icon: <SiExpo size={34} />, name: "Expo", color: "#FFFFFF", bg: "rgba(255, 255, 255, 0.1)" },
-  { icon: <FaNodeJs size={34} />, name: "Node.js", color: "#68A063", bg: "rgba(104, 160, 99, 0.1)" },
-  { icon: <SiMongodb size={34} />, name: "MongoDB", color: "#47A248", bg: "rgba(71, 162, 72, 0.1)" },
-  { icon: <SiPostgresql size={34} />, name: "PostgreSQL", color: "#336791", bg: "rgba(51, 103, 145, 0.1)" },
-  { icon: <SiTailwindcss size={34} />, name: "Tailwind", color: "#06B6D4", bg: "rgba(6, 182, 212, 0.1)" },
-  { icon: <FaGitAlt size={34} />, name: "Git", color: "#F05032", bg: "rgba(240, 80, 50, 0.1)" },
-  { icon: <FaDocker size={34} />, name: "Docker", color: "#2496ED", bg: "rgba(36, 150, 237, 0.1)" },
+  {
+    icon: <SiTypescript size={34} />,
+    name: "TypeScript",
+    color: "#3178C6",
+    bg: "rgba(49, 120, 198, 0.1)",
+  },
+  {
+    icon: <FaReact size={34} />,
+    name: "React",
+    color: "#61DAFB",
+    bg: "rgba(97, 218, 251, 0.1)",
+  },
+  {
+    icon: <SiNextdotjs size={34} />,
+    name: "Next.js",
+    color: "#FFFFFF",
+    bg: "rgba(255, 255, 255, 0.1)",
+  },
+  {
+    icon: <SiExpo size={34} />,
+    name: "Expo",
+    color: "#FFFFFF",
+    bg: "rgba(255, 255, 255, 0.1)",
+  },
+  {
+    icon: <FaNodeJs size={34} />,
+    name: "Node.js",
+    color: "#68A063",
+    bg: "rgba(104, 160, 99, 0.1)",
+  },
+  {
+    icon: <SiMongodb size={34} />,
+    name: "MongoDB",
+    color: "#47A248",
+    bg: "rgba(71, 162, 72, 0.1)",
+  },
+  {
+    icon: <SiPostgresql size={34} />,
+    name: "PostgreSQL",
+    color: "#336791",
+    bg: "rgba(51, 103, 145, 0.1)",
+  },
+  {
+    icon: <FaDocker size={34} />,
+    name: "Docker",
+    color: "#2496ED",
+    bg: "rgba(36, 150, 237, 0.1)",
+  },
 ];
 
 const ToolsMarquee = () => {

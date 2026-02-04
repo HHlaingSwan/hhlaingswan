@@ -9,7 +9,6 @@ const Footer = dynamic(() => import("@/sections/Footer"));
 const ProjectOverview = dynamic(() => import("@/sections/ProjectOverview"));
 const ToolsMarquee = dynamic(() => import("@/sections/ToolsMarquee"));
 const Education = dynamic(() => import("@/sections/Education"));
-const Achievements = dynamic(() => import("@/sections/Achievements"));
 const Contact = dynamic(() => import("@/sections/Contact"));
 
 const ClientWrapper = () => {
@@ -19,7 +18,6 @@ const ClientWrapper = () => {
       <About />
       <ToolsMarquee />
       <Education />
-      <Achievements />
       <ProjectOverview />
       <Contact />
       <Footer />

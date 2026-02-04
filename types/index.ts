@@ -6,6 +6,8 @@ export interface Project {
   details?: React.ReactNode;
   status?: "in-progress" | "completed";
   images?: string[];
+  tags?: string[];
+  impact?: string;
 }
 
 export interface StatItem {
@@ -61,9 +63,7 @@ export interface Certificate {
   institution: string;
   date: string;
   category: "degree" | "diploma" | "honor" | "certification";
-  description: string;
   image: string;
-  pdf?: string;
   skills: string[];
   credentialId?: string;
 }
