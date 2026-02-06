@@ -1,86 +1,111 @@
 "use client";
 import { TypingAnimation } from "@/components/ui/typing-animation";
 import { AuroraText } from "@/components/ui/aurora-text";
-import { Meteors } from "@/components/ui/meteors";
-import { StatGrid } from "@/components/ui/stat-card";
+import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
-import { Code2, Briefcase, Calendar } from "lucide-react";
-
-const stats = [
-  {
-    icon: <Calendar className="size-4 md:size-5 text-primary" />,
-    value: "2+",
-    label: "Years",
-  },
-  {
-    icon: <Briefcase className="size-4 md:size-5 text-primary" />,
-    value: "10+",
-    label: "Projects",
-  },
-  {
-    icon: <Code2 className="size-4 md:size-5 text-primary" />,
-    value: "5+",
-    label: "Tech",
-  },
-];
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex min-h-[100vh] w-full flex-col items-center justify-center overflow-hidden rounded-lg px-4 py-12 bg-gradient-to-b from-background via-secondary to-background dark:via-slate-950"
+      className="relative min-h-[100vh] w-full flex items-center overflow-hidden px-4 py-12 bg-gradient-to-b from-background via-secondary/30 to-background"
     >
-      <div className="flex flex-col items-center text-center z-10">
-        <Meteors number={30} className="stroke-accent" />
-
-        <p className="text-sm md:text-lg text-muted-foreground">
-          Hi, I&apos;m{" "}
-          <span className="font-bold text-muted-foreground">
-            Htet Hlaing Swan
-          </span>
-          .
-        </p>
-
-        <h1 className="text-2xl font-bold md:text-6xl mt-2">
-          I&apos;m a{" "}
-          <AuroraText>
-            <TypingAnimation
-              cursorStyle="block"
-              words={[
-                "DevOps Student",
-                "Backend Engineer",
-                "Frontend Architect",
-              ]}
-              loop
-            />
-          </AuroraText>
-        </h1>
-
-        <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
-          <a
-            href="#projects"
-            className="px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
+      <div className="container mx-auto md:max-w-6xl">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-8"
           >
-            View Projects
-          </a>
+            <div className="space-y-4">
+              <p className="text-sm md:text-lg text-muted-foreground">
+                Hi, I&apos;m{" "}
+                <span className="font-bold text-foreground">
+                  Htet Hlaing Swan
+                </span>
+                .
+              </p>
+
+              <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+                I&apos;m a{" "}
+                <span className="inline-block">
+                  <AuroraText>
+                    <TypingAnimation
+                      cursorStyle="block"
+                      words={[
+                        "Backend Engineer",
+                        "Frontend Architect",
+                        "DevOps Student",
+                      ]}
+                      loop
+                    />
+                  </AuroraText>
+                </span>
+              </h1>
+
+              <p className="text-muted-foreground text-lg max-w-md">
+                Building elegant, scalable solutions with clean code and modern
+                technologies.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#projects"
+                className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                See What I Build
+                <ArrowRight className="size-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+              <a
+                href="#about"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-lg font-medium hover:bg-muted transition-colors"
+              >
+                About Me
+              </a>
+            </div>
+
+            <div className="flex items-center gap-8 pt-4">
+              <div>
+                <p className="text-2xl font-bold">2+</p>
+                <p className="text-sm text-muted-foreground">Years</p>
+              </div>
+              <div className="w-px h-12 bg-border" />
+              <div>
+                <p className="text-2xl font-bold">10+</p>
+                <p className="text-sm text-muted-foreground">Projects</p>
+              </div>
+              <div className="w-px h-12 bg-border" />
+              <div>
+                <p className="text-2xl font-bold">5+</p>
+                <p className="text-sm text-muted-foreground">Tech</p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex justify-center"
+          >
+            <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl" />
+              <Image
+                src="/Man-thinking.png"
+                alt="Htet Hlaing Swan - Full-Stack Developer"
+                width={500}
+                height={500}
+                className="object-contain relative z-10"
+                priority
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
-
-      <div className="flex w-full items-center justify-center mt-6 z-10">
-        <div className="w-[180px] h-[180px] md:w-[400px] md:h-[400px]">
-          <Image
-            src="/Man-thinking.png"
-            alt="Htet Hlaing Swan - Full-Stack Developer"
-            width={500}
-            height={500}
-            className="object-contain"
-            priority
-          />
-        </div>
-      </div>
-
-      <StatGrid stats={stats} />
     </section>
   );
 };

@@ -64,6 +64,7 @@ export interface Certificate {
   date: string;
   category: "degree" | "diploma" | "honor" | "certification";
   image: string;
+  description: string;
   skills: string[];
   credentialId?: string;
 }

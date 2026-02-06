@@ -9,7 +9,7 @@ import ProjectMasonry from "@/components/ui/project-masonry";
 
 const ProjectOverview = () => {
   return (
-    <section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
+    <section id="projects" className="py-20 px-4 max-w-8xl mx-auto ">
       <div className="mb-12 text-center">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}

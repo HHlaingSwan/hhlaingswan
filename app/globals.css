@@ -369,6 +369,15 @@
   background-color: hsl(var(--muted-foreground) / 0.5);
 }
 
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 .perspective-1000 {
   perspective: 1000px;
 }
