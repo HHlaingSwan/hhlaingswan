@@ -125,9 +125,7 @@ const Education = () => {
               </div>
 
               {/* Content Card */}
-              <div className="education-card bg-white/30 dark:bg-card/80 p-6 rounded-md backdrop-blur-lg shadow-md ">
-                <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
-
+              <div className="education-card bg-white/30 dark:bg-card/80 p-6 border border-foreground rounded-md backdrop-blur-lg shadow-md ">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 mb-3 sm:mb-0 text-primary text-xl flex-shrink-0">
                     {item.icon}
@@ -160,7 +158,7 @@ const Education = () => {
                     {item.courses.map((course, i) => (
                       <li
                         key={i}
-                        className="bg-secondary/50 p-3 rounded-md text-secondary-foreground text-sm"
+                        className="bg-white/10  p-3 rounded-md text-secondary-foreground text-sm"
                       >
                         {course}
                       </li>

@@ -10,9 +10,15 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[100vh] w-full flex items-center overflow-hidden px-4 py-12 bg-gradient-to-b from-background via-secondary/30 to-background"
+      className="relative min-h-[100vh] w-full flex items-center overflow-hidden px-4 py-12"
     >
-      <div className="container mx-auto md:max-w-6xl">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e5e5_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:linear-gradient(to_bottom,white,transparent)] dark:[mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 animate-pulse" />
+      </div>
+      
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background pointer-events-none" />
+
+      <div className="container mx-auto md:max-w-6xl relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}

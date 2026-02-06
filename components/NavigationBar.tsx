@@ -37,7 +37,6 @@ const DATA = {
     { href: "#home", icon: HomeIcon, label: "Home" },
     { href: "#about", icon: UserIcon, label: "About" },
     { href: "#projects", icon: BriefcaseIcon, label: "Projects" },
-    { href: "#contact", icon: Icons.email, label: "Contact" },
   ],
   social: [
     {

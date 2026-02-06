@@ -51,12 +51,6 @@ export interface SocialLink {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
-export interface ContactFormData {
-  name: string;
-  email: string;
-  message: string;
-}
-
 export interface Certificate {
   id: string;
   title: string;
