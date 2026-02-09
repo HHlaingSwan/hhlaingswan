@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useLayoutEffect } from "react";
+import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Calendar, Code, GraduationCap, University } from "lucide-react";
@@ -92,7 +93,14 @@ const Education = () => {
   }, []); // Dependency array can be empty now
 
   return (
-    <section id="about" className="py-20 bg-background">
+    <motion.section
+      id="about"
+      className="py-20 bg-background"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 md:mb-20 text-foreground">
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">
@@ -177,7 +185,7 @@ const Education = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

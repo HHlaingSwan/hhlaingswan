@@ -43,7 +43,14 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 bg-background">
+    <motion.section
+      id="about"
+      className="py-20 md:py-28 bg-background"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="container mx-auto px-4 md:px-8 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -189,7 +196,7 @@ const About = () => {
           </motion.div>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

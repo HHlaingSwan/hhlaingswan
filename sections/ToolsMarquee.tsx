@@ -65,7 +65,14 @@ const ToolsMarquee = () => {
   const duplicatedTools = [...tools, ...tools, ...tools];
 
   return (
-    <section id="tools" className="py-10 bg-background w-full overflow-hidden">
+    <motion.section
+      id="tools"
+      className="py-10 bg-background w-full overflow-hidden"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="relative">
         <motion.div
           animate={{ x: ["0%", "-33.33%"] }}
@@ -92,7 +99,7 @@ const ToolsMarquee = () => {
           ))}
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -8,15 +8,19 @@ import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section
+    <motion.section
       id="home"
-      className="relative min-h-[100vh] w-full flex items-center   overflow-hidden px-4 py-12"
+      className="relative min-h-screen w-full flex items-center overflow-hidden px-4 py-12 bg-gradient-to-b from-background via-primary/5 to-background"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e5e5_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:linear-gradient(to_bottom,white,transparent)] dark:[mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 animate-pulse" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e5e5_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[linear-gradient(to_bottom,white,transparent)] dark:mask-[radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none">
+        <div className="absolute inset-0 bg-linear-to-r from-primary/5 via-transparent to-primary/5 animate-pulse" />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-background via-transparent to-background pointer-events-none" />
 
       <div className="container mx-auto md:max-w-7xl relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -81,7 +85,7 @@ const Hero = () => {
               </div>
               <div className="w-px h-12 bg-border" />
               <div>
-                <p className="text-2xl font-bold">10+</p>
+                <p className="text-2xl font-bold">6+</p>
                 <p className="text-sm text-muted-foreground">Projects</p>
               </div>
               <div className="w-px h-12 bg-border" />
@@ -98,8 +102,8 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex justify-center"
           >
-            <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl" />
+            <div className="relative w-70 h-70 md:w-100 md:h-100">
+              <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-transparent rounded-full blur-3xl" />
               <Image
                 src="/Man-thinking.png"
                 alt="Htet Hlaing Swan - Full-Stack Developer"
@@ -112,7 +116,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
