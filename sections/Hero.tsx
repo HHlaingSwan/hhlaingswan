@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <motion.section
       id="home"
-      className="relative min-h-screen w-full flex items-center overflow-hidden px-4 py-12 bg-gradient-to-b from-background via-primary/5 to-background"
+      className="relative min-h-screen w-full flex items-center overflow-hidden px-4 py-12"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
