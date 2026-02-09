@@ -14,7 +14,7 @@ const Achievements = () => {
   if (!certificates.length) return null;
 
   return (
-    <section id="achievements" className="py-20 bg-background">
+    <section id="achievements" className="py-20 overflow-hidden">
       <div className="container mx-auto px-4 space-y-6">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
@@ -26,11 +26,11 @@ const Achievements = () => {
           </p>
         </div>
 
-        <div className="flex gap-4 md:gap-6  overflow-x-auto p-4 w-screen">
+        <div className="flex gap-4 md:gap-6   overflow-x-auto overflow-hidden p-4 md:p-0 md:w-80vw  w-screen">
           {certificates.map((certificate) => (
             <article
               key={certificate.id}
-              className="w-72 md:w-120 shrink-0 rounded-md border border-border/60 bg-card/80 shadow-lg shadow-primary/10"
+              className="w-72 md:w-120 shrink-0 rounded-md  border border-border/60 bg-card/80 shadow-lg shadow-primary/10"
             >
               <div className="relative h-44 md:h-76 overflow-hidden rounded-t-lg">
                 <Image
