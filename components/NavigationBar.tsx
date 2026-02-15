@@ -3,13 +3,12 @@
 import React from "react";
 import Link from "next/link";
 import {
-  Facebook,
   GithubIcon,
   HomeIcon,
   Linkedin,
-  MailIcon,
   UserIcon,
   BriefcaseIcon,
+  GraduationCapIcon,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -26,9 +25,7 @@ import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
-  email: (props: IconProps) => <MailIcon {...props} />,
   linkedin: (props: IconProps) => <Linkedin {...props} />,
-  facebook: (props: IconProps) => <Facebook {...props} />,
   github: (props: IconProps) => <GithubIcon {...props} />,
 };
 
@@ -36,6 +33,7 @@ const DATA = {
   navbar: [
     { href: "#home", icon: HomeIcon, label: "Home" },
     { href: "#about", icon: UserIcon, label: "About" },
+    { href: "#education", icon: GraduationCapIcon, label: "Education" },
     { href: "#projects", icon: BriefcaseIcon, label: "Projects" },
   ],
   social: [

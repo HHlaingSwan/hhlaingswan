@@ -3,7 +3,7 @@ import ClientWrapper from "@/components/ClientWrapper";
 
 const page = () => {
 	return (
-		<main>
+		<main id="main-content">
 			<ClientWrapper />
 		</main>
 	);

@@ -26,13 +26,13 @@ const tools = [
   {
     icon: <SiNextdotjs size={34} />,
     name: "Next.js",
-    color: "#FFFFFF",
+    color: "currentColor",
     bg: "rgba(255, 255, 255, 0.1)",
   },
   {
     icon: <SiExpo size={34} />,
     name: "Expo",
-    color: "#FFFFFF",
+    color: "currentColor",
     bg: "rgba(255, 255, 255, 0.1)",
   },
   {
@@ -90,7 +90,9 @@ const ToolsMarquee = () => {
                 className="w-12 h-12 rounded-lg flex items-center justify-center"
                 style={{ backgroundColor: tool.bg }}
               >
-                <span style={{ color: tool.color }}>{tool.icon}</span>
+                <span className="text-foreground" style={{ color: tool.color }}>
+                  {tool.icon}
+                </span>
               </div>
               <span className="text-base font-semibold text-foreground">
                 {tool.name}

@@ -14,11 +14,14 @@ const Achievements = () => {
   if (!certificates.length) return null;
 
   return (
-    <section id="achievements" className="py-20  ">
-      <div className="container mx-auto px-4 space-y-6">
+    <section id="achievements" className="py-20 md:py-24">
+      <div className="container mx-auto px-4 space-y-8">
         <div className="text-center max-w-3xl mx-auto">
+          <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-primary font-semibold mb-3">
+            Certifications
+          </p>
           <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
-            <AuroraText>Achievement</AuroraText>
+            <AuroraText>Achievements</AuroraText>
           </h2>
           <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
             Explore my journey through various courses, certifications, and
@@ -26,22 +29,25 @@ const Achievements = () => {
           </p>
         </div>
 
-        <div className="flex gap-4 md:gap-6   overflow-x-auto overflow-hidden  p-4 md:p-0 md:w-full mx-auto  w-screen">
-          {certificates.map((certificate) => (
+        <div
+          className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {certificates.map((certificate, index) => (
             <article
               key={certificate.id}
-              className="w-72 md:w-120 shrink-0 rounded-md  border border-border/60 bg-card/80 shadow-lg shadow-primary/10"
+              className="w-[72vw] md:w-[36vw] lg:w-[30vw] shrink-0 snap-start rounded-xl border border-border/60 bg-card/85 shadow-md shadow-primary/5"
             >
-              <div className="relative h-44 md:h-76 overflow-hidden rounded-t-lg">
+              <div className="relative h-44 md:h-64 overflow-hidden rounded-t-xl">
                 <Image
                   src={certificate.image}
                   alt={`${certificate.title} certificate`}
                   fill
                   className="object-cover brightness-105"
-                  priority
+                  sizes="(max-width: 768px) 288px, 480px"
+                  priority={index === 0}
                 />
                 <div className="absolute bottom-3 left-4 right-4 text-white">
-                  <p className="text-[10px] md:text-xs uppercase tracking-[0.22em] md:tracking-[0.3em] text-white/70">
+                  <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-white/70">
                     {certificate.institution}
                   </p>
                   <h3 className="text-base md:text-lg font-semibold">
@@ -52,15 +58,15 @@ const Achievements = () => {
                   </p>
                 </div>
               </div>
-              <div className="px-4 md:px-5 py-3 md:py-4 space-y-3">
-                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+              <div className="px-4 md:px-5 py-4 space-y-3">
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed min-h-12">
                   {certificate.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {certificate.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full bg-border/50 px-2.5 md:px-3 py-1 text-[8px] md:text-[11px] font-semibold uppercase tracking-[0.18em] md:tracking-[0.2em] text-muted-foreground"
+                      className="rounded-full bg-border/50 px-2.5 md:px-3 py-1 text-[9px] md:text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground"
                     >
                       {skill}
                     </span>

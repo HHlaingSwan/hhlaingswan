@@ -1,10 +1,7 @@
 export interface Project {
   title: string;
-  description: React.ReactNode;
+  description: string;
   url: string;
-  content: React.ReactNode;
-  details?: React.ReactNode;
-  status?: "in-progress" | "completed";
   images?: string[];
   tags?: string[];
   impact?: string;

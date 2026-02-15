@@ -54,6 +54,9 @@ const Education = () => {
     if (!container || !timeline) return;
 
     const ctx = gsap.context(() => {
+      const cards = gsap.utils.toArray<HTMLElement>("[data-education-card]");
+      const dots = gsap.utils.toArray<HTMLElement>("[data-timeline-dot]");
+
       // Create a single timeline for all animations
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -69,7 +72,7 @@ const Education = () => {
 
       // Animate the education cards with a stagger
       tl.from(
-        ".education-card",
+        cards,
         {
           opacity: 0,
           y: 50,
@@ -80,7 +83,7 @@ const Education = () => {
 
       // Animate the timeline dots with a stagger
       tl.from(
-        ".timeline-dot",
+        dots,
         {
           scale: 0,
           stagger: 0.2,
@@ -94,62 +97,71 @@ const Education = () => {
 
   return (
     <motion.section
-      id="about"
-      className="py-20 bg-background"
+      id="education"
+      className="py-20 md:py-24 bg-background"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 md:mb-20 text-foreground">
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">
+        <div className="text-center mb-14 md:mb-18 text-foreground max-w-3xl mx-auto">
+          <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-primary font-semibold mb-3">
+            Learning Path
+          </p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
             <AuroraText>About My Education</AuroraText>
           </h2>
 
-          <p className="text-muted-foreground font-lora max-w-2xl text-sm md:text-base mx-auto px-4 md:px-0">
+          <p className="text-muted-foreground max-w-2xl text-sm md:text-base leading-relaxed mx-auto">
             Explore my academic background and the skills I&apos;ve gained
             throughout my educational journey at Myanmar Technopreneur Academy.
           </p>
         </div>
 
         <div
-          className="max-w-3xl mx-auto relative [perspective:1000px]"
+          className="max-w-3xl mx-auto relative"
           ref={containerRef}
         >
           {/* Main timeline line that grows with scroll using GSAP */}
           <div
             ref={timelineRef}
-            className="absolute left-3 md:left-[7px] top-2 bottom-0 w-0.5 md:w-1 bg-foreground origin-top"
+            className="absolute left-[11px] md:left-3 top-4 bottom-0 w-px bg-border origin-top"
           ></div>
 
           {educationData.map((item, index) => (
-            <div key={index} className="mb-12 pl-10 md:pl-12 relative">
+            <div key={index} className="mb-8 md:mb-10 pl-10 md:pl-14 relative">
               {/* Timeline Dot - Outer circle is animated by GSAP */}
-              <div className="timeline-dot absolute left-0 md:-left-1 top-2 w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center bg-background">
+              <div
+                data-timeline-dot
+                className="absolute left-0 md:left-0 top-6 w-6 h-6 rounded-full border border-primary/50 flex items-center justify-center bg-background"
+              >
                 {/* Inner dot with a subtle pulse animation */}
-                <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-primary animate-pulse"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-primary/90 animate-pulse"></div>
               </div>
 
               {/* Content Card */}
-              <div className="education-card bg-white/30 dark:bg-card/80 p-6 border border-foreground rounded-md backdrop-blur-lg shadow-md ">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 mb-3 sm:mb-0 text-primary text-xl flex-shrink-0">
+              <div
+                data-education-card
+                className="bg-card/70 p-5 md:p-6 border border-border/60 rounded-xl backdrop-blur-sm shadow-sm"
+              >
+                <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4 gap-3">
+                  <div className="w-10 h-10 md:w-11 md:h-11 bg-primary/10 rounded-lg flex items-center justify-center text-primary text-lg flex-shrink-0">
                     {item.icon}
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-card-foreground">
+                  <h3 className="text-lg md:text-xl font-semibold text-card-foreground">
                     {item.title}
                   </h3>
                 </div>
 
                 {item.subtitle && (
                   <div className="mb-4">
-                    <h4 className="text-base md:text-lg font-semibold text-primary">
+                    <h4 className="text-sm md:text-base font-semibold text-primary">
                       {item.subtitle}
                     </h4>
                     {item.date && (
-                      <div className="flex items-center text-muted-foreground mt-1">
-                        <Calendar className="mr-2" />
+                      <div className="flex items-center text-muted-foreground mt-1 text-sm">
+                        <Calendar className="mr-2 size-4" />
                         <span>{item.date}</span>
                       </div>
                     )}
@@ -157,15 +169,17 @@ const Education = () => {
                 )}
 
                 {item.description && (
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                    {item.description}
+                  </p>
                 )}
 
                 {item.courses && (
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-4">
                     {item.courses.map((course, i) => (
                       <li
                         key={i}
-                        className="bg-white/10  p-3 rounded-md text-secondary-foreground text-sm"
+                        className="bg-muted/50 border border-border/50 p-3 rounded-lg text-sm text-foreground/90"
                       >
                         {course}
                       </li>
@@ -174,9 +188,12 @@ const Education = () => {
                 )}
 
                 {item.achievements && (
-                  <ul className="list-disc list-inside text-muted-foreground space-y-2 mt-4">
+                  <ul className="text-muted-foreground text-sm md:text-base space-y-2 mt-4">
                     {item.achievements.map((achievement, i) => (
-                      <li key={i}>{achievement}</li>
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary/80 flex-shrink-0" />
+                        <span className="leading-relaxed">{achievement}</span>
+                      </li>
                     ))}
                   </ul>
                 )}

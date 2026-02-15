@@ -12,14 +12,14 @@ const About = () => {
       title: "React Frontend Developer",
       company: "WeDay Social E commerce Platform",
       description:
-        "Built and shipped storefront features in Next.js and collaborated on Express APIs for a social e‑commerce platform.",
+        "Shipped storefront features in Next.js and supported Express API integration for a social e-commerce product.",
     },
     {
       year: "2023 - 2024",
       title: "Web Development Student",
       company: "Self-Learning | Education",
       description:
-        "Completed a self‑guided curriculum in React, Node.js, and databases while shipping multiple projects.",
+        "Completed a self-guided track in React, Node.js, and databases while delivering practical projects.",
     },
   ];
 
@@ -64,9 +64,9 @@ const About = () => {
               <AuroraText>About Me</AuroraText>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              I turn coffee into code and ideas into reality. Based in Myanmar,
-              I craft digital experiences with React, Node.js, and a lot of
-              determination. When I&apos;m not building, I&apos;m learning.
+              Based in Myanmar, I build full-stack products with React and
+              Node.js, with strong focus on performance, clean architecture,
+              and practical delivery.
             </p>
           </div>
 
@@ -90,16 +90,20 @@ const About = () => {
                     <div className="absolute left-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                       <div className="w-3 h-3 bg-background rounded-full" />
                     </div>
-                    <div className="mb-2">
-                      <span className="text-sm text-primary font-medium">
+                    <article className="rounded-xl border border-border/60 bg-card/60 p-4 md:p-5">
+                      <p className="text-xs md:text-sm text-primary font-medium mb-1">
                         {item.year}
-                      </span>
-                    </div>
-                    <h4 className="text-lg font-semibold mb-1">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      {item.company}
-                    </p>
-                    <p className="text-muted-foreground">{item.description}</p>
+                      </p>
+                      <h4 className="text-base md:text-lg font-semibold mb-1">
+                        {item.title}
+                      </h4>
+                      <p className="text-xs md:text-sm text-muted-foreground mb-3">
+                        {item.company}
+                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {item.description}
+                      </p>
+                    </article>
                   </motion.div>
                 ))}
               </div>
@@ -118,7 +122,7 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.6 }}
-                    className="p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-all"
+                    className="p-5 md:p-6 rounded-xl border border-border/60 bg-card/50 hover:border-primary/50 transition-all"
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -130,7 +134,7 @@ const About = () => {
                       {category.items.map((item, i) => (
                         <li
                           key={i}
-                          className="text-sm text-muted-foreground flex items-center gap-2"
+                          className="text-sm text-muted-foreground flex items-center gap-2 leading-relaxed"
                         >
                           <div className="w-1 h-1 bg-primary rounded-full" />
                           {item}
@@ -147,9 +151,9 @@ const About = () => {
             <div className="max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">What I Do</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I specialize in building full-stack applications with a focus on
-                user experience, performance, and scalability. From concept to
-                deployment, I handle every aspect of the development process.
+                I build end-to-end web applications from idea to deployment,
+                balancing user experience, backend reliability, and long-term
+                maintainability.
               </p>
             </div>
 
@@ -157,15 +161,15 @@ const About = () => {
               {[
                 {
                   title: "Design & UX",
-                  desc: "Creating intuitive interfaces with modern design principles",
+                  desc: "Designing interfaces that are simple, clear, and user-focused",
                 },
                 {
                   title: "Development",
-                  desc: "Writing clean, maintainable code with best practices",
+                  desc: "Building maintainable codebases with practical engineering standards",
                 },
                 {
                   title: "Deployment",
-                  desc: "Setting up scalable infrastructure and CI/CD pipelines",
+                  desc: "Deploying scalable services with CI/CD and production discipline",
                 },
               ].map((item, index) => (
                 <motion.div
