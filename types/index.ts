@@ -2,6 +2,7 @@ export interface Project {
   title: string;
   description: string;
   url: string;
+  repoUrl?: string;
   images?: string[];
   tags?: string[];
   impact?: string;

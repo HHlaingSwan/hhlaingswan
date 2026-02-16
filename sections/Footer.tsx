@@ -32,10 +32,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer
-      id="contact"
-      className="relative z-30 bg-background border-t border-border/50"
-    >
+    <footer id="footer" className="relative z-30 bg-background border-t border-border/50">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
       <div className="container mx-auto md:max-w-7xl px-4 py-10 md:py-12">
         <motion.div

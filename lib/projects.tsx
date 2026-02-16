@@ -6,6 +6,7 @@ export const content: Project[] = [
     description:
       "Full-stack shop with product management, secure auth, cart/checkout, and admin dashboard.",
     url: "https://master-project-sable.vercel.app",
+    repoUrl: "https://github.com/HHlaingSwan/master-project",
     tags: ["MERN", "E-Commerce", "Admin", "Cloudinary"],
     impact: "Full-stack shop with role-based admin access and order tracking.",
     images: ["/images/homeView.png"],
@@ -15,6 +16,7 @@ export const content: Project[] = [
     description:
       "Full-stack chat with real-time messaging, media sharing, presence, and JWT auth.",
     url: "https://unit-chat-five.vercel.app/",
+    repoUrl: "https://github.com/HHlaingSwan/Unit-Chat",
     tags: ["MERN", "Socket.IO", "JWT", "Cloudinary"],
     impact: "Real-time messaging with auth, media sharing, and live presence.",
     images: ["/images/demoChatApp.png"],
@@ -24,6 +26,7 @@ export const content: Project[] = [
     description:
       "Telegram bot for Burmese/English expense logging, monthly summaries, and holiday sync.",
     url: "https://t.me/gogoTimeBot",
+    repoUrl: "https://github.com/HHlaingSwan/gogoTimeBot",
     tags: ["Node.js", "Telegram Bot", "MongoDB", "API"],
     impact: "Burmese/English expense logging with automatic category mapping.",
     images: ["/images/function.png"],

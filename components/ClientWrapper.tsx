@@ -10,16 +10,18 @@ const ProjectOverview = dynamic(() => import("@/sections/ProjectOverview"));
 const ToolsMarquee = dynamic(() => import("@/sections/ToolsMarquee"));
 const Education = dynamic(() => import("@/sections/Education"));
 const Achievements = dynamic(() => import("@/sections/Achievements"));
+const Contact = dynamic(() => import("@/sections/Contact"));
 
 const ClientWrapper = () => {
   return (
-    <div className="relative flex flex-col justify-center items-center pb-28">
+    <div className="relative flex flex-col items-center gap-6 md:gap-8 pb-28">
       <Hero />
       <ToolsMarquee />
       <About />
       <Education />
       <Achievements />
       <ProjectOverview />
+      <Contact />
       <Footer />
       <div className="fixed bottom-10 md:bottom-14  left-1/2 -translate-x-1/2">
         <NavigationBar />

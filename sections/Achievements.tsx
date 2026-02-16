@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React from "react";
-import { AuroraText } from "@/components/ui/aurora-text";
 import { certificates } from "@/lib/certificates";
 
 const formatDate = (date: Date) =>
@@ -21,7 +20,7 @@ const Achievements = () => {
             Certifications
           </p>
           <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
-            <AuroraText>Achievements</AuroraText>
+            Achievements
           </h2>
           <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
             Explore my journey through various courses, certifications, and

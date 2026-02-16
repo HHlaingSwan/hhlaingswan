@@ -6,9 +6,8 @@ import {
   GithubIcon,
   HomeIcon,
   Linkedin,
-  UserIcon,
   BriefcaseIcon,
-  GraduationCapIcon,
+  MailIcon,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -32,9 +31,8 @@ const Icons = {
 const DATA = {
   navbar: [
     { href: "#home", icon: HomeIcon, label: "Home" },
-    { href: "#about", icon: UserIcon, label: "About" },
-    { href: "#education", icon: GraduationCapIcon, label: "Education" },
     { href: "#projects", icon: BriefcaseIcon, label: "Projects" },
+    { href: "#contact", icon: MailIcon, label: "Contact" },
   ],
   social: [
     {

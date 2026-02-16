@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Calendar, Code, GraduationCap, University } from "lucide-react";
-import { AuroraText } from "@/components/ui/aurora-text";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -110,7 +109,7 @@ const Education = () => {
             Learning Path
           </p>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            <AuroraText>About My Education</AuroraText>
+            About My Education
           </h2>
 
           <p className="text-muted-foreground max-w-2xl text-sm md:text-base leading-relaxed mx-auto">

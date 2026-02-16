@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Code, Database, Globe, Smartphone, Cpu, Layers } from "lucide-react";
-import { AuroraText } from "@/components/ui/aurora-text";
 
 const About = () => {
   const timeline = [
@@ -61,7 +60,7 @@ const About = () => {
         >
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <AuroraText>About Me</AuroraText>
+              About Me
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Based in Myanmar, I build full-stack products with React and

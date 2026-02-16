@@ -39,7 +39,7 @@ const Hero = () => {
                 .
               </p>
 
-              <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-2xl md:text-5xl font-bold leading-tight">
                 I&apos;m a{" "}
                 <span className="inline-block">
                   <AuroraText>
@@ -56,7 +56,7 @@ const Hero = () => {
                 </span>
               </h1>
 
-              <p className="text-muted-foreground text-lg max-w-md">
+              <p className="text-muted-foreground text-base md:text-lg max-w-md">
                 Building elegant, scalable solutions with clean code and modern
                 technologies.
               </p>
@@ -65,14 +65,14 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#projects"
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
+                className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
               >
                 See What I Build
                 <ArrowRight className="size-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
               <a
                 href="#about"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-lg font-medium hover:bg-muted transition-colors"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 border border-border rounded-lg font-medium hover:bg-muted transition-colors"
               >
                 About Me
               </a>
@@ -109,6 +109,7 @@ const Hero = () => {
                 alt="Htet Hlaing Swan - Full-Stack Developer"
                 width={500}
                 height={500}
+                sizes="(max-width: 768px) 280px, 400px"
                 className="object-contain relative z-10"
                 priority
               />
