@@ -56,9 +56,7 @@ const Contact = () => {
     >
       <div className="container mx-auto md:max-w-7xl px-0">
         <div className="mb-8 text-center md:mb-10">
-          <h2 className="mb-3 text-2xl font-bold md:text-5xl">
-            Contact
-          </h2>
+          <h2 className="mb-3 text-2xl font-bold md:text-5xl">Contact</h2>
           <p className="mx-auto max-w-2xl text-sm text-muted-foreground md:text-base">
             Choose a direct channel below. No form.
           </p>
@@ -79,7 +77,7 @@ const Contact = () => {
                 className={`group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-5 md:p-6`}
               >
                 <div
-                  className={`pointer-events-none absolute inset-0 bg-gradient-to-r ${item.tone} opacity-70`}
+                  className={`pointer-events-none absolute inset-0 bg-linear-to-r ${item.tone} opacity-70`}
                 />
                 <div className="relative flex items-center justify-between gap-4">
                   <div className="flex min-w-0 items-center gap-3">
@@ -106,26 +104,36 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.45 }}
-            className="rounded-2xl border border-border/60 bg-card p-6 md:p-7"
+            className="relative overflow-hidden rounded-2xl border border-border/60 bg-card p-6 md:p-7"
           >
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-border/60 px-3 py-1 text-xs text-muted-foreground">
+            <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/12 via-transparent to-cyan-500/10" />
+            <div className="relative mb-4 inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-3 py-1.5 text-xs text-muted-foreground">
               <CalendarClock className="size-3.5" />
               Availability
             </div>
-            <h3 className="mb-2 text-xl font-semibold">Open to work</h3>
-            <p className="text-sm text-muted-foreground">
+            <h3 className="relative mb-2 text-xl font-semibold">
+              Open to work
+            </h3>
+            <p className="relative text-sm text-muted-foreground">
               Freelance projects and full-time opportunities.
             </p>
-            <div className="mt-6 space-y-3 text-sm">
-              <div className="rounded-lg border border-border/60 bg-background/60 px-3 py-2">
-                Preferred: Email
+            <div className="relative mt-6 grid gap-3 text-sm">
+              <div className="flex items-center justify-between rounded-xl border border-border/60 bg-background/70 px-3 py-3.5">
+                <span className="text-muted-foreground">Preferred</span>
+                <span className="font-medium">Email</span>
               </div>
-              <div className="rounded-lg border border-border/60 bg-background/60 px-3 py-2">
-                Time zone: GMT+6:30
+              <div className="flex items-center justify-between rounded-xl border border-border/60 bg-background/70 px-3 py-3.5">
+                <span className="text-muted-foreground">Time zone</span>
+                <span className="font-medium">GMT+6:30</span>
               </div>
-              <div className="rounded-lg border border-border/60 bg-background/60 px-3 py-2">
-                Response: within 24h
+              <div className="flex items-center justify-between rounded-xl border border-border/60 bg-background/70 px-3 py-3.5">
+                <span className="text-muted-foreground">Response</span>
+                <span className="font-medium">Within 24h</span>
               </div>
+            </div>
+            <div className="relative mt-4 inline-flex items-center gap-2 rounded-lg bg-emerald-500/15 px-3 py-1.5 text-xs font-medium text-emerald-600 dark:text-emerald-400">
+              <span className="size-2 rounded-full bg-emerald-500" />
+              Currently available
             </div>
           </motion.aside>
         </div>
