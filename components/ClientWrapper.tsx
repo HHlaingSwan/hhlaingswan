@@ -14,7 +14,7 @@ const Contact = dynamic(() => import("@/sections/Contact"));
 
 const ClientWrapper = () => {
   return (
-    <div className="relative flex flex-col items-center gap-6 md:gap-8 pb-28">
+    <div className="relative flex w-full flex-col items-center gap-6 md:gap-8 ">
       <Hero />
       <ToolsMarquee />
       <About />

@@ -17,21 +17,18 @@ const channels = [
     value: "htethlaingswan@gmail.com",
     href: "mailto:htethlaingswan@gmail.com",
     icon: Mail,
-    tone: "from-blue-500/20 to-cyan-500/10",
   },
   {
     title: "Phone",
     value: "+95 995 464 1112",
     href: "tel:+959954641112",
     icon: PhoneCall,
-    tone: "from-emerald-500/20 to-lime-500/10",
   },
   {
     title: "Location",
     value: "Yangon, Myanmar",
     href: "https://maps.google.com/?q=Yangon,Myanmar",
     icon: MapPin,
-    tone: "from-amber-500/20 to-orange-500/10",
     external: true,
   },
   {
@@ -39,7 +36,6 @@ const channels = [
     value: "R R ( Robert Rebellion )",
     href: "https://t.me/Hhs4438",
     icon: Send,
-    tone: "from-sky-500/20 to-blue-500/10",
     external: true,
   },
 ];
@@ -48,7 +44,7 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="w-full px-4 py-20 md:py-24"
+      className="w-full px-4 bg-background py-20 md:py-24"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -76,12 +72,10 @@ const Contact = () => {
                 transition={{ duration: 0.35, delay: index * 0.08 }}
                 className={`group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-5 md:p-6`}
               >
-                <div
-                  className={`pointer-events-none absolute inset-0 bg-linear-to-r ${item.tone} opacity-70`}
-                />
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-foreground/3 to-transparent dark:from-foreground/6" />
                 <div className="relative flex items-center justify-between gap-4">
                   <div className="flex min-w-0 items-center gap-3">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-background/70 text-primary">
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-background/80 text-foreground">
                       <item.icon className="size-5" />
                     </div>
                     <div className="min-w-0">
@@ -106,7 +100,7 @@ const Contact = () => {
             transition={{ duration: 0.45 }}
             className="relative overflow-hidden rounded-2xl border border-border/60 bg-card p-6 md:p-7"
           >
-            <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/12 via-transparent to-cyan-500/10" />
+            <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-foreground/4 via-transparent to-foreground/2 dark:from-foreground/8 dark:to-foreground/3" />
             <div className="relative mb-4 inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-3 py-1.5 text-xs text-muted-foreground">
               <CalendarClock className="size-3.5" />
               Availability
@@ -131,8 +125,8 @@ const Contact = () => {
                 <span className="font-medium">Within 24h</span>
               </div>
             </div>
-            <div className="relative mt-4 inline-flex items-center gap-2 rounded-lg bg-emerald-500/15 px-3 py-1.5 text-xs font-medium text-emerald-600 dark:text-emerald-400">
-              <span className="size-2 rounded-full bg-emerald-500" />
+            <div className="relative mt-4 inline-flex items-center gap-2 rounded-lg border border-border/60 bg-background/70 px-3 py-1.5 text-xs font-medium text-foreground">
+              <span className="size-2 rounded-full bg-foreground" />
               Currently available
             </div>
           </motion.aside>
