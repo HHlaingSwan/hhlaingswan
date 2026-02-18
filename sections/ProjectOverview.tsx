@@ -29,7 +29,7 @@ const ProjectOverview = () => {
         </p>
       </div>
 
-      <div className="space-y-12 md:space-y-16">
+      <div className="space-y-16 md:space-y-24">
         {content.map((project, index) => (
           <motion.article
             key={project.title}
