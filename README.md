@@ -1,109 +1,93 @@
-<!-- Profile Header -->
-<div align="center">
+# Hi, I'm Htet Hlaing Swan
 
-  <!-- Fun intro emoji -->
-  <h1>👋 Hey there, I'm <span style="color:#16a34a;">Htet Hlaing Swan</span></h1>
-  <h3>💻 Full Stack Developer · 🌏 Mandalay, Myanmar · 🎮 Code, Coffee &amp; Cartoons</h3>
+<p align="left">
+  <img src="https://img.shields.io/badge/Role-Full%20Stack%20Developer-2563eb?style=for-the-badge" alt="Role" />
+  <img src="https://img.shields.io/badge/Location-Yangon%2C%20Myanmar-16a34a?style=for-the-badge" alt="Location" />
+  <img src="https://img.shields.io/badge/Focus-Growth%20%26%20Discipline-f97316?style=for-the-badge" alt="Focus" />
+</p>
 
-  <!-- Cartoon / GIF area (replace with your own image or GIF) -->
-  <!-- Upload a GIF or image to this repo and replace the src below -->
-  <!-- Example: src="https://github.com/HHlaingSwan/hhlaingswan/blob/main/assets/dev-cartoon.gif" -->
-  <img src="YOUR-CARTOON-OR-ANIMATION-IMAGE-URL" alt="Developer Cartoon" height="220" />
+<p align="left">
+  <img src="./public/cartoon.jpeg" alt="Htet Hlaing Swan Cartoon" width="220" />
+</p>
 
-</div>
+## About Me
 
----
+I am a developer who values clean thinking, practical execution, and constant learning.
 
-<!-- Animated-like divider using emojis -->
-<div align="center">
+I started coding because I wanted to build useful things, but I stayed because software taught me how to think better: break big problems into smaller parts, stay calm under pressure, and keep improving one version at a time.
 
-🟢⚫🟢⚫🟢⚫🟢⚫🟢⚫🟢⚫🟢⚫🟢⚫🟢⚫🟢⚫  
+## What Reflects Me
 
-</div>
+- I prefer clear systems over noise.
+- I care about consistency more than quick hype.
+- I learn by building, testing, and refining.
+- I believe strong communication is part of strong engineering.
 
-## 🚀 About Me
+## Now
 
-- 🧑 I’m a **Full Stack Developer** who loves building clean, scalable, and user-friendly apps.  
-- 🌐 I build **web** &amp; **mobile** apps with React, Next.js, React Native, Node.js, MongoDB &amp; more.  
-- ☕ Currently leveling up my **Java + Spring Boot** backend skills.  
-- 🎯 Goal: craft products that feel **smooth, modern, and fun** to use.  
-- 🎨 Vibes: minimal UI + **cartoon/animated** style when possible.
+- Deepening backend architecture and API design decisions
+- Improving Docker-based development workflows
+- Practicing production-focused debugging and performance checks
 
----
+## My Working Style
 
-## 🧩 Tech Stack (as a Cartoon Skill Tree)
+- `Clarity first`: understand the problem before writing code.
+- `Small iterations`: ship, review, improve.
+- `Ownership mindset`: if I touch it, I make it better.
+- `Long-term view`: write code that stays readable.
 
-**Frontend Power-Ups:**
+## My Current Journey
 
-- ⚡ **React.js** – Hooks, Context API, Redux  
-- 🌀 **Next.js** – SSR, SSG, performance-focused apps  
-- 🎨 **Tailwind CSS**, **Material UI**, **Framer Motion** (smooth animations &amp; micro-interactions)  
-- 🌐 **Axios**, **React Query**, **TanStack Table**
+I am growing as a full-stack engineer with stronger backend depth and better architecture decisions.
 
-**Mobile Moves:**
+Right now, I am focused on:
 
-- 📱 **React Native** (iOS &amp; Android)  
-- 🚀 **Expo**  
-- 🧭 **React Navigation**
+- writing cleaner TypeScript and Node.js code
+- improving database modeling and performance thinking
+- strengthening deployment and DevOps habits
+- becoming more reliable in real-world production workflows
 
-**Backend Abilities:**
+## Principles
 
-- 🧠 **Node.js** &amp; **Express.js**  
-- 🔐 **REST APIs**, Auth with **JWT** &amp; **OAuth**  
-- 🗂️ **MongoDB** + **Mongoose**  
-- ☁️ File upload, cloud storage, real-time with **Socket.io**
+- Build for clarity, not complexity
+- Solve root causes, not only visible symptoms
+- Keep feedback loops short
+- Prefer maintainable code over clever code
+- Communicate early and directly
 
-**Java Journey (XP Grinding):**
+## Tech Map
 
-- ☕ **Java Core**, OOP  
-- 🌱 **Spring Boot** – REST APIs, JPA, MySQL/Mongo  
-- 📦 **Maven / Gradle**, **JUnit Testing**
+- Core: `TypeScript`, `React`, `Next.js`, `Node.js`, `MongoDB`
+- Comfortable: `Express`, `Tailwind CSS`, `Git`, `Docker`
+- Learning: `AWS`, `Java`, `Golang`, deeper system design
 
----
+## Tech I Enjoy
 
-## 🎮 What I Can Do
+<p align="left">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/React-20232a?style=flat-square&logo=react&logoColor=61dafb" alt="React" />
+  <img src="https://img.shields.io/badge/Next.js-111111?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Node.js-3c873a?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/MongoDB-13aa52?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
+  <img src="https://img.shields.io/badge/Docker-0db7ed?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+</p>
 
-- ✅ Build **full-stack web applications** from scratch  
-- ✅ Design &amp; implement **REST APIs**  
-- ✅ Connect &amp; manage **MongoDB / MySQL** databases  
-- ✅ Create **responsive, modern UI** with React &amp; animations  
-- ✅ Deploy apps on **Vercel**, **Render**, **Railway**  
-- ✅ Integrate **third-party APIs &amp; authentication systems**  
-- ✅ Write **clean, maintainable, and reusable** code
+## Languages
 
----
+- Burmese: Native
+- English: Professional working level
 
-## 🧠 Currently Exploring
+## Connect
 
-- 🟦 **TypeScript** for safer code  
-- ⚛️ **Next.js 15 &amp; Server Components**  
-- 🧱 **Microservices** architecture  
-- 🐳 **Docker** for containerized deployments
+- Email: `htethlaingswan@gmail.com`
+- Telegram: `https://t.me/Hhs4438`
+- LinkedIn: `https://www.linkedin.com/in/h-hlaing-swan-345956353`
 
----
+## Open To
 
-## 🌟 Projects (Cartoon Highlights)
-
-- 🔹 **MERN Dashboard** – Admin panel with charts &amp; analytics  
-- 🔹 **Task Manager API** – Node + MongoDB CRUD REST API  
-- 🔹 **Chat App** – Real-time chat with Socket.io  
-- 🔹 **Java Guessing Game** – Simple console fun  
-- 🔹 **Portfolio Website** – React + Tailwind personal site
+- Freelance projects
+- Full-time software engineering opportunities
 
 ---
 
-## 📫 Reach Me
-
-- 💼 LinkedIn – https://www.linkedin.com/in/h-hlaing-swan-345956353/
-- 🌐 Portfolio – https://hhlaingswan.vercel.app/
-- 📧 Email – `htethlaingswan@gmail.com`
-
----
-
-<div align="center">
-
-⭐ <b>"Code. Create. Improve. Repeat."</b>  
-<br/>
-Thanks for scrolling! 🙌
-
-</div>
+> "Progress is built in quiet days, not only big moments."
