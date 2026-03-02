@@ -7,7 +7,7 @@
 </p>
 
 <p align="left">
-  <img src="./public/cartoon.jpeg" alt="Htet Hlaing Swan Cartoon" width="220" />
+  <img src="./cartoon.jpeg" alt="Htet Hlaing Swan Cartoon" width="220" />
 </p>
 
 <p align="left">
@@ -22,51 +22,6 @@ I am a developer who values clean thinking, practical execution, and constant le
 
 I started coding because I wanted to build useful things, but I stayed because software taught me how to think better: break big problems into smaller parts, stay calm under pressure, and keep improving one version at a time.
 
-## 🪞 What Reflects Me
-
-- I prefer clear systems over noise.
-- I care about consistency more than quick hype.
-- I learn by building, testing, and refining.
-- I believe strong communication is part of strong engineering.
-
-## 🚀 Now
-
-- Deepening backend architecture and API design decisions
-- Improving Docker-based development workflows
-- Practicing production-focused debugging and performance checks
-
-## 🧭 My Working Style
-
-- `Clarity first`: understand the problem before writing code.
-- `Small iterations`: ship, review, improve.
-- `Ownership mindset`: if I touch it, I make it better.
-- `Long-term view`: write code that stays readable.
-
-## 📈 My Current Journey
-
-I am growing as a full-stack engineer with stronger backend depth and better architecture decisions.
-
-Right now, I am focused on:
-
-- writing cleaner TypeScript and Node.js code
-- improving database modeling and performance thinking
-- strengthening deployment and DevOps habits
-- becoming more reliable in real-world production workflows
-
-## ✅ Principles
-
-- Build for clarity, not complexity
-- Solve root causes, not only visible symptoms
-- Keep feedback loops short
-- Prefer maintainable code over clever code
-- Communicate early and directly
-
-## 🧰 Tech Map
-
-- Core: `TypeScript`, `React`, `Next.js`, `Node.js`, `MongoDB`
-- Comfortable: `Java`, `Spring Boot`, `PostgreSQL`, `Express`, `Tailwind CSS`, `Git`, `Docker`
-- Learning: `AWS`, `Golang`, advanced system design, cloud-native architecture
-
 ## 🎨 Tech I Enjoy
 
 <p align="left">
@@ -80,21 +35,47 @@ Right now, I am focused on:
   <img src="https://img.shields.io/badge/MongoDB-13aa52?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
   <img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <img src="https://img.shields.io/badge/Docker-0db7ed?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-  <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman" />
 </p>
+
+## 🚀 Now
+
+- Deepening backend architecture and API design decisions
+- Improving Docker-based development workflows
+- Practicing production-focused debugging and performance checks
+
+## 📊 GitHub Stats
+
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api?username=hhlaingswan&show_icons=true&theme=dark&hide_border=true&count_private=true" alt="GitHub Stats" />
+</p>
+
+## � How I Work
+
+- `Clarity first`: understand the problem before writing code
+- `Small iterations`: ship, review, improve
+- `Ownership mindset`: if I touch it, I make it better
+- Build for clarity, not complexity — prefer maintainable over clever
+- Solve root causes, not only visible symptoms
+- Communicate early and directly
 
 ## 🌏 Languages
 
 - Burmese: Native
 - English: working level
 
+## 🗂️ Projects
+
+| Project                                                   | Description             | Stack                         |
+| --------------------------------------------------------- | ----------------------- | ----------------------------- |
+| [hhlaingswan](https://github.com/hhlaingswan/hhlaingswan) | Personal portfolio site | Next.js, TypeScript, Tailwind |
+
+<!-- Add more of your best repos here -->
+
 ## 🤝 Connect
 
-- Email: `htethlaingswan@gmail.com`
-- Telegram: `https://t.me/Hhs4438`
-- LinkedIn: `https://www.linkedin.com/in/h-hlaing-swan-345956353`
+- 📧 [htethlaingswan@gmail.com](mailto:htethlaingswan@gmail.com)
+- ✈️ [Telegram](https://t.me/Hhs4438)
+- 💼 [LinkedIn](https://www.linkedin.com/in/h-hlaing-swan-345956353)
 
 ## 💼 Open To
 
