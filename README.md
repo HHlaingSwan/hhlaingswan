@@ -1,85 +1,109 @@
-# 👋 Hi, I'm Htet Hlaing Swan
+<!-- Profile Header -->
+<div align="center">
 
-I'm a **Full Stack Developer** who loves building clean, scalable, and user-friendly applications.  
-I specialize in creating modern web and mobile apps using **React**, **React Native**, **Node.js**, and **MongoDB**. Currently, I am also learning **Java**.
+  <!-- Fun intro emoji -->
+  <h1>👋 Hey there, I'm <span style="color:#16a34a;">Htet Hlaing Swan</span></h1>
+  <h3>💻 Full Stack Developer · 🌏 Mandalay, Myanmar · 🎮 Code, Coffee &amp; Cartoons</h3>
 
----
+  <!-- Cartoon / GIF area (replace with your own image or GIF) -->
+  <!-- Upload a GIF or image to this repo and replace the src below -->
+  <!-- Example: src="https://github.com/HHlaingSwan/hhlaingswan/blob/main/assets/dev-cartoon.gif" -->
+  <img src="YOUR-CARTOON-OR-ANIMATION-IMAGE-URL" alt="Developer Cartoon" height="220" />
 
-## 🚀 Tech Stack
-
-### 💻 Frontend
-
-- **React.js** (Hooks, Context API, Redux)
-- **Next.js** for server-side rendering and performance
-- **Tailwind CSS**, **Material UI**, **Framer Motion**
-- **Axios**, **React Query**, **TanStack Table**
-
-### 📱 Mobile
-
-- **React Native** (iOS & Android)
-- **Expo**
-- **React Navigation**
-
-### 🧠 Backend
-
-- **Node.js** & **Express.js**
-- **RESTful APIs** and **Authentication (JWT, OAuth)**
-- **MongoDB** with **Mongoose**
-- **File upload**, **Cloud storage**, and **Socket.io**
-
-### ☕ Java (Learning)
-
-- **Java Core** and **OOP**
-- **Spring Boot** (REST APIs, JPA, MySQL/Mongo)
-- **Maven/Gradle**, **JUnit Testing**
+</div>
 
 ---
 
-## 🧩 What I Can Do
+<!-- Animated-like divider using emojis -->
+<div align="center">
 
-✅ Build full-stack web applications from scratch  
-✅ Design and implement REST APIs  
-✅ Connect and manage MongoDB / MySQL databases  
-✅ Create responsive, modern UI with React  
-✅ Deploy applications on cloud platforms (Vercel, Render, or Railway)  
-✅ Integrate third-party APIs & authentication systems  
-✅ Write clean, maintainable, and reusable code
+🟢⚫🟢⚫🟢⚫🟢⚫🟢⚫🟢⚫🟢⚫🟢⚫🟢⚫🟢⚫  
+
+</div>
+
+## 🚀 About Me
+
+- 🧑 I’m a **Full Stack Developer** who loves building clean, scalable, and user-friendly apps.  
+- 🌐 I build **web** &amp; **mobile** apps with React, Next.js, React Native, Node.js, MongoDB &amp; more.  
+- ☕ Currently leveling up my **Java + Spring Boot** backend skills.  
+- 🎯 Goal: craft products that feel **smooth, modern, and fun** to use.  
+- 🎨 Vibes: minimal UI + **cartoon/animated** style when possible.
+
+---
+
+## 🧩 Tech Stack (as a Cartoon Skill Tree)
+
+**Frontend Power-Ups:**
+
+- ⚡ **React.js** – Hooks, Context API, Redux  
+- 🌀 **Next.js** – SSR, SSG, performance-focused apps  
+- 🎨 **Tailwind CSS**, **Material UI**, **Framer Motion** (smooth animations &amp; micro-interactions)  
+- 🌐 **Axios**, **React Query**, **TanStack Table**
+
+**Mobile Moves:**
+
+- 📱 **React Native** (iOS &amp; Android)  
+- 🚀 **Expo**  
+- 🧭 **React Navigation**
+
+**Backend Abilities:**
+
+- 🧠 **Node.js** &amp; **Express.js**  
+- 🔐 **REST APIs**, Auth with **JWT** &amp; **OAuth**  
+- 🗂️ **MongoDB** + **Mongoose**  
+- ☁️ File upload, cloud storage, real-time with **Socket.io**
+
+**Java Journey (XP Grinding):**
+
+- ☕ **Java Core**, OOP  
+- 🌱 **Spring Boot** – REST APIs, JPA, MySQL/Mongo  
+- 📦 **Maven / Gradle**, **JUnit Testing**
+
+---
+
+## 🎮 What I Can Do
+
+- ✅ Build **full-stack web applications** from scratch  
+- ✅ Design &amp; implement **REST APIs**  
+- ✅ Connect &amp; manage **MongoDB / MySQL** databases  
+- ✅ Create **responsive, modern UI** with React &amp; animations  
+- ✅ Deploy apps on **Vercel**, **Render**, **Railway**  
+- ✅ Integrate **third-party APIs &amp; authentication systems**  
+- ✅ Write **clean, maintainable, and reusable** code
 
 ---
 
 ## 🧠 Currently Exploring
 
-- **TypeScript** for better code safety
-- **Next.js 15** & **Server Components**
-- **Microservices** and **Docker**
+- 🟦 **TypeScript** for safer code  
+- ⚛️ **Next.js 15 &amp; Server Components**  
+- 🧱 **Microservices** architecture  
+- 🐳 **Docker** for containerized deployments
 
 ---
 
-## 🛠️ Tools & Workflow
+## 🌟 Projects (Cartoon Highlights)
 
-- **Git / GitHub** for version control
-- **VS Code** & **IntelliJ IDEA**
-- **Postman**, **MongoDB Compass**, **Figma**
-- **Agile / Scrum** development approach
-
----
-
-## 🌱 Projects You Might Like
-
-- 🔹 **MERN Dashboard** – Admin panel with charts and analytics
-- 🔹 **Task Manager API** – Node + MongoDB CRUD REST API
-- 🔹 **Chat App** – Real-time messaging with Socket.io
-- 🔹 **Java Guessing Game** – Simple but fun console game
-- 🔹 **Portfolio Website** – Personal site built with React + Tailwind
+- 🔹 **MERN Dashboard** – Admin panel with charts &amp; analytics  
+- 🔹 **Task Manager API** – Node + MongoDB CRUD REST API  
+- 🔹 **Chat App** – Real-time chat with Socket.io  
+- 🔹 **Java Guessing Game** – Simple console fun  
+- 🔹 **Portfolio Website** – React + Tailwind personal site
 
 ---
 
-## 📫 Get In Touch
+## 📫 Reach Me
 
-- 💼 [LinkedIn](---)
-- 🌐 [Portfolio](https://hhlaingswan.vercel.app/)
-- 📧 Email: htethlaingswan@gmail.com
+- 💼 LinkedIn – https://www.linkedin.com/in/h-hlaing-swan-345956353/
+- 🌐 Portfolio – https://hhlaingswan.vercel.app/
+- 📧 Email – `htethlaingswan@gmail.com`
 
 ---
 
-⭐ **"Code. Create. Improve. Repeat."**
+<div align="center">
+
+⭐ <b>"Code. Create. Improve. Repeat."</b>  
+<br/>
+Thanks for scrolling! 🙌
+
+</div>
