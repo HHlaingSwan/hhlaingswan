@@ -16,14 +16,6 @@
   <img src="https://img.shields.io/badge/Status-Open%20to%20Work-16a34a?style=flat-square" alt="Status" />
 </p>
 
-## 🌟 About Me
-
-I am a developer who values clean thinking, practical execution, and constant learning.
-
-I started coding because I wanted to build useful things, but I stayed because software taught me how to think better: break big problems into smaller parts, stay calm under pressure, and keep improving one version at a time.
-
-## 🎨 Tech I Enjoy
-
 <p align="left">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/React-20232a?style=flat-square&logo=react&logoColor=61dafb" alt="React" />
@@ -37,17 +29,17 @@ I started coding because I wanted to build useful things, but I stayed because s
   <img src="https://img.shields.io/badge/Docker-0db7ed?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
 </p>
 
+## 🌟 About Me
+
+I am a developer who values clean thinking, practical execution, and constant learning.
+
+I started coding because I wanted to build useful things, but I stayed because software taught me how to think better: break big problems into smaller parts, stay calm under pressure, and keep improving one version at a time.
+
 ## 🚀 Now
 
 - Deepening backend architecture and API design decisions
 - Improving Docker-based development workflows
 - Practicing production-focused debugging and performance checks
-
-## 📊 GitHub Stats
-
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=hhlaingswan&show_icons=true&theme=dark&hide_border=true&count_private=true" alt="GitHub Stats" />
-</p>
 
 ## � How I Work
 
@@ -62,14 +54,6 @@ I started coding because I wanted to build useful things, but I stayed because s
 
 - Burmese: Native
 - English: working level
-
-## 🗂️ Projects
-
-| Project                                                   | Description             | Stack                         |
-| --------------------------------------------------------- | ----------------------- | ----------------------------- |
-| [hhlaingswan](https://github.com/hhlaingswan/hhlaingswan) | Personal portfolio site | Next.js, TypeScript, Tailwind |
-
-<!-- Add more of your best repos here -->
 
 ## 🤝 Connect
 
