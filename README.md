@@ -16,6 +16,14 @@
   <img src="https://img.shields.io/badge/Status-Open%20to%20Work-16a34a?style=flat-square" alt="Status" />
 </p>
 
+## 🌟 About Me
+
+I am a developer who values clean thinking, practical execution, and constant learning.
+
+I started coding because I wanted to build useful things, but I stayed because software taught me how to think better: break big problems into smaller parts, stay calm under pressure, and keep improving one version at a time.
+
+## 🎨 Tech I Enjoy
+
 <p align="left">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/React-20232a?style=flat-square&logo=react&logoColor=61dafb" alt="React" />
@@ -28,12 +36,6 @@
   <img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <img src="https://img.shields.io/badge/Docker-0db7ed?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
 </p>
-
-## 🌟 About Me
-
-I am a developer who values clean thinking, practical execution, and constant learning.
-
-I started coding because I wanted to build useful things, but I stayed because software taught me how to think better: break big problems into smaller parts, stay calm under pressure, and keep improving one version at a time.
 
 ## 🚀 Now
 
