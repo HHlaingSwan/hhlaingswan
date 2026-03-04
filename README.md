@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/HHlaingSwan/hhlaingswan/main/public/cartoon.jpeg" alt="Htet Hlaing Swan Cartoon" width="220" />
+  <img src="./cartoon.jpeg" alt="Htet Hlaing Swan Cartoon" width="220" />
 </p>
 
 <p align="center">
