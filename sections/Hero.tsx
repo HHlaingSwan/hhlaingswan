@@ -80,17 +80,17 @@ const Hero = () => {
 
             <div className="flex items-center gap-8 pt-4">
               <div>
-                <p className="text-2xl font-bold">2+</p>
+                <p className="text-2xl font-bold">2 +</p>
                 <p className="text-sm text-muted-foreground">Years</p>
               </div>
               <div className="w-px h-12 bg-border" />
               <div>
-                <p className="text-2xl font-bold">6+</p>
+                <p className="text-2xl font-bold">12 +</p>
                 <p className="text-sm text-muted-foreground">Projects</p>
               </div>
               <div className="w-px h-12 bg-border" />
               <div>
-                <p className="text-2xl font-bold">5+</p>
+                <p className="text-2xl font-bold">8 +</p>
                 <p className="text-sm text-muted-foreground">Tech</p>
               </div>
             </div>

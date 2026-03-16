@@ -20,6 +20,17 @@ const educationData = [
     institution: "CodeHub Myanmar",
   },
   {
+    semester: "AWS | Simplilearn",
+    title: "Fundamental of DevOps On AWS",
+    topics: [
+      "Introduction to DevOps",
+      "Introduction to AWS",
+      "Introduction to CI/CD",
+      "Introduction to Docker",
+    ],
+    institution: "SimpliLearn | SkillUp",
+  },
+  {
     semester: "Semester 1",
     title: "Java Developer Certificate",
     topics: [
@@ -107,13 +118,13 @@ const Education = () => {
         </div>
 
         <div className="relative max-w-6xl w-full mx-auto" ref={containerRef}>
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border/70 -translate-x-1/2" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border/70 -translate-x-1/2" />
           <div
             ref={timelineRef}
-            className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-sky-400 via-indigo-500 to-fuchsia-500 origin-top -translate-x-1/2"
+            className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-sky-400 via-indigo-500 to-fuchsia-500 origin-top -translate-x-1/2"
           />
 
-          <div className="space-y-12  md:space-y-20">
+          <div className="space-y-10">
             {educationData.map((item, index) => {
               const isLeft = index % 2 === 0;
               return (
@@ -128,8 +139,8 @@ const Education = () => {
                       transition={{ duration: 0.5, delay: index * 0.05 }}
                       className={`w-full  p-6 md:p-10 ${
                         isLeft
-                          ? "md:col-start-1 md:pr-20"
-                          : "md:col-start-2 md:pl-20"
+                          ? "md:col-start-1 md:pr-10"
+                          : "md:col-start-2 md:pl-10"
                       }`}
                     >
                       <div className="flex flex-wrap items-center gap-5 mb-4">

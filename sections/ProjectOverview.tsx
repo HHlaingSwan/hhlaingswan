@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { AuroraText } from "@/components/ui/aurora-text";
 import { content } from "@/lib/projects";
 import { ExternalLink, Github as GithubIcon } from "lucide-react";
 
@@ -22,7 +21,7 @@ const ProjectOverview = () => {
           Selected Work
         </p>
         <h2 className="text-3xl md:text-5xl font-bold mb-4">
-          <AuroraText>Project Showcase</AuroraText>
+          Project Showcase
         </h2>
         <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
           My main projects with preview, stack, and direct links.
