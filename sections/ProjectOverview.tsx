@@ -42,7 +42,7 @@ const ProjectOverview = () => {
         </motion.p>
       </div>
 
-      <div className="flex flex-col gap-24  w-6xl md:gap-40">
+      <div className="flex flex-col gap-20 md:gap-32 w-full">
         {content.map((project, index) => {
           const isEven = index % 2 === 0;
 
@@ -59,14 +59,14 @@ const ProjectOverview = () => {
             >
               {/* Image Container */}
               <div className="w-full md:w-3/5 group">
-                <div className="relative aspect-video overflow-hidden rounded-2xl border border-border/50 bg-muted/30 shadow-2xl">
+                <div className="relative aspect-[4/3] md:aspect-video overflow-hidden rounded-2xl border border-border/50 bg-muted/30 shadow-2xl">
                   {project.images?.[0] ? (
                     <Image
                       src={project.images[0]}
                       alt={project.title}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 800px"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 60vw, 800px"
                     />
                   ) : (
                     <div className="h-full w-full flex items-center justify-center text-sm text-muted-foreground">
