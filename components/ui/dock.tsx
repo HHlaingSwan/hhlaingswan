@@ -23,13 +23,13 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
   children: React.ReactNode
 }
 
-const DEFAULT_SIZE = 40
-const DEFAULT_MAGNIFICATION = 60
+const DEFAULT_SIZE = 52
+const DEFAULT_MAGNIFICATION = 100
 const DEFAULT_DISTANCE = 140
 const DEFAULT_DISABLEMAGNIFICATION = false
 
 const dockVariants = cva(
-  "supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 mx-auto mt-8 flex h-[58px] w-max items-center justify-center gap-2 rounded-2xl border p-2 backdrop-blur-md"
+  "supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 mx-auto mt-8 flex h-[72px] w-max items-end justify-center gap-4 rounded-2xl border p-2 pb-3 backdrop-blur-md"
 )
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -110,7 +110,6 @@ const DockIcon = ({
   ...props
 }: DockIconProps) => {
   const ref = useRef<HTMLDivElement>(null)
-  const padding = Math.max(6, size * 0.2)
   const defaultMouseX = useMotionValue(Infinity)
 
   const distanceCalc = useTransform(mouseX ?? defaultMouseX, (val: number) => {
@@ -129,21 +128,22 @@ const DockIcon = ({
   const scaleSize = useSpring(sizeTransform, {
     mass: 0.1,
     stiffness: 150,
-    damping: 12,
+    damping: 15,
   })
 
   return (
     <motion.div
       ref={ref}
-      style={{ width: scaleSize, height: scaleSize, padding }}
+      style={{ width: scaleSize, height: scaleSize }}
       className={cn(
-        "flex aspect-square cursor-pointer items-center justify-center rounded-full",
+        "flex aspect-square cursor-pointer items-center justify-center rounded-full p-1.5",
         disableMagnification && "hover:bg-muted-foreground transition-colors",
         className
       )}
-      {...props}
+      {...props
+    }
     >
-      <div>{children}</div>
+      {children}
     </motion.div>
   )
 }

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Database, Globe, Smartphone, Cpu, Layers } from "lucide-react";
+import { Code, Database, Globe, Monitor, Cpu, Layers } from "lucide-react";
 
 const About = () => {
   const timeline = [
@@ -29,14 +29,14 @@ const About = () => {
       items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
-      icon: Smartphone,
-      title: "Mobile",
-      items: ["React Native", "Expo", "React Navigation"],
+      icon: Monitor,
+      title: "Desktop App",
+      items: ["Java Swing", "JavaFX", "Scene Builder", "JDBC"],
     },
     {
       icon: Database,
       title: "Backend",
-      items: ["Node.js", "Express", "MongoDB", "Java (Learning)"],
+      items: ["Node.js", "Express", "Java", "MongoDB"],
     },
     { icon: Globe, title: "DevOps", items: ["Docker", "Git", "CI/CD", "AWS"] },
   ];
@@ -59,13 +59,11 @@ const About = () => {
           className="space-y-20"
         >
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              About Me
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">About Me</h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Based in Myanmar, I build full-stack products with React and
-              Node.js, with strong focus on performance, clean architecture,
-              and practical delivery.
+              Node.js, with strong focus on performance, clean architecture, and
+              practical delivery.
             </p>
           </div>
 

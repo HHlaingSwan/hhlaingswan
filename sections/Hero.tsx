@@ -3,14 +3,14 @@ import { TypingAnimation } from "@/components/ui/typing-animation";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { motion } from "framer-motion";
 import React from "react";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const Hero = () => {
   return (
     <motion.section
       id="home"
-      className="relative min-h-screen w-full flex items-center overflow-hidden px-4 py-12"
+      className="relative min-h-screen w-full flex items-center bg-foreground  overflow-hidden px-4 py-12"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -22,7 +22,7 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-linear-to-b from-background via-transparent to-background pointer-events-none" />
 
-      <div className="container mx-auto md:max-w-7xl relative z-10">
+      <div className="container  mx-auto md:max-w-7xl relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -85,34 +85,44 @@ const Hero = () => {
               </div>
               <div className="w-px h-12 bg-border" />
               <div>
-                <p className="text-2xl font-bold">12 +</p>
+                <p className="text-2xl font-bold">8 +</p>
                 <p className="text-sm text-muted-foreground">Projects</p>
               </div>
               <div className="w-px h-12 bg-border" />
               <div>
-                <p className="text-2xl font-bold">8 +</p>
+                <p className="text-2xl font-bold">3 +</p>
                 <p className="text-sm text-muted-foreground">Tech</p>
               </div>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex justify-center relative order-first md:order-last"
           >
-            <div className="relative w-70 h-70 md:w-100 md:h-100">
-              <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-transparent rounded-full blur-3xl" />
-              <Image
-                src="/Man-thinking.png"
-                alt="Htet Hlaing Swan - Full-Stack Developer"
-                width={500}
-                height={500}
-                sizes="(max-width: 768px) 280px, 400px"
-                className="object-contain relative z-10"
-                priority
-              />
+            <div className="relative w-full aspect-square max-w-137.5">
+              {/* Floating Lottie Container */}
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                animate={{
+                  y: [0, -20, 0],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative z-10 w-full h-full flex items-center justify-center cursor-default"
+              >
+                <DotLottieReact
+                  src="/developer.lottie"
+                  loop
+                  autoplay
+                  className="w-full h-full filter brightness-125 contrast-125 saturate-150 transition-all duration-300"
+                />
+              </motion.div>
             </div>
           </motion.div>
         </div>

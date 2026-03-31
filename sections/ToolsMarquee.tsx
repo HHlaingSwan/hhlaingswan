@@ -1,14 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaDocker } from "react-icons/fa";
-import {
-  SiNextdotjs,
-  SiMongodb,
-  SiTypescript,
-  SiExpo,
-  SiPostgresql,
-} from "react-icons/si";
+import { FaReact, FaNodeJs, FaDocker, FaJava } from "react-icons/fa";
+import { SiNextdotjs, SiTypescript, SiExpo } from "react-icons/si";
 
 const tools = [
   {
@@ -42,22 +36,16 @@ const tools = [
     bg: "rgba(104, 160, 99, 0.1)",
   },
   {
-    icon: <SiMongodb size={34} />,
-    name: "MongoDB",
-    color: "#47A248",
-    bg: "rgba(71, 162, 72, 0.1)",
-  },
-  {
-    icon: <SiPostgresql size={34} />,
-    name: "PostgreSQL",
-    color: "#336791",
-    bg: "rgba(51, 103, 145, 0.1)",
-  },
-  {
     icon: <FaDocker size={34} />,
     name: "Docker",
     color: "#2496ED",
     bg: "rgba(36, 150, 237, 0.1)",
+  },
+  {
+    icon: <FaJava size={34} />,
+    name: "Java",
+    color: "#007396",
+    bg: "rgba(0, 115, 150, 0.1)",
   },
 ];
 

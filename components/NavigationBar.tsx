@@ -52,7 +52,7 @@ export function NavigationBar() {
   return (
     <div className="flex flex-col items-center justify-center">
       <TooltipProvider>
-        <Dock direction="middle">
+        <Dock direction="bottom">
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>
@@ -62,10 +62,10 @@ export function NavigationBar() {
                     aria-label={item.label}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full"
+                      "w-full h-full rounded-full"
                     )}
                   >
-                    <item.icon className="size-5" />
+                    <item.icon className="size-[55%]" />
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>
@@ -77,7 +77,7 @@ export function NavigationBar() {
           <DockIcon>
             <AnimatedThemeToggler className={cn(
               buttonVariants({ variant: "ghost", size: "icon" }),
-              "size-12 rounded-full"
+              "w-full h-full rounded-full"
             )} />
           </DockIcon>
           {DATA.social.map((social) => (
@@ -91,10 +91,10 @@ export function NavigationBar() {
                     rel="noopener noreferrer"
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full"
+                      "w-full h-full rounded-full"
                     )}
                   >
-                    <social.icon className="size-5" />
+                    <social.icon className="size-[55%]" />
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>
