@@ -159,22 +159,22 @@ const About = () => {
               </p>
             </div>
 
-            <div className="flex justify-center w-full">
-              <Terminal className="max-w-2xl w-full">
+            <div className="flex justify-center  w-full">
+              <Terminal className="max-w-3xl   w-full">
                 <TypingAnimation>&gt; design --ux</TypingAnimation>
-                <AnimatedSpan className="text-green-500">
+                <AnimatedSpan className="text-green-500 mb-6">
                   ✔ Designing interfaces that are simple, clear, and
                   user-focused
                 </AnimatedSpan>
 
                 <TypingAnimation>&gt; develop --full-stack</TypingAnimation>
-                <AnimatedSpan className="text-blue-500">
+                <AnimatedSpan className="text-blue-500 mb-6">
                   ✔ Building maintainable codebases with practical engineering
                   standards
                 </AnimatedSpan>
 
                 <TypingAnimation>&gt; deploy --production</TypingAnimation>
-                <AnimatedSpan className="text-purple-500">
+                <AnimatedSpan className="text-purple-500 mb-6">
                   ✔ Deploying scalable services with CI/CD and production
                   discipline
                 </AnimatedSpan>

@@ -32,14 +32,14 @@ const Achievements = () => {
           {certificates.map((certificate, index) => (
             <article
               key={certificate.id}
-              className="w-screen md:w-[36vw]  lg:w-[30vw] shrink-0 snap-start rounded-xl border border-border/60 bg-card/85  shadow-md shadow-primary/5"
+              className="w-screen md:w-[33vw]  lg:w-[30vw] shrink-0 snap-start rounded-xl border border-border/60 bg-card/85  shadow-md shadow-primary/5"
             >
-              <div className="relative h-44 md:h-64 overflow-hidden rounded-t-xl">
+              <div className="relative h-44 md:h-64 overflow-hidden rounded-t-lg">
                 <Image
                   src={certificate.image}
                   alt={`${certificate.title} certificate`}
                   fill
-                  className="object-cover brightness-105"
+                  className="object-fill brightness-105 p-1"
                   sizes="(max-width: 768px) 288px, 480px"
                   priority={index === 0}
                 />

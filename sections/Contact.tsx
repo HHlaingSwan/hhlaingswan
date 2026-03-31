@@ -20,20 +20,20 @@ const channels = [
   },
   {
     title: "Phone",
-    value: "+95 995 464 1112",
+    value: "09 95 464 1112",
     href: "tel:+959954641112",
     icon: PhoneCall,
   },
   {
     title: "Location",
-    value: "Yangon, Myanmar",
+    value: "Mandalay, Myanmar",
     href: "https://maps.google.com/?q=Yangon,Myanmar",
     icon: MapPin,
     external: true,
   },
   {
     title: "Telegram",
-    value: "R R ( Robert Rebellion )",
+    value: "Reach out on Telegram",
     href: "https://t.me/Hhs4438",
     icon: Send,
     external: true,

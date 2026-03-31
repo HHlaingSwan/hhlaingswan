@@ -9,7 +9,7 @@ const Footer = () => {
 
   const contactInfo = {
     email: "htethlaingswan@gmail.com",
-    location: "Yangon, Myanmar",
+    location: "Mandalay, Myanmar",
     phone: "+95 995 464 1112",
   };
 

@@ -4,7 +4,6 @@ import React, { useLayoutEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { AuroraText } from "@/components/ui/aurora-text";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -122,7 +121,7 @@ const Education = () => {
           <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border/70 -translate-x-1/2" />
           <div
             ref={timelineRef}
-            className="absolute left-1/2 top-0 bottom-0 w-1.5 rounded-full bg-linear-to-b from-sky-400 via-indigo-500 to-fuchsia-500 origin-top -translate-x-1/2"
+            className="absolute left-1/2 top-0 bottom-0 w-1.25 rounded-full bg-linear-to-b from-sky-400 via-indigo-500 to-fuchsia-500 origin-top -translate-x-1/2"
           />
 
           <div className="space-y-10">
@@ -152,8 +151,8 @@ const Education = () => {
                           {item.institution}
                         </span>
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-semibold mb-6 ">
-                        <AuroraText>{item.title}</AuroraText>
+                      <h3 className="text-2xl md:text-3xl text-indigo-500 font-semibold mb-6 ">
+                        {item.title}
                       </h3>
 
                       <ul className="space-y-2 text-base  text-muted-foreground">

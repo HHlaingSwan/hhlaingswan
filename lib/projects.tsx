@@ -2,33 +2,47 @@ import type { Project } from "@/types";
 
 export const content: Project[] = [
   {
-    title: "E-Commerce Platform",
+    title: "MERN E-Commerce Platform",
     description:
-      "Full-stack shop with product management, secure auth, cart/checkout, and admin dashboard.",
+      "Production-ready e-commerce platform with product management, secure authentication, cart and checkout flows, and a full admin dashboard.",
     url: "https://master-project-sable.vercel.app",
     repoUrl: "https://github.com/HHlaingSwan/master-project",
     tags: ["MERN", "E-Commerce", "Admin", "Cloudinary"],
-    impact: "Full-stack shop with role-based admin access and order tracking.",
+    impact:
+      "Increased operational control with admin dashboards, order tracking, and reliable checkout flow.",
     images: ["/images/homeView.png"],
   },
   {
-    title: "Real-Time Chat App",
+    title: "Chat App with Socket.IO",
     description:
-      "Full-stack chat with real-time messaging, media sharing, presence, and JWT auth.",
+      "Real-time chat app featuring JWT auth, live presence, and media sharing with Socket.IO and Cloudinary.",
     url: "https://unit-chat-five.vercel.app/",
     repoUrl: "https://github.com/HHlaingSwan/Unit-Chat",
     tags: ["MERN", "Socket.IO", "JWT", "Cloudinary"],
-    impact: "Real-time messaging with auth, media sharing, and live presence.",
-    images: ["/images/demoChatApp.png"],
+    impact:
+      "Fast, reliable messaging with secure auth, presence, and media sharing.",
+    images: ["/images/chatMessage.png"],
   },
   {
-    title: "Expense Tracker Bot (Myanmar)",
+    title: "Static Game Advertisement with Cool Animation",
     description:
-      "Telegram bot for Burmese/English expense logging, monthly summaries, and holiday sync.",
+      "Interactive game promo landing page with cinematic motion, scroll-based effects, and a strong visual narrative.",
+    url: "https://arcane-game.vercel.app/",
+    repoUrl: "https://github.com/HHlaingSwan/Arcane-Game",
+    tags: ["React", "GSAP", "Tailwind CSS"],
+    impact:
+      "Engaging promo experience with smooth animations and strong visual storytelling.",
+    images: ["/images/arcaneMovie.png"],
+  },
+  {
+    title: "Personal Assistant Bot with AI",
+    description:
+      "Telegram bot that handles expense tracking and AI-driven replies, built for fast chat-based workflows.",
     url: "https://t.me/gogoTimeBot",
     repoUrl: "https://github.com/HHlaingSwan/gogoTimeBot",
     tags: ["Node.js", "Telegram Bot", "MongoDB", "API"],
-    impact: "Burmese/English expense logging with automatic category mapping.",
-    images: ["/images/function.png"],
+    impact:
+      "Streamlined expense logging and AI assistance through a single Telegram chat.",
+    images: ["/images/personalBot.png"],
   },
 ];
