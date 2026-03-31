@@ -2,6 +2,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import {
+  Terminal,
+  AnimatedSpan,
+  TypingAnimation,
+} from "@/components/ui/terminal";
 import { Code, Database, Globe, Monitor, Cpu, Layers } from "lucide-react";
 
 const About = () => {
@@ -154,33 +159,30 @@ const About = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {[
-                {
-                  title: "Design & UX",
-                  desc: "Designing interfaces that are simple, clear, and user-focused",
-                },
-                {
-                  title: "Development",
-                  desc: "Building maintainable codebases with practical engineering standards",
-                },
-                {
-                  title: "Deployment",
-                  desc: "Deploying scalable services with CI/CD and production discipline",
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  className="p-6 rounded-xl bg-secondary/30 border border-border/50"
-                >
-                  <h4 className="font-semibold mb-2">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
-                </motion.div>
-              ))}
+            <div className="flex justify-center w-full">
+              <Terminal className="max-w-2xl w-full">
+                <TypingAnimation>&gt; design --ux</TypingAnimation>
+                <AnimatedSpan className="text-green-500">
+                  ✔ Designing interfaces that are simple, clear, and
+                  user-focused
+                </AnimatedSpan>
+
+                <TypingAnimation>&gt; develop --full-stack</TypingAnimation>
+                <AnimatedSpan className="text-blue-500">
+                  ✔ Building maintainable codebases with practical engineering
+                  standards
+                </AnimatedSpan>
+
+                <TypingAnimation>&gt; deploy --production</TypingAnimation>
+                <AnimatedSpan className="text-purple-500">
+                  ✔ Deploying scalable services with CI/CD and production
+                  discipline
+                </AnimatedSpan>
+
+                <TypingAnimation className="text-muted-foreground">
+                  &gt; status: Ready for next challenge...
+                </TypingAnimation>
+              </Terminal>
             </div>
           </div>
 

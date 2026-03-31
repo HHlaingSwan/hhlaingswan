@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <motion.section
       id="home"
-      className="relative min-h-screen w-full flex items-center bg-background overflow-hidden px-4 py-12"
+      className="relative min-h-screen w-full flex items-center bg-foreground text-background overflow-hidden px-4 py-12"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-linear-to-r from-primary/5 via-transparent to-primary/5 animate-pulse" />
       </div>
 
-      <div className="absolute inset-0 bg-linear-to-b from-background via-transparent to-background pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-foreground via-transparent to-foreground pointer-events-none" />
 
       <div className="container  mx-auto md:max-w-7xl relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -31,15 +31,15 @@ const Hero = () => {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <p className="text-sm md:text-lg text-muted-foreground">
+              <p className="text-sm md:text-lg text-background/60">
                 Hi, I&apos;m{" "}
-                <span className="font-bold text-foreground">
+                <span className="font-bold text-background">
                   Htet Hlaing Swan
                 </span>
                 .
               </p>
 
-              <h1 className="text-2xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-2xl md:text-5xl text-background font-bold leading-tight">
                 I&apos;m a{" "}
                 <span className="inline-block">
                   <AuroraText>
@@ -56,7 +56,7 @@ const Hero = () => {
                 </span>
               </h1>
 
-              <p className="text-muted-foreground text-base md:text-lg max-w-md">
+              <p className="text-background/60 text-base md:text-lg max-w-md">
                 Building elegant, scalable solutions with clean code and modern
                 technologies.
               </p>
@@ -65,14 +65,14 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#projects"
-                className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
+                className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-background text-foreground font-medium rounded-lg hover:bg-background/90 transition-colors"
               >
                 See What I Build
                 <ArrowRight className="size-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
               <a
                 href="#about"
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 border border-border rounded-lg font-medium hover:bg-muted transition-colors"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 border border-background/20 rounded-lg font-medium hover:bg-background/5 transition-colors"
               >
                 About Me
               </a>
@@ -81,17 +81,17 @@ const Hero = () => {
             <div className="flex items-center gap-8 pt-4">
               <div>
                 <p className="text-2xl font-bold">2 +</p>
-                <p className="text-sm text-muted-foreground">Years</p>
+                <p className="text-sm text-background/60">Years</p>
               </div>
-              <div className="w-px h-12 bg-border" />
+              <div className="w-px h-12 bg-background/10" />
               <div>
                 <p className="text-2xl font-bold">8 +</p>
-                <p className="text-sm text-muted-foreground">Projects</p>
+                <p className="text-sm text-background/60">Projects</p>
               </div>
-              <div className="w-px h-12 bg-border" />
+              <div className="w-px h-12 bg-background/10" />
               <div>
                 <p className="text-2xl font-bold">3 +</p>
-                <p className="text-sm text-muted-foreground">Tech</p>
+                <p className="text-sm text-background/60">Tech</p>
               </div>
             </div>
           </motion.div>

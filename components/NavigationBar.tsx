@@ -61,7 +61,7 @@ export function NavigationBar() {
                     aria-label={item.label}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "w-full h-full rounded-full"
+                      "w-full h-full rounded-full text-foreground"
                     )}
                   >
                     <item.icon className="size-[55%]" />
@@ -84,7 +84,7 @@ export function NavigationBar() {
                     rel="noopener noreferrer"
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "w-full h-full rounded-full"
+                      "w-full h-full rounded-full text-foreground"
                     )}
                   >
                     <social.icon className="size-[55%]" />
