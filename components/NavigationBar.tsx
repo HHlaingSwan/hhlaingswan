@@ -19,7 +19,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "@/components/ui/dock";
-import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -74,12 +73,6 @@ export function NavigationBar() {
               </Tooltip>
             </DockIcon>
           ))}
-          <DockIcon>
-            <AnimatedThemeToggler className={cn(
-              buttonVariants({ variant: "ghost", size: "icon" }),
-              "w-full h-full rounded-full"
-            )} />
-          </DockIcon>
           {DATA.social.map((social) => (
             <DockIcon key={social.name}>
               <Tooltip>

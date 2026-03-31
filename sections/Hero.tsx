@@ -10,13 +10,13 @@ const Hero = () => {
   return (
     <motion.section
       id="home"
-      className="relative min-h-screen w-full flex items-center bg-foreground  overflow-hidden px-4 py-12"
+      className="relative min-h-screen w-full flex items-center bg-background overflow-hidden px-4 py-12"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e5e5_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[linear-gradient(to_bottom,white,transparent)] dark:mask-[radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e5e5_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[linear-gradient(to_bottom,white,transparent)] pointer-events-none">
         <div className="absolute inset-0 bg-linear-to-r from-primary/5 via-transparent to-primary/5 animate-pulse" />
       </div>
 
@@ -120,7 +120,7 @@ const Hero = () => {
                   src="/developer.lottie"
                   loop
                   autoplay
-                  className="w-full h-full filter brightness-125 contrast-125 saturate-150 transition-all duration-300"
+                  className="w-full h-full transition-all duration-300"
                 />
               </motion.div>
             </div>

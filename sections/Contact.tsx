@@ -72,7 +72,7 @@ const Contact = () => {
                 transition={{ duration: 0.35, delay: index * 0.08 }}
                 className={`group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-5 md:p-6`}
               >
-                <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-foreground/3 to-transparent dark:from-foreground/6" />
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-foreground/3 to-transparent" />
                 <div className="relative flex items-center justify-between gap-4">
                   <div className="flex min-w-0 items-center gap-3">
                     <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-background/80 text-foreground">
@@ -100,7 +100,7 @@ const Contact = () => {
             transition={{ duration: 0.45 }}
             className="relative overflow-hidden rounded-2xl border border-border/60 bg-card p-6 md:p-7"
           >
-            <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-foreground/4 via-transparent to-foreground/2 dark:from-foreground/8 dark:to-foreground/3" />
+            <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-foreground/4 via-transparent to-foreground/2" />
             <div className="relative mb-4 inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-3 py-1.5 text-xs text-muted-foreground">
               <CalendarClock className="size-3.5" />
               Availability
