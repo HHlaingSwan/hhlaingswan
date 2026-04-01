@@ -97,7 +97,7 @@ const Education = () => {
   return (
     <motion.section
       id="education"
-      className="py-20 md:py-24 bg-background"
+      className="py-20 md:py-24 z-10 bg-background"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -118,10 +118,10 @@ const Education = () => {
         </div>
 
         <div className="relative max-w-6xl w-full mx-auto" ref={containerRef}>
-          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border/70 -translate-x-1/2" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-border/70 -translate-x-1/2" />
           <div
             ref={timelineRef}
-            className="absolute left-1/2 top-0 bottom-0 w-1.25 rounded-full bg-linear-to-b from-sky-400 via-indigo-500 to-fuchsia-500 origin-top -translate-x-1/2"
+            className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1.25 rounded-full bg-linear-to-b from-sky-400 via-indigo-500 to-fuchsia-500 origin-top -translate-x-1/2"
           />
 
           <div className="space-y-10">
@@ -129,15 +129,15 @@ const Education = () => {
               const isLeft = index % 2 === 0;
               return (
                 <div key={item.semester} className="relative">
-                  <div className="absolute left-1/2  top-0 size-4 rounded-full bg-primary -translate-x-1/2 " />
+                  <div className="absolute left-4 md:left-1/2 top-0 size-4 rounded-full bg-primary -translate-x-1/2" />
 
-                  <div className="grid md:grid-cols-2  gap-8 md:gap-16 items-start">
+                  <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start">
                     <motion.div
                       initial={{ opacity: 0, y: 18 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.2 }}
                       transition={{ duration: 0.5, delay: index * 0.05 }}
-                      className={`w-full  p-6 md:p-10 ${
+                      className={`w-full pl-10 md:pl-0 md:p-10 ${
                         isLeft
                           ? "md:col-start-1 md:pr-10"
                           : "md:col-start-2 md:pl-10"
@@ -147,15 +147,15 @@ const Education = () => {
                         <span className="text-[14px] uppercase tracking-[0.3em] text-amber-400 font-semibold">
                           {item.semester}
                         </span>
-                        <span className="text-xs text-amber-400 ">
+                        <span className="text-xs text-amber-400">
                           {item.institution}
                         </span>
                       </div>
-                      <h3 className="text-2xl md:text-3xl  font-semibold mb-6 ">
+                      <h3 className="text-2xl md:text-3xl font-semibold mb-6">
                         {item.title}
                       </h3>
 
-                      <ul className="space-y-2 text-base  text-muted-foreground">
+                      <ul className="space-y-2 text-base text-muted-foreground">
                         {item.topics.map((topic) => (
                           <li key={topic} className="flex items-start gap-2">
                             <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary/80 shrink-0" />
