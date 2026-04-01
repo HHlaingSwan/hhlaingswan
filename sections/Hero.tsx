@@ -15,6 +15,7 @@ const Hero = () => {
   const buttonsRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
   const lottieRef = useRef<HTMLDivElement>(null);
+  const circleRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     const section = sectionRef.current;
@@ -70,6 +71,25 @@ const Hero = () => {
           );
         });
       }
+
+      // Circle reveal scroll animation
+      if (circleRef.current) {
+        gsap.fromTo(
+          circleRef.current,
+          { clipPath: "circle(0% at 50% 50%)" },
+          {
+            clipPath: "circle(150% at 50% 50%)",
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: "top top",
+              end: "+=150%",
+              pin: true,
+              scrub: 1,
+            },
+          },
+        );
+      }
     }, section);
 
     return () => ctx.revert();
@@ -86,6 +106,12 @@ const Hero = () => {
       </div>
 
       <div className="absolute inset-0 bg-linear-to-b from-foreground via-transparent to-foreground pointer-events-none" />
+
+      {/* Circle reveal overlay */}
+      <div
+        ref={circleRef}
+        className="absolute inset-0 z-20 bg-background pointer-events-none"
+      />
 
       <div className="container mx-auto md:max-w-7xl relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">

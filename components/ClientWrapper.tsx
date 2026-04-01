@@ -17,17 +17,17 @@ const ClientWrapper = () => {
   return (
     <div className="relative flex w-full flex-col items-center gap-6 md:gap-8 ">
       <Hero />
-      <ToolsMarquee />
       <About />
+      <ToolsMarquee />
       <Education />
       <Achievements />
       <ProjectOverview />
       <Contact />
       <Footer />
-      <div className="hidden md:block fixed right-4 md:right-6 top-1/2 -translate-y-1/2 z-50">
+      <div className="hidden md:block fixed right-4 md:right-6 top-2/5 -translate-y-1/2 z-50">
         <NavigationBar />
       </div>
-      <div className="fixed left-4 md:left-6 bottom-4 md:bottom-6 z-50 w-28 h-28 md:w-40 md:h-40">
+      <div className="fixed right-4 cursor-progress md:right-6 bottom-4 md:bottom-6 z-50 w-28 h-28 md:w-40 md:h-40">
         <DotLottieReact
           src="/catPlaying.lottie"
           loop
