@@ -1,8 +1,11 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaReact, FaNodeJs, FaDocker, FaJava } from "react-icons/fa";
 import { SiNextdotjs, SiTypescript, SiExpo } from "react-icons/si";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const tools = [
   {
@@ -50,29 +53,70 @@ const tools = [
 ];
 
 const ToolsMarquee = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const marqueeRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useLayoutEffect(() => {
+    const section = sectionRef.current;
+    const marquee = marqueeRef.current;
+    if (!section || !marquee) return;
+
+    const ctx = gsap.context(() => {
+      const totalWidth = marquee.scrollWidth / 3;
+
+      const tween = gsap.to(marquee, {
+        x: -totalWidth,
+        duration: 30,
+        ease: "none",
+        repeat: -1,
+      });
+
+      cardsRef.current.forEach((card) => {
+        if (!card) return;
+        card.addEventListener("mouseenter", () => {
+          gsap.to(card, {
+            scale: 1.05,
+            y: -4,
+            boxShadow: "0 8px 30px rgba(0,0,0,0.12)",
+            duration: 0.3,
+            ease: "power2.out",
+          });
+          tween.timeScale(0.3);
+        });
+        card.addEventListener("mouseleave", () => {
+          gsap.to(card, {
+            scale: 1,
+            y: 0,
+            boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+            duration: 0.3,
+            ease: "power2.out",
+          });
+          tween.timeScale(1);
+        });
+      });
+    }, section);
+
+    return () => ctx.revert();
+  }, []);
+
   const duplicatedTools = [...tools, ...tools, ...tools];
 
   return (
-    <motion.section
+    <section
+      ref={sectionRef}
       id="tools"
       className="py-10 bg-background w-full overflow-hidden"
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="relative">
-        <motion.div
-          animate={{ x: ["0%", "-33.33%"] }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="flex gap-4 w-max"
-        >
+        <div ref={marqueeRef} className="flex gap-4 w-max">
           {duplicatedTools.map((tool, index) => (
-            <motion.div
+            <div
               key={`tool-${index}`}
-              className="flex items-center gap-4 px-6 py-4 rounded-xl border border-border/60 bg-card/80 backdrop-blur-sm shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 whitespace-nowrap"
-              whileHover={{ scale: 1.02, y: -3 }}
-              whileTap={{ scale: 0.98 }}
+              ref={(el) => {
+                cardsRef.current[index] = el;
+              }}
+              className="flex items-center gap-4 px-6 py-4 rounded-xl border border-border/60 bg-card/80 backdrop-blur-sm shadow-sm whitespace-nowrap cursor-default"
             >
               <div
                 className="w-12 h-12 rounded-lg flex items-center justify-center"
@@ -85,11 +129,11 @@ const ToolsMarquee = () => {
               <span className="text-base font-semibold text-foreground">
                 {tool.name}
               </span>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

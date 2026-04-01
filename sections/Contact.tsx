@@ -1,7 +1,8 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   ArrowUpRight,
   CalendarClock,
@@ -10,6 +11,8 @@ import {
   PhoneCall,
   Send,
 } from "lucide-react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const channels = [
   {
@@ -41,17 +44,97 @@ const channels = [
 ];
 
 const Contact = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const headingRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<(HTMLAnchorElement | null)[]>([]);
+  const asideRef = useRef<HTMLElement>(null);
+
+  useLayoutEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        headingRef.current,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+          },
+        }
+      );
+
+      cardsRef.current.forEach((card, i) => {
+        if (!card) return;
+        gsap.fromTo(
+          card,
+          { opacity: 0, x: -40, scale: 0.95 },
+          {
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            duration: 0.6,
+            delay: i * 0.1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 85%",
+            },
+          }
+        );
+
+        card.addEventListener("mousemove", (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          gsap.to(card, {
+            x: x * 0.08,
+            y: y * 0.08,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        });
+        card.addEventListener("mouseleave", () => {
+          gsap.to(card, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.5)" });
+        });
+      });
+
+      if (asideRef.current) {
+        gsap.fromTo(
+          asideRef.current,
+          { opacity: 0, x: 60, scale: 0.95 },
+          {
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            duration: 0.7,
+            delay: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: asideRef.current,
+              start: "top 85%",
+            },
+          }
+        );
+      }
+    }, section);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <motion.section
+    <section
+      ref={sectionRef}
       id="contact"
       className="w-full px-4 bg-background py-20 md:py-24"
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="container mx-auto md:max-w-7xl px-0">
-        <div className="mb-8 text-center md:mb-10">
+      <div className="container mx-auto md:max-7xl px-0">
+        <div ref={headingRef} className="mb-8 text-center md:mb-10 opacity-0">
           <h2 className="mb-3 text-2xl font-bold md:text-5xl">Contact</h2>
           <p className="mx-auto max-w-2xl text-sm text-muted-foreground md:text-base">
             Choose a direct channel below. No form.
@@ -61,16 +144,15 @@ const Contact = () => {
         <div className="grid gap-5 lg:grid-cols-[1.35fr_0.65fr]">
           <div className="grid gap-4">
             {channels.map((item, index) => (
-              <motion.a
+              <a
                 key={item.title}
+                ref={(el) => {
+                  cardsRef.current[index] = el;
+                }}
                 href={item.href}
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noopener noreferrer" : undefined}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.35, delay: index * 0.08 }}
-                className={`group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-5 md:p-6`}
+                className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-5 md:p-6 opacity-0"
               >
                 <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-foreground/3 to-transparent" />
                 <div className="relative flex items-center justify-between gap-4">
@@ -89,16 +171,13 @@ const Contact = () => {
                   </div>
                   <ArrowUpRight className="size-5 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground" />
                 </div>
-              </motion.a>
+              </a>
             ))}
           </div>
 
-          <motion.aside
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.45 }}
-            className="relative overflow-hidden rounded-2xl border border-border/60 bg-card p-6 md:p-7"
+          <aside
+            ref={asideRef}
+            className="relative overflow-hidden rounded-2xl border border-border/60 bg-card p-6 md:p-7 opacity-0"
           >
             <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-foreground/4 via-transparent to-foreground/2" />
             <div className="relative mb-4 inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-3 py-1.5 text-xs text-muted-foreground">
@@ -129,10 +208,10 @@ const Contact = () => {
               <span className="size-2 rounded-full bg-foreground" />
               Currently available
             </div>
-          </motion.aside>
+          </aside>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

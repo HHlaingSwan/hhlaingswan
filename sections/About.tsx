@@ -1,7 +1,8 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   Terminal,
   AnimatedSpan,
@@ -9,7 +10,19 @@ import {
 } from "@/components/ui/terminal";
 import { Code, Database, Globe, Monitor, Cpu, Layers } from "lucide-react";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const headingRef = useRef<HTMLDivElement>(null);
+  const expertiseCardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const expertiseTitleRef = useRef<HTMLHeadingElement>(null);
+  const journeyTitleRef = useRef<HTMLHeadingElement>(null);
+  const timelineItemsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const whatIDoRef = useRef<HTMLDivElement>(null);
+  const terminalRef = useRef<HTMLDivElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
+
   const timeline = [
     {
       year: "2026-02 - 2026-03",
@@ -46,24 +59,161 @@ const About = () => {
     { icon: Globe, title: "DevOps", items: ["Docker", "Git", "CI/CD", "AWS"] },
   ];
 
+  useLayoutEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        headingRef.current,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: headingRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+
+      gsap.fromTo(
+        expertiseTitleRef.current,
+        { opacity: 0, x: -30 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.6,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: expertiseTitleRef.current,
+            start: "top 85%",
+          },
+        }
+      );
+
+      expertiseCardsRef.current.forEach((card, i) => {
+        if (!card) return;
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 40, rotateX: 15 },
+          {
+            opacity: 1,
+            y: 0,
+            rotateX: 0,
+            duration: 0.7,
+            delay: i * 0.12,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 88%",
+            },
+          }
+        );
+      });
+
+      gsap.fromTo(
+        journeyTitleRef.current,
+        { opacity: 0, x: -30 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.6,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: journeyTitleRef.current,
+            start: "top 85%",
+          },
+        }
+      );
+
+      timelineItemsRef.current.forEach((item, i) => {
+        if (!item) return;
+        gsap.fromTo(
+          item,
+          { opacity: 0, x: i % 2 === 0 ? -50 : 50 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 0.7,
+            delay: i * 0.15,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: item,
+              start: "top 85%",
+            },
+          }
+        );
+      });
+
+      if (whatIDoRef.current) {
+        gsap.fromTo(
+          whatIDoRef.current,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: whatIDoRef.current,
+              start: "top 80%",
+            },
+          }
+        );
+      }
+
+      if (terminalRef.current) {
+        gsap.fromTo(
+          terminalRef.current,
+          { opacity: 0, y: 50, scale: 0.95 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: terminalRef.current,
+              start: "top 85%",
+            },
+          }
+        );
+      }
+
+      if (ctaRef.current) {
+        gsap.fromTo(
+          ctaRef.current,
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            delay: 0.3,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: ctaRef.current,
+              start: "top 90%",
+            },
+          }
+        );
+      }
+    }, section);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <motion.section
+    <section
+      ref={sectionRef}
       id="about"
       className="py-20 md:py-28 bg-background"
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="container mx-auto px-4 md:px-8 max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="space-y-20"
-        >
-          <div className="text-center max-w-3xl mx-auto">
+        <div className="space-y-20">
+          <div ref={headingRef} className="text-center max-w-3xl mx-auto opacity-0">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">About Me</h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Based in Myanmar, I build full-stack products with React and
@@ -74,19 +224,21 @@ const About = () => {
 
           <div className="space-y-16 md:space-y-20">
             <div className="space-y-8">
-              <h3 className="text-2xl font-bold flex items-center gap-3">
+              <h3
+                ref={expertiseTitleRef}
+                className="text-2xl font-bold flex items-center gap-3 opacity-0"
+              >
                 <Layers className="size-6 text-primary" />
                 Expertise
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                 {expertise.map((category, index) => (
-                  <motion.div
+                  <div
                     key={category.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1, duration: 0.6 }}
-                    className="p-5 md:p-6 rounded-xl border border-border/60 bg-card/50 hover:border-primary/50 transition-all"
+                    ref={(el) => {
+                      expertiseCardsRef.current[index] = el;
+                    }}
+                    className="p-5 md:p-6 rounded-xl border border-border/60 bg-card/50 hover:border-primary/50 transition-all opacity-0"
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -105,25 +257,27 @@ const About = () => {
                         </li>
                       ))}
                     </ul>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
 
             <div className="space-y-8">
-              <h3 className="text-2xl  font-bold flex items-center gap-3">
+              <h3
+                ref={journeyTitleRef}
+                className="text-2xl font-bold flex items-center gap-3 opacity-0"
+              >
                 <Cpu className="size-6 text-primary" />
                 My Journey
               </h3>
               <div className="divide-y divide-border">
                 {timeline.map((item, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 12 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.08, duration: 0.4 }}
-                    className="py-5 first:pt-0"
+                    ref={(el) => {
+                      timelineItemsRef.current[index] = el;
+                    }}
+                    className="py-5 first:pt-0 opacity-0"
                   >
                     <div className="flex flex-col md:flex-row gap-3 md:gap-8">
                       <div className="md:w-2/6 shrink-0">
@@ -139,13 +293,13 @@ const About = () => {
                         {item.description}
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="text-center space-y-8">
+          <div ref={whatIDoRef} className="text-center space-y-8 opacity-0">
             <div className="max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">What I Do</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -155,7 +309,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="flex justify-center  w-full">
+            <div ref={terminalRef} className="flex justify-center w-full opacity-0">
               <Terminal className="max-w-2xl md:max-w-3xl w-full">
                 <TypingAnimation>&gt; design --ux</TypingAnimation>
                 <AnimatedSpan className="text-green-500 mb-6">
@@ -182,20 +336,14 @@ const About = () => {
             </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-center"
-          >
+          <div ref={ctaRef} className="text-center opacity-0">
             <p className="text-muted-foreground mb-6">
               Let&apos;s work together on your next project
             </p>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

@@ -1,21 +1,51 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { certificates } from "@/lib/certificates";
 
-const formatDate = (date: Date) =>
-  new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" }).format(
-    date,
-  );
+gsap.registerPlugin(ScrollTrigger);
 
 const Achievements = () => {
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    const container = cardsRef.current;
+    if (!container) return;
+
+    const ctx = gsap.context(() => {
+      const cards = container.querySelectorAll("article");
+
+      gsap.fromTo(
+        cards,
+        { opacity: 0, y: 60, scale: 0.9 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.7,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: container,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        },
+      );
+    }, container);
+
+    return () => ctx.revert();
+  }, []);
+
   if (!certificates.length) return null;
 
   return (
-    <section id="achievements" className="py-20 md:py-24 ">
-      <div className="w-screen md:w-[80vw] mx-auto px-4 space-y-8  ">
-        <div className="text-center max-w-3xl mx-auto">
+    <section id="achievements" className="py-20 md:py-24 bg-background">
+      <div className="w-screen md:w-[85vw] mx-auto px-4 md:px-0">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-primary font-semibold mb-3">
             Certifications
           </p>
@@ -28,47 +58,20 @@ const Achievements = () => {
           </p>
         </div>
 
-        <div className="flex gap-4 md:gap-6 overflow-x-auto  snap-x snap-mandatory scroll-smooth pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-          {certificates.map((certificate, index) => (
+        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {certificates.map((certificate) => (
             <article
               key={certificate.id}
-              className="w-screen md:w-[33vw]  lg:w-[30vw] shrink-0 snap-start rounded-xl border border-border/60 bg-card/85  shadow-md shadow-primary/5"
+              className="rounded-sm  overflow-hidden cursor-pointer scale-95"
             >
-              <div className="relative h-44 md:h-64 overflow-hidden rounded-t-lg">
+              <div className="relative h-56  md:h-72">
                 <Image
                   src={certificate.image}
                   alt={`${certificate.title} certificate`}
                   fill
-                  className="object-fill brightness-105 p-1"
-                  sizes="(max-width: 768px) 288px, 480px"
-                  priority={index === 0}
+                  className="object-fill brightness-105 "
+                  sizes="(max-width: 768px) 100vw, 28vw"
                 />
-                <div className="absolute bottom-3 left-4 right-4 text-white">
-                  <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-white/70">
-                    {certificate.institution}
-                  </p>
-                  <h3 className="text-base md:text-lg font-semibold">
-                    {certificate.title}
-                  </h3>
-                  <p className="text-[10px] md:text-[11px] text-white/80">
-                    {formatDate(new Date(certificate.date))}
-                  </p>
-                </div>
-              </div>
-              <div className="px-4 md:px-5 py-4 space-y-3">
-                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed min-h-12">
-                  {certificate.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {certificate.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full bg-border/50 px-2.5 md:px-3 py-1 text-[9px] md:text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
               </div>
             </article>
           ))}
