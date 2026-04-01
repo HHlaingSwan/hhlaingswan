@@ -126,8 +126,8 @@ const Hero = () => {
                 ref={descRef}
                 className="text-background/60 text-base md:text-lg max-w-md opacity-0"
               >
-                Building elegant, scalable solutions with clean code and modern
-                technologies. Let&apos;s create something great together.
+                Building elegant, scalable solutions with and modern
+                technologies. Let&apos;s build something great together.
               </p>
             </div>
 

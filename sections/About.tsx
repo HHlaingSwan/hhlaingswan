@@ -209,20 +209,20 @@ const About = () => {
     <section
       ref={sectionRef}
       id="about"
-      className="py-20 md:py-28 bg-background"
+      className="py-16 md:py-28 bg-background overflow-hidden"
     >
-      <div className="container mx-auto px-4 md:px-8 max-w-6xl">
-        <div className="space-y-20">
+      <div className="container mx-auto px-4 md:px-8 max-w-6xl overflow-hidden">
+        <div className="space-y-12 md:space-y-20">
           <div ref={headingRef} className="text-center max-w-3xl mx-auto opacity-0">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">About Me</h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">About Me</h2>
+            <p className="text-base md:text-xl text-muted-foreground leading-relaxed">
               Based in Myanmar, I build full-stack products with React and
               Node.js, with strong focus on performance, clean architecture, and
               practical delivery.
             </p>
           </div>
 
-          <div className="space-y-16 md:space-y-20">
+          <div className="space-y-10 md:space-y-20">
             <div className="space-y-8">
               <h3
                 ref={expertiseTitleRef}
@@ -309,8 +309,8 @@ const About = () => {
               </p>
             </div>
 
-            <div ref={terminalRef} className="flex justify-center w-full opacity-0">
-              <Terminal className="max-w-2xl md:max-w-3xl w-full">
+            <div ref={terminalRef} className="flex justify-center w-full px-2 md:px-0 opacity-0">
+              <Terminal className="max-w-full md:max-w-3xl w-full">
                 <TypingAnimation>&gt; design --ux</TypingAnimation>
                 <AnimatedSpan className="text-green-500 mb-6">
                   ✔ Designing interfaces that are simple, clear, and

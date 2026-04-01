@@ -19,17 +19,29 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
   iconMagnification?: number
   disableMagnification?: boolean
   iconDistance?: number
-  direction?: "top" | "middle" | "bottom"
+  direction?: "top" | "middle" | "bottom" | "left" | "center" | "right"
+  orientation?: "horizontal" | "vertical"
   children: React.ReactNode
 }
 
-const DEFAULT_SIZE = 52
-const DEFAULT_MAGNIFICATION = 100
-const DEFAULT_DISTANCE = 140
+const DEFAULT_SIZE = 48
+const DEFAULT_MAGNIFICATION = 68
+const DEFAULT_DISTANCE = 100
 const DEFAULT_DISABLEMAGNIFICATION = false
 
 const dockVariants = cva(
-  "mx-auto mt-8 flex h-[72px] w-max items-end justify-center gap-4 rounded-2xl border border-white/10 bg-black/20 p-2 pb-3 backdrop-blur-md shadow-2xl"
+  "flex items-center justify-center gap-4 rounded-2xl border border-white/10 bg-black/20 backdrop-blur-md shadow-2xl",
+  {
+    variants: {
+      orientation: {
+        horizontal: "mx-auto mt-8 h-[72px] w-max p-2 pb-3",
+        vertical: "h-max w-[72px] flex-col p-3 px-2",
+      },
+    },
+    defaultVariants: {
+      orientation: "horizontal",
+    },
+  }
 )
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -42,6 +54,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
       disableMagnification = DEFAULT_DISABLEMAGNIFICATION,
       iconDistance = DEFAULT_DISTANCE,
       direction = "middle",
+      orientation = "horizontal",
       ...props
     },
     ref
@@ -61,6 +74,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
             magnification: iconMagnification,
             disableMagnification: disableMagnification,
             distance: iconDistance,
+            orientation: orientation,
           })
         }
         return child
@@ -70,13 +84,13 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     return (
       <motion.div
         ref={ref}
-        onMouseMove={(e) => mouseX.set(e.pageX)}
+        onMouseMove={(e) => mouseX.set(orientation === "vertical" ? e.pageY : e.pageX)}
         onMouseLeave={() => mouseX.set(Infinity)}
         {...props}
-        className={cn(dockVariants({ className }), {
-          "items-start": direction === "top",
-          "items-center": direction === "middle",
-          "items-end": direction === "bottom",
+        className={cn(dockVariants({ orientation, className }), {
+          "items-start": direction === "top" || direction === "left",
+          "items-center": direction === "middle" || direction === "center",
+          "items-end": direction === "bottom" || direction === "right",
         })}
       >
         {renderChildren()}
@@ -95,6 +109,7 @@ export interface DockIconProps
   distance?: number
   mouseX?: MotionValue<number>
   className?: string
+  orientation?: "horizontal" | "vertical"
   children?: React.ReactNode
   props?: PropsWithChildren
 }
@@ -105,6 +120,7 @@ const DockIcon = ({
   disableMagnification,
   distance = DEFAULT_DISTANCE,
   mouseX,
+  orientation = "horizontal",
   className,
   children,
   ...props
@@ -113,19 +129,20 @@ const DockIcon = ({
   const defaultMouseX = useMotionValue(Infinity)
 
   const distanceCalc = useTransform(mouseX ?? defaultMouseX, (val: number) => {
-    const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 }
+    const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, y: 0, width: 0, height: 0 }
+    if (orientation === "vertical") {
+      return val - bounds.y - bounds.height / 2
+    }
     return val - bounds.x - bounds.width / 2
   })
 
-  const targetSize = disableMagnification ? size : magnification
-
-  const sizeTransform = useTransform(
+  const scaleTransform = useTransform(
     distanceCalc,
     [-distance, 0, distance],
-    [size, targetSize, size]
+    [1, magnification / size, 1]
   )
 
-  const scaleSize = useSpring(sizeTransform, {
+  const scale = useSpring(scaleTransform, {
     mass: 0.1,
     stiffness: 150,
     damping: 15,
@@ -134,14 +151,18 @@ const DockIcon = ({
   return (
     <motion.div
       ref={ref}
-      style={{ width: scaleSize, height: scaleSize }}
+      style={{
+        width: size,
+        height: size,
+        scale,
+        transformOrigin: orientation === "vertical" ? "center right" : "center bottom",
+      }}
       className={cn(
         "flex aspect-square cursor-pointer items-center justify-center rounded-full p-1.5",
         disableMagnification && "hover:bg-muted-foreground transition-colors",
         className
       )}
-      {...props
-    }
+      {...props}
     >
       {children}
     </motion.div>

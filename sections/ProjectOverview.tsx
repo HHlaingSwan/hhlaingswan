@@ -1,45 +1,143 @@
 "use client";
 
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { content } from "@/lib/projects";
 import { ExternalLink, Github as GithubIcon } from "lucide-react";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const ProjectOverview = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const articlesRef = useRef<(HTMLElement | null)[]>([]);
+  const imagesRef = useRef<(HTMLDivElement | null)[]>([]);
+  const contentsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useLayoutEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const ctx = gsap.context(() => {
+      if (headerRef.current) {
+        const children = headerRef.current.children;
+        gsap.fromTo(
+          children,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            stagger: 0.12,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: headerRef.current,
+              start: "top 80%",
+            },
+          }
+        );
+      }
+
+      articlesRef.current.forEach((article, i) => {
+        if (!article) return;
+
+        const image = imagesRef.current[i];
+        const contentEl = contentsRef.current[i];
+        const isEven = i % 2 === 0;
+
+        gsap.fromTo(
+          article,
+          { opacity: 0 },
+          {
+            opacity: 1,
+            duration: 0.1,
+            scrollTrigger: {
+              trigger: article,
+              start: "top 85%",
+            },
+          }
+        );
+
+        if (image) {
+          const img = image.querySelector("img");
+          if (img) {
+            gsap.fromTo(
+              img,
+              { scale: 1.2 },
+              {
+                scale: 1,
+                duration: 1.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                  trigger: article,
+                  start: "top 80%",
+                  end: "bottom 20%",
+                  scrub: 1,
+                },
+              }
+            );
+          }
+
+          gsap.fromTo(
+            image,
+            { opacity: 0, x: isEven ? -80 : 80, rotateY: isEven ? 8 : -8 },
+            {
+              opacity: 1,
+              x: 0,
+              rotateY: 0,
+              duration: 1,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: article,
+                start: "top 80%",
+              },
+            }
+          );
+        }
+
+        if (contentEl) {
+          const elements = contentEl.querySelectorAll(".anim-child");
+          gsap.fromTo(
+            elements,
+            { opacity: 0, y: 25 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              stagger: 0.08,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: contentEl,
+                start: "top 85%",
+              },
+            }
+          );
+        }
+      });
+    }, section);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       id="projects"
       className="py-20 md:py-32 px-4 max-w-7xl mx-auto overflow-hidden"
     >
-      <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-xs md:text-sm uppercase tracking-[0.2em] text-primary font-semibold mb-3"
-        >
+      <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+        <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-primary font-semibold mb-3 opacity-0">
           Selected Work
-        </motion.p>
-        <motion.h2
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-3xl md:text-5xl font-bold mb-6"
-        >
+        </p>
+        <h2 className="text-3xl md:text-5xl font-bold mb-6 opacity-0">
           Project Showcase
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="text-sm md:text-lg text-muted-foreground leading-relaxed"
-        >
+        </h2>
+        <p className="text-sm md:text-lg text-muted-foreground leading-relaxed opacity-0">
           A collection of digital experiences built with precision and modern
           technology.
-        </motion.p>
+        </p>
       </div>
 
       <div className="flex flex-col gap-20 md:gap-32 w-full">
@@ -47,25 +145,29 @@ const ProjectOverview = () => {
           const isEven = index % 2 === 0;
 
           return (
-            <motion.article
+            <article
               key={project.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+              ref={(el) => {
+                articlesRef.current[index] = el;
+              }}
               className={`flex flex-col ${
                 isEven ? "md:flex-row" : "md:flex-row-reverse"
-              } gap-8 md:gap-16 items-center`}
+              } gap-8 md:gap-16 items-center opacity-0`}
             >
-              {/* Image Container */}
-              <div className="w-full md:w-3/5 group">
+              <div
+                ref={(el) => {
+                  imagesRef.current[index] = el;
+                }}
+                className="w-full md:w-3/5 opacity-0"
+                style={{ perspective: "1000px" }}
+              >
                 <div className="relative aspect-4/3 md:aspect-video overflow-hidden rounded-2xl border border-border/50 bg-muted/30 shadow-2xl">
                   {project.images?.[0] ? (
                     <Image
                       src={project.images[0]}
                       alt={project.title}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 60vw, 800px"
                     />
                   ) : (
@@ -73,26 +175,29 @@ const ProjectOverview = () => {
                       No image
                     </div>
                   )}
-                  {/* Subtle Overlay */}
-                  <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-black/5" />
                 </div>
               </div>
 
-              {/* Content Container */}
-              <div className="w-full md:w-2/5 flex flex-col justify-center space-y-6">
-                <div className="space-y-2">
+              <div
+                ref={(el) => {
+                  contentsRef.current[index] = el;
+                }}
+                className="w-full md:w-2/5 flex flex-col justify-center space-y-6"
+              >
+                <div className="anim-child space-y-2 opacity-0">
                   <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
                     {project.title}
                   </h3>
                   <div className="h-1 w-12 bg-primary rounded-full" />
                 </div>
 
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                <p className="anim-child text-sm md:text-base text-muted-foreground leading-relaxed opacity-0">
                   {project.description}
                 </p>
 
                 {project.impact && (
-                  <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
+                  <div className="anim-child p-4 rounded-xl bg-primary/5 border border-primary/10 opacity-0">
                     <p className="text-xs md:text-sm font-medium text-primary/80">
                       Key Impact:
                     </p>
@@ -100,7 +205,7 @@ const ProjectOverview = () => {
                   </div>
                 )}
 
-                <div className="flex flex-wrap gap-2">
+                <div className="anim-child flex flex-wrap gap-2 opacity-0">
                   {project.tags?.map((tag) => (
                     <span
                       key={tag}
@@ -111,7 +216,7 @@ const ProjectOverview = () => {
                   ))}
                 </div>
 
-                <div className="flex flex-wrap items-center gap-4 pt-4">
+                <div className="anim-child flex flex-wrap items-center gap-4 pt-4 opacity-0">
                   {project.url && project.url !== "#" && (
                     <a
                       href={project.url}
@@ -134,7 +239,7 @@ const ProjectOverview = () => {
                   </a>
                 </div>
               </div>
-            </motion.article>
+            </article>
           );
         })}
       </div>

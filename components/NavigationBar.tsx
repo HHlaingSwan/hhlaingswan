@@ -3,9 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import {
-  GithubIcon,
-  HomeIcon,
-  Linkedin,
+  UserIcon,
+  GraduationCapIcon,
   BriefcaseIcon,
   MailIcon,
 } from "lucide-react";
@@ -20,30 +19,12 @@ import {
 } from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "@/components/ui/dock";
 
-export type IconProps = React.HTMLAttributes<SVGElement>;
-
-const Icons = {
-  linkedin: (props: IconProps) => <Linkedin {...props} />,
-  github: (props: IconProps) => <GithubIcon {...props} />,
-};
-
 const DATA = {
   navbar: [
-    { href: "#home", icon: HomeIcon, label: "Home" },
+    { href: "#home", icon: UserIcon, label: "Me" },
+    { href: "#education", icon: GraduationCapIcon, label: "Education" },
     { href: "#projects", icon: BriefcaseIcon, label: "Projects" },
     { href: "#contact", icon: MailIcon, label: "Contact" },
-  ],
-  social: [
-    {
-      name: "GitHub",
-      url: "https://github.com/HHlaingSwan",
-      icon: Icons.github,
-    },
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/h-hlaing-swan-345956353",
-      icon: Icons.linkedin,
-    },
   ],
 };
 
@@ -51,7 +32,7 @@ export function NavigationBar() {
   return (
     <div className="flex flex-col items-center justify-center">
       <TooltipProvider>
-        <Dock direction="bottom">
+        <Dock direction="center" orientation="vertical">
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>
@@ -67,31 +48,8 @@ export function NavigationBar() {
                     <item.icon className="size-[55%]" />
                   </Link>
                 </TooltipTrigger>
-                <TooltipContent>
+                <TooltipContent side="left">
                   <p>{item.label}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
-          {DATA.social.map((social) => (
-            <DockIcon key={social.name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
-                    aria-label={social.name}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "w-full h-full rounded-full text-foreground"
-                    )}
-                  >
-                    <social.icon className="size-[55%]" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{social.name}</p>
                 </TooltipContent>
               </Tooltip>
             </DockIcon>
