@@ -59,7 +59,7 @@ const ProjectOverview = () => {
             >
               {/* Image Container */}
               <div className="w-full md:w-3/5 group">
-                <div className="relative aspect-[4/3] md:aspect-video overflow-hidden rounded-2xl border border-border/50 bg-muted/30 shadow-2xl">
+                <div className="relative aspect-4/3 md:aspect-video overflow-hidden rounded-2xl border border-border/50 bg-muted/30 shadow-2xl">
                   {project.images?.[0] ? (
                     <Image
                       src={project.images[0]}

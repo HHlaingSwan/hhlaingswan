@@ -12,18 +12,18 @@ import { Code, Database, Globe, Monitor, Cpu, Layers } from "lucide-react";
 const About = () => {
   const timeline = [
     {
+      year: "2026-02 - 2026-03",
+      title: "Project Leader (React & Node.js)",
+      company: "One Month One Project Program",
+      description:
+        "Led a team of 4 to build a full-stack social web app in 4 weeks, using React, Node.js, and MongoDB. Oversaw project planning, development, and deployment, resulting in a successful launch and positive user feedback.",
+    },
+    {
       year: "2024 - 2026",
       title: "React Frontend Developer",
       company: "WeDay Social E commerce Platform",
       description:
-        "Shipped storefront features in Next.js and supported Express API integration for a social e-commerce product.",
-    },
-    {
-      year: "2023 - 2024",
-      title: "Web Development Student",
-      company: "Self-Learning | Education",
-      description:
-        "Completed a self-guided track in React, Node.js, and databases while delivering practical projects.",
+        "Developed and maintained the frontend of a social e-commerce platform using React, TypeScript, and Tailwind CSS. Collaborated with designers and backend developers to implement new features, optimize performance, and ensure a seamless user experience.",
     },
   ];
 
@@ -72,51 +72,13 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div className="space-y-8">
-              <h3 className="text-2xl font-bold flex items-center gap-3">
-                <Cpu className="size-6 text-primary" />
-                My Journey
-              </h3>
-              <div className="relative">
-                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border" />
-                {timeline.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1, duration: 0.6 }}
-                    className="relative pl-12 pb-8"
-                  >
-                    <div className="absolute left-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                      <div className="w-3 h-3 bg-background rounded-full" />
-                    </div>
-                    <article className="rounded-xl border border-border/60 bg-card/60 p-4 md:p-5">
-                      <p className="text-xs md:text-sm text-primary font-medium mb-1">
-                        {item.year}
-                      </p>
-                      <h4 className="text-base md:text-lg font-semibold mb-1">
-                        {item.title}
-                      </h4>
-                      <p className="text-xs md:text-sm text-muted-foreground mb-3">
-                        {item.company}
-                      </p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {item.description}
-                      </p>
-                    </article>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
+          <div className="space-y-16 md:space-y-20">
             <div className="space-y-8">
               <h3 className="text-2xl font-bold flex items-center gap-3">
                 <Layers className="size-6 text-primary" />
                 Expertise
               </h3>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                 {expertise.map((category, index) => (
                   <motion.div
                     key={category.title}
@@ -147,6 +109,40 @@ const About = () => {
                 ))}
               </div>
             </div>
+
+            <div className="space-y-8">
+              <h3 className="text-2xl  font-bold flex items-center gap-3">
+                <Cpu className="size-6 text-primary" />
+                My Journey
+              </h3>
+              <div className="divide-y divide-border">
+                {timeline.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.08, duration: 0.4 }}
+                    className="py-5 first:pt-0"
+                  >
+                    <div className="flex flex-col md:flex-row gap-3 md:gap-8">
+                      <div className="md:w-2/6 shrink-0">
+                        <h4 className="text-lg font-semibold">{item.title}</h4>
+                        <p className="text-base text-muted-foreground mt-1">
+                          {item.company}
+                        </p>
+                        <span className="text-sm text-muted-foreground">
+                          {item.year}
+                        </span>
+                      </div>
+                      <p className="md:w-4/6 text-base text-muted-foreground leading-7">
+                        {item.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="text-center space-y-8">
@@ -160,7 +156,7 @@ const About = () => {
             </div>
 
             <div className="flex justify-center  w-full">
-              <Terminal className="max-w-3xl   w-full">
+              <Terminal className="max-w-2xl md:max-w-3xl w-full">
                 <TypingAnimation>&gt; design --ux</TypingAnimation>
                 <AnimatedSpan className="text-green-500 mb-6">
                   ✔ Designing interfaces that are simple, clear, and

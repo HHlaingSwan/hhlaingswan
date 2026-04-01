@@ -13,17 +13,6 @@ export const content: Project[] = [
     images: ["/images/homeView.png"],
   },
   {
-    title: "Chat App with Socket.IO",
-    description:
-      "Real-time chat app featuring JWT auth, live presence, and media sharing with Socket.IO and Cloudinary.",
-    url: "https://unit-chat-five.vercel.app/",
-    repoUrl: "https://github.com/HHlaingSwan/Unit-Chat",
-    tags: ["MERN", "Socket.IO", "JWT", "Cloudinary"],
-    impact:
-      "Fast, reliable messaging with secure auth, presence, and media sharing.",
-    images: ["/images/chatMessage.png"],
-  },
-  {
     title: "Static Game Advertisement with Cool Animation",
     description:
       "Interactive game promo landing page with cinematic motion, scroll-based effects, and a strong visual narrative.",
@@ -33,6 +22,17 @@ export const content: Project[] = [
     impact:
       "Engaging promo experience with smooth animations and strong visual storytelling.",
     images: ["/images/arcaneMovie.png"],
+  },
+  {
+    title: "Chat App with Socket.IO",
+    description:
+      "Real-time chat app featuring JWT auth, live presence, and media sharing with Socket.IO and Cloudinary.",
+    url: "https://unit-chat-five.vercel.app/",
+    repoUrl: "https://github.com/HHlaingSwan/Unit-Chat",
+    tags: ["MERN", "Socket.IO", "JWT", "Cloudinary"],
+    impact:
+      "Fast, reliable messaging with secure auth, presence, and media sharing.",
+    images: ["/images/chatMessage.png"],
   },
   {
     title: "Personal Assistant Bot with AI",

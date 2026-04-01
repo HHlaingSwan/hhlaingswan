@@ -30,7 +30,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
-            <div className="space-y-4">
+            <div>
               <p className="text-sm md:text-lg text-background/60">
                 Hi, I&apos;m{" "}
                 <span className="font-bold text-background">
@@ -58,7 +58,7 @@ const Hero = () => {
 
               <p className="text-background/60 text-base md:text-lg max-w-md">
                 Building elegant, scalable solutions with clean code and modern
-                technologies.
+                technologies. Let&apos;s create something great together.
               </p>
             </div>
 
