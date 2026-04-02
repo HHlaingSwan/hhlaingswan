@@ -103,15 +103,15 @@ const About = () => {
               >
                 <div className="flex flex-col lg:flex-row gap-3 lg:gap-10">
                   <div className="lg:w-2/6 shrink-0">
-                    <h4 className="text-lg font-semibold">{item.title}</h4>
-                    <p className="text-base text-muted-foreground mt-1">
+                    <h4 className="text-base md:text-lg font-semibold">{item.title}</h4>
+                    <p className="text-sm md:text-base text-muted-foreground mt-1">
                       {item.company}
                     </p>
-                    <span className="text-sm text-muted-foreground">
+                    <span className="text-xs md:text-sm text-muted-foreground">
                       {item.year}
                     </span>
                   </div>
-                  <ul className="lg:w-4/6 space-y-2 text-base text-muted-foreground leading-7">
+                  <ul className="lg:w-4/6 space-y-2 text-sm md:text-base text-muted-foreground leading-7">
                     {item.description
                       .split(". ")
                       .filter(Boolean)

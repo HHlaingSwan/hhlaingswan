@@ -208,7 +208,7 @@ const Contact = () => {
             <div className="absolute inset-0 bg-linear-to-br from-foreground/3 to-transparent pointer-events-none" />
             <div className="relative">
               <p className="text-xs text-muted-foreground mb-1">Time Zone</p>
-              <p className="text-2xl font-bold">GMT+6:30</p>
+              <p className="text-xl md:text-2xl font-bold">GMT+6:30</p>
             </div>
             <div className="relative">
               <p className="text-xs text-muted-foreground">

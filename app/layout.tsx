@@ -1,13 +1,25 @@
 import type { Metadata } from "next";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const SITE_URL = "https://hhlaingswan.vercel.app";
+const SITE_NAME = "Htet Hlaing Swan";
+const DESCRIPTION =
+  "Full-Stack Developer from Myanmar specializing in React, Node.js, MongoDB, and modern web applications.";
 
 export const metadata: Metadata = {
   title: {
-    default: "Htet Hlaing Swan | Developer",
-    template: "%s | Htet Hlaing Swan",
+    default: `${SITE_NAME} | Developer`,
+    template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "Full-Stack Developer from Myanmar specializing in React, Node.js, MongoDB, and modern web applications. Building scalable solutions with clean code.",
+  description: DESCRIPTION,
   keywords: [
     "Full-Stack Developer",
     "React Developer",
@@ -19,74 +31,33 @@ export const metadata: Metadata = {
     "Portfolio",
     "Myanmar",
   ],
-  authors: [
-    { name: "Htet Hlaing Swan", url: "https://hhlaingswan.vercel.app" },
-  ],
-  creator: "Htet Hlaing Swan",
-  publisher: "Htet Hlaing Swan",
-  formatDetection: {
-    email: true,
-    address: true,
-  },
-  metadataBase: new URL("https://hhlaingswan.vercel.app"),
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://hhlaingswan.vercel.app",
-    title: "Htet Hlaing Swan | Full-Stack Developer",
-    description:
-      "Full-Stack Developer from Myanmar specializing in React, Node.js, MongoDB, and modern web applications.",
-    siteName: "Htet Hlaing Swan",
-    images: [
-      {
-        url: "/personal.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Htet Hlaing Swan - Full-Stack Developer",
-      },
-    ],
+    url: SITE_URL,
+    title: `${SITE_NAME} | Full-Stack Developer`,
+    description: DESCRIPTION,
+    siteName: SITE_NAME,
+    images: [{ url: "/cartoon.jpeg", width: 1200, height: 630, alt: `${SITE_NAME} - Full-Stack Developer` }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Htet Hlaing Swan | Full-Stack Developer",
-    description:
-      "Full-Stack Developer from Myanmar specializing in React, Node.js, MongoDB, and modern web applications.",
-    images: ["/personal.jpg"],
+    title: `${SITE_NAME} | Full-Stack Developer`,
+    description: DESCRIPTION,
+    images: ["/cartoon.jpeg"],
     creator: "@hhlaingswan",
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-      </head>
-      <body>
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg"
-        >
+    <html lang="en" className={dmSans.variable}>
+      <body className="antialiased">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg">
           Skip to main content
         </a>
         {children}
