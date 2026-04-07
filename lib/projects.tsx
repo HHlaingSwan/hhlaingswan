@@ -24,6 +24,17 @@ export const content: Project[] = [
     images: ["/images/arcaneMovie.png"],
   },
   {
+    title: "Chess Game with Java Swing",
+    description:
+      "Classic chess game with a challenging AI opponent, built using Java Swing for a smooth and interactive experience.",
+    url: "#",
+    repoUrl: "https://github.com/HHlaingSwan/java_chess_engine",
+    tags: ["Java", "Swing"],
+    impact:
+      "Classic chess game with a challenging AI opponent for endless fun and strategy.",
+    images: ["/images/chessGame.png"],
+  },
+  {
     title: "Chat App with Socket.IO",
     description:
       "Real-time chat app featuring JWT auth, live presence, and media sharing with Socket.IO and Cloudinary.",

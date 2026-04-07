@@ -41,7 +41,14 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} | Full-Stack Developer`,
     description: DESCRIPTION,
     siteName: SITE_NAME,
-    images: [{ url: "/cartoon.jpeg", width: 1200, height: 630, alt: `${SITE_NAME} - Full-Stack Developer` }],
+    images: [
+      {
+        url: "/cartoon.jpeg",
+        width: 1200,
+        height: 630,
+        alt: `${SITE_NAME} - Full-Stack Developer`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -53,11 +60,18 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={dmSans.variable}>
       <body className="antialiased">
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg"
+        >
           Skip to main content
         </a>
         {children}
