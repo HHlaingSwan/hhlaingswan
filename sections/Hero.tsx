@@ -138,9 +138,9 @@ const Hero = () => {
                     <TypingAnimation
                       cursorStyle="block"
                       words={[
-                        "Backend Engineer",
                         "Frontend Architect",
-                        "DevOps Student",
+                        "Backend Engineer",
+                        "Java Developer",
                       ]}
                       loop
                     />
@@ -173,7 +173,10 @@ const Hero = () => {
               </a>
             </div>
 
-            <div ref={statsRef} className="flex items-center gap-4 md:gap-8 pt-4">
+            <div
+              ref={statsRef}
+              className="flex items-center gap-4 md:gap-8 pt-4"
+            >
               <div>
                 <p className="text-xl md:text-2xl font-bold">
                   <span data-count="2">0</span> +
@@ -185,7 +188,9 @@ const Hero = () => {
                 <p className="text-xl md:text-2xl font-bold">
                   <span data-count="8">0</span> +
                 </p>
-                <p className="text-xs md:text-sm text-background/60">Projects</p>
+                <p className="text-xs md:text-sm text-background/60">
+                  Projects
+                </p>
               </div>
               <div className="w-px h-10 md:h-12 bg-background/10" />
               <div>

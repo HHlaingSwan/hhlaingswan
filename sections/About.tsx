@@ -14,7 +14,7 @@ const About = () => {
   const timeline = [
     {
       year: "2026-02 - 2026-03",
-      title: "Project Leader (React & Node.js)",
+      title: "Project Leader ( Next.js & Node.js )",
       company: "One Month One Project Program",
       description:
         "Led a team of 4 to build a full-stack social web app in 4 weeks, using React, Node.js, and MongoDB. Oversaw project planning, development, and deployment, resulting in a successful launch and positive user feedback.",
@@ -76,10 +76,7 @@ const About = () => {
     <section ref={sectionRef} id="about" className="py-16 md:py-28 z-10">
       <div className="container mx-auto px-4 md:px-8 max-w-6xl">
         <div className="space-y-12 md:space-y-20">
-          <div
-            ref={headingRef}
-            className="text-center max-w-3xl mx-auto"
-          >
+          <div ref={headingRef} className="text-center max-w-3xl mx-auto">
             <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-primary font-semibold mb-3 opacity-0">
               Introduction
             </p>
@@ -103,7 +100,9 @@ const About = () => {
               >
                 <div className="flex flex-col lg:flex-row gap-3 lg:gap-10">
                   <div className="lg:w-2/6 shrink-0">
-                    <h4 className="text-base md:text-lg font-semibold">{item.title}</h4>
+                    <h4 className="text-base md:text-lg font-semibold">
+                      {item.title}
+                    </h4>
                     <p className="text-sm md:text-base text-muted-foreground mt-1">
                       {item.company}
                     </p>
