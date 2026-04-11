@@ -12,7 +12,7 @@ const dmSans = DM_Sans({
 const SITE_URL = "https://hhlaingswan.vercel.app";
 const SITE_NAME = "Htet Hlaing Swan";
 const DESCRIPTION =
-  "Full-Stack Developer from Myanmar specializing in React, Node.js, MongoDB, and modern web applications.";
+  "Full-Stack Engineer from Myanmar specializing in React/Next.js, Node.js, and modern web applications.";
 
 export const metadata: Metadata = {
   title: {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    title: `${SITE_NAME} | Full-Stack Developer`,
+    title: `${SITE_NAME} | Full-Stack Engineer`,
     description: DESCRIPTION,
     siteName: SITE_NAME,
     images: [
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} | Full-Stack Developer`,
+    title: `${SITE_NAME} | Full-Stack Engineer`,
     description: DESCRIPTION,
     images: ["/cartoon.jpeg"],
     creator: "@hhlaingswan",

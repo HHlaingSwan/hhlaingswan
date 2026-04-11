@@ -14,17 +14,17 @@ const About = () => {
   const timeline = [
     {
       year: "2026-02 - 2026-03",
-      title: "Project Leader ( Next.js & Node.js )",
+      title: "Project Lead (Next.js & Node.js)",
       company: "One Month One Project Program",
       description:
-        "Led a team of 4 to build a full-stack social web app in 4 weeks, using React, Node.js, and MongoDB. Oversaw project planning, development, and deployment, resulting in a successful launch and positive user feedback.",
+        "Led a 4-person team to ship a full-stack social web app in 4 weeks. Owned planning, task breakdown, and delivery coordination from kickoff to release. Built core features across UI, API, and database with a focus on reliability and clean UX. Managed deployment and release checks to deliver a stable MVP.",
     },
     {
       year: "2024 - 2026",
-      title: "React Frontend Developer",
+      title: "Frontend Engineer (React/TypeScript)",
       company: "WeDay Social E commerce Platform",
       description:
-        "Developed and maintained the frontend of a social e-commerce platform using React, TypeScript, and Tailwind CSS. Collaborated with designers and backend developers to implement new features, optimize performance, and ensure a seamless user experience.",
+        "Built and maintained user-facing features for a social e-commerce platform using React, TypeScript, and Tailwind CSS. Delivered reusable UI components and end-to-end flows with clear API integration. Partnered with designers and backend engineers to ship features with consistent UX and solid edge-case handling. Debugged issues and continuously improved performance, maintainability, and accessibility.",
     },
   ];
 
@@ -84,8 +84,12 @@ const About = () => {
               About Me
             </h2>
             <p className="text-sm md:text-lg text-muted-foreground leading-relaxed opacity-0">
-              Java & Full-Stack Developer building fast, reliable apps with
-              React, Node.js, and Java.
+              Full-Stack Engineer building fast, reliable apps with React,
+              Next.js, and Node.js. I care deeply about performance and failure
+              cases—clear loading states, graceful errors, careful validation,
+              and predictable APIs. I like shipping small improvements, measuring
+              what matters, and fixing root causes so the product feels smooth
+              for users and stable for the team.
             </p>
           </div>
 

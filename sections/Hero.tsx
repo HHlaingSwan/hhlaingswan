@@ -4,7 +4,7 @@ import { AuroraText } from "@/components/ui/aurora-text";
 import { motion } from "framer-motion";
 import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const Hero = () => {
@@ -138,9 +138,7 @@ const Hero = () => {
                     <TypingAnimation
                       cursorStyle="block"
                       words={[
-                        "Frontend Architect",
-                        "Backend Engineer",
-                        "Java Developer",
+                        "Full-Stack Engineer",
                       ]}
                       loop
                     />
@@ -152,24 +150,26 @@ const Hero = () => {
                 ref={descRef}
                 className="text-background/60 text-base md:text-lg max-w-md opacity-0"
               >
-                Building elegant, scalable solutions with and modern
-                technologies. Let&apos;s build something great together.
+                Building elegant, scalable solutions with modern technologies.
+                Let&apos;s build something great together.
               </p>
             </div>
 
             <div ref={buttonsRef} className="flex flex-wrap gap-4">
               <a
-                href="#projects"
-                className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-background text-foreground font-medium rounded-lg hover:bg-background/90 transition-colors opacity-0"
+                href="/cv"
+                className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto sm:min-w-48 md:min-w-56 h-12 px-7 bg-background text-foreground text-sm md:text-base font-medium rounded-lg hover:bg-background/90 transition-colors opacity-0"
               >
-                See What I Build
+                View CV
                 <ArrowRight className="size-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
               <a
-                href="#about"
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 border border-background/20 rounded-lg font-medium hover:bg-background/5 transition-colors opacity-0"
+                href="/cv.pdf"
+                download
+                className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto sm:min-w-48 md:min-w-56 h-12 px-7 border border-background/30 rounded-lg text-sm md:text-base font-medium hover:bg-background/5 transition-colors opacity-0"
               >
-                About Me
+                Download CV
+                <Download className="size-4 group-hover:-translate-y-0.5 transition-transform" />
               </a>
             </div>
 

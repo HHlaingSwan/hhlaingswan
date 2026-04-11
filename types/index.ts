@@ -1,11 +1,10 @@
 export interface Project {
   title: string;
   description: string;
+  highlights?: string[];
   url: string;
   repoUrl?: string;
   images?: string[];
-  tags?: string[];
-  impact?: string;
 }
 
 export interface StatItem {

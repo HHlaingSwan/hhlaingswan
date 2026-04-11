@@ -141,7 +141,7 @@ const Contact = () => {
           {/* Location */}
           <a
             ref={locationRef}
-            href="https://maps.google.com/?q=Mandalay,Myanmar"
+            href="https://maps.google.com/?q=Yangon,Myanmar"
             target="_blank"
             rel="noopener noreferrer"
             className="group rounded-2xl border border-border/60 bg-card p-5 flex flex-col justify-between relative overflow-hidden opacity-0"
@@ -154,7 +154,7 @@ const Contact = () => {
             </div>
             <div className="relative">
               <p className="text-xs text-muted-foreground mb-1">Location</p>
-              <p className="text-sm font-semibold">Mandalay, Myanmar</p>
+              <p className="text-sm font-semibold">Yangon, Myanmar</p>
             </div>
           </a>
 

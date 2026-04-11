@@ -196,25 +196,16 @@ const ProjectOverview = () => {
                   {project.description}
                 </p>
 
-                {project.impact && (
-                  <div className="anim-child p-4 rounded-xl bg-primary/5 border border-primary/10 opacity-0">
-                    <p className="text-xs md:text-sm font-medium text-primary/80">
-                      Key Impact:
-                    </p>
-                    <p className="text-sm">{project.impact}</p>
-                  </div>
-                )}
-
-                <div className="anim-child flex flex-wrap gap-2 opacity-0">
-                  {project.tags?.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[10px] md:text-[11px] px-3 py-1 rounded-full bg-secondary text-secondary-foreground border border-border/50 font-medium"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                {project.highlights?.length ? (
+                  <ul className="anim-child space-y-2 text-sm md:text-base text-muted-foreground leading-7 opacity-0">
+                    {project.highlights.map((point) => (
+                      <li key={point} className="flex items-start gap-2">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary/80 shrink-0" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
 
                 <div className="anim-child flex flex-wrap items-center gap-4 pt-4 opacity-0">
                   {project.url && project.url !== "#" && (

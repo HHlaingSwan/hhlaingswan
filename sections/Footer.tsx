@@ -98,7 +98,7 @@ const Footer = () => {
           >
             <span>htethlaingswan@gmail.com</span>
             <span className="hidden sm:inline">•</span>
-            <span>Mandalay, Myanmar</span>
+            <span>Yangon, Myanmar</span>
             <span className="hidden sm:inline">•</span>
             <span>+95 995 464 1112</span>
           </div>
