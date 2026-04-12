@@ -76,7 +76,7 @@ const About = () => {
     <section ref={sectionRef} id="about" className="py-16 md:py-28 z-10">
       <div className="container mx-auto px-4 md:px-8 max-w-6xl">
         <div className="space-y-12 md:space-y-20">
-          <div ref={headingRef} className="text-center max-w-3xl mx-auto">
+          <div ref={headingRef} className="text-center max-w-5xl   mx-auto">
             <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-primary font-semibold mb-3 opacity-0">
               Introduction
             </p>
@@ -87,9 +87,9 @@ const About = () => {
               Full-Stack Engineer building fast, reliable apps with React,
               Next.js, and Node.js. I care deeply about performance and failure
               cases—clear loading states, graceful errors, careful validation,
-              and predictable APIs. I like shipping small improvements, measuring
-              what matters, and fixing root causes so the product feels smooth
-              for users and stable for the team.
+              and predictable APIs. I like shipping small improvements,
+              measuring what matters, and fixing root causes so the product
+              feels smooth for users and stable for the team.
             </p>
           </div>
 

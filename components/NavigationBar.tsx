@@ -21,7 +21,7 @@ import { Dock, DockIcon } from "@/components/ui/dock";
 
 const DATA = {
   navbar: [
-    { href: "#home", icon: UserIcon, label: "Me" },
+    { href: "#about", icon: UserIcon, label: "Me" },
     { href: "#education", icon: GraduationCapIcon, label: "Education" },
     { href: "#projects", icon: BriefcaseIcon, label: "Projects" },
     { href: "#contact", icon: MailIcon, label: "Contact" },
@@ -42,7 +42,7 @@ export function NavigationBar() {
                     aria-label={item.label}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "w-full h-full rounded-full text-foreground"
+                      "w-full h-full rounded-full text-foreground",
                     )}
                   >
                     <item.icon className="size-[55%]" />

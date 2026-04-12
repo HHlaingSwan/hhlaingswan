@@ -9,12 +9,12 @@ export const metadata: Metadata = {
 export default function CvPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <div className="container mx-auto max-w-5xl px-4 py-10">
+      <div className="container mx-auto max-w-6xl px-4 py-10">
         <div className="flex flex-col gap-2 mb-6">
-          <h1 className="text-3xl md:text-4xl font-bold">CV</h1>
+          <h1 className="text-3xl md:text-4xl font-bold">Curriculum Vitae</h1>
           <p className="text-sm text-muted-foreground">
-            If you don&apos;t see the PDF, add your file at{" "}
-            <span className="font-mono">public/cv.pdf</span>.
+            This is my CV. I hope you like it. You can download it from the
+            button below.
           </p>
         </div>
 
@@ -45,4 +45,3 @@ export default function CvPage() {
     </main>
   );
 }
-

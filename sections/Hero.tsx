@@ -137,9 +137,7 @@ const Hero = () => {
                   <AuroraText>
                     <TypingAnimation
                       cursorStyle="block"
-                      words={[
-                        "Full-Stack Engineer",
-                      ]}
+                      words={["Full-Stack Engineer"]}
                       loop
                     />
                   </AuroraText>
@@ -157,19 +155,19 @@ const Hero = () => {
 
             <div ref={buttonsRef} className="flex flex-wrap gap-4">
               <a
-                href="/cv"
-                className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto sm:min-w-48 md:min-w-56 h-12 px-7 bg-background text-foreground text-sm md:text-base font-medium rounded-lg hover:bg-background/90 transition-colors opacity-0"
-              >
-                View CV
-                <ArrowRight className="size-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
-              <a
                 href="/cv.pdf"
                 download
-                className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto sm:min-w-48 md:min-w-56 h-12 px-7 border border-background/30 rounded-lg text-sm md:text-base font-medium hover:bg-background/5 transition-colors opacity-0"
+                className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto sm:min-w-40 md:min-w-48 h-12 px-5 bg-background text-foreground text-sm md:text-base font-medium rounded-lg hover:bg-background/90 transition-colors opacity-0"
               >
                 Download CV
                 <Download className="size-4 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+              <a
+                href="/cv"
+                className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto sm:min-w-32 md:min-w-40 h-12 px-5 border border-background/30 rounded-lg text-sm md:text-base font-medium hover:bg-background/5 transition-colors opacity-0"
+              >
+                View CV
+                <ArrowRight className="size-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
             </div>
 

@@ -123,7 +123,7 @@ const Footer = () => {
 
       {/* Bottom bar */}
       <div ref={barRef} className="border-t border-border/40 py-5 opacity-0">
-        <div className="container mx-auto max-w-5xl px-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-[8px] text-muted-foreground">
+        <div className="container mx-auto max-w-5xl px-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-[8px] sm:text-[6px] text-muted-foreground">
           <p>
             &lt;/&gt; with <span className="text-red-500">♥</span> by Htet
             Hlaing Swan
