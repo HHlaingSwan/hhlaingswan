@@ -1,5 +1,5 @@
 "use client";
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useCallback, useMemo } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaReact, FaNodeJs, FaDocker, FaJava } from "react-icons/fa";
@@ -56,16 +56,40 @@ const ToolsMarquee = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const marqueeRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const tweenRef = useRef<gsap.core.Tween | null>(null);
+
+  // Memoize the duplicated tools array to prevent unnecessary re-renders
+  const duplicatedTools = useMemo(() => [...tools, ...tools, ...tools], []);
+
+  const handleCardInteraction = useCallback(
+    (card: HTMLDivElement, isEntering: boolean) => {
+      if (!tweenRef.current) return;
+
+      gsap.to(card, {
+        scale: isEntering ? 1.05 : 1,
+        y: isEntering ? -4 : 0,
+        boxShadow: isEntering
+          ? "0 8px 30px rgba(0,0,0,0.12)"
+          : "0 1px 3px rgba(0,0,0,0.06)",
+        duration: 0.3,
+        ease: "power2.out",
+      });
+
+      tweenRef.current.timeScale(isEntering ? 0.3 : 1);
+    },
+    [],
+  );
 
   useLayoutEffect(() => {
     const section = sectionRef.current;
     const marquee = marqueeRef.current;
+
     if (!section || !marquee) return;
 
     const ctx = gsap.context(() => {
       const totalWidth = marquee.scrollWidth / 3;
 
-      const tween = gsap.to(marquee, {
+      tweenRef.current = gsap.to(marquee, {
         x: -totalWidth,
         duration: 30,
         ease: "none",
@@ -74,42 +98,34 @@ const ToolsMarquee = () => {
 
       cardsRef.current.forEach((card) => {
         if (!card) return;
-        card.addEventListener("mouseenter", () => {
-          gsap.to(card, {
-            scale: 1.05,
-            y: -4,
-            boxShadow: "0 8px 30px rgba(0,0,0,0.12)",
-            duration: 0.3,
-            ease: "power2.out",
-          });
-          tween.timeScale(0.3);
-        });
-        card.addEventListener("mouseleave", () => {
-          gsap.to(card, {
-            scale: 1,
-            y: 0,
-            boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
-            duration: 0.3,
-            ease: "power2.out",
-          });
-          tween.timeScale(1);
-        });
+
+        // Use mouseenter/mouseleave for better performance than mouseover/mouseout
+        card.addEventListener("mouseenter", () =>
+          handleCardInteraction(card, true),
+        );
+        card.addEventListener("mouseleave", () =>
+          handleCardInteraction(card, false),
+        );
       });
     }, section);
 
-    return () => ctx.revert();
-  }, []);
-
-  const duplicatedTools = [...tools, ...tools, ...tools];
+    return () => {
+      ctx.revert();
+      if (tweenRef.current) {
+        tweenRef.current.kill();
+      }
+    };
+  }, [handleCardInteraction]);
 
   return (
     <section
       ref={sectionRef}
       id="tools"
       className="py-10 bg-background w-full overflow-hidden"
+      aria-label="Technologies and tools showcase"
     >
       <div className="relative">
-        <div ref={marqueeRef} className="flex gap-4 w-max">
+        <div ref={marqueeRef} className="flex gap-4 w-max" role="marquee">
           {duplicatedTools.map((tool, index) => (
             <div
               key={`tool-${index}`}
@@ -117,10 +133,14 @@ const ToolsMarquee = () => {
                 cardsRef.current[index] = el;
               }}
               className="flex items-center gap-4 px-6 py-4 rounded-xl border border-border/60 bg-card/80 backdrop-blur-sm shadow-sm whitespace-nowrap cursor-default"
+              role="button"
+              tabIndex={0}
+              aria-label={`${tool.name} technology`}
             >
               <div
                 className="w-12 h-12 rounded-lg flex items-center justify-center"
                 style={{ backgroundColor: tool.bg }}
+                aria-hidden="true"
               >
                 <span className="text-foreground" style={{ color: tool.color }}>
                   {tool.icon}
