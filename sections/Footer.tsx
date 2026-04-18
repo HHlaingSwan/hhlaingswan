@@ -1,19 +1,10 @@
 "use client";
 
-import React, { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Github, Linkedin, Facebook, Mail } from "lucide-react";
+import React from "react";
+import { Github, Linkedin, Facebook } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const Footer = () => {
+const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear();
-  const sectionRef = useRef<HTMLElement>(null);
-  const headingRef = useRef<HTMLDivElement>(null);
-  const ctaRef = useRef<HTMLAnchorElement>(null);
-  const infoRef = useRef<HTMLDivElement>(null);
-  const barRef = useRef<HTMLDivElement>(null);
 
   const socialLinks = [
     { name: "GitHub", url: "https://github.com/HHlaingSwan", icon: Github },
@@ -22,117 +13,76 @@ const Footer = () => {
       url: "https://www.linkedin.com/in/h-hlaing-swan-345956353",
       icon: Linkedin,
     },
-    {
-      name: "Facebook",
-      url: "https://www.facebook.com/h.hlaing.swan",
-      icon: Facebook,
-    },
+    { name: "Facebook", url: "https://www.facebook.com/h.hlaing.swan", icon: Facebook },
   ];
 
-  useLayoutEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
-
-    const ctx = gsap.context(() => {
-      const items = [headingRef, ctaRef, infoRef, barRef];
-      items.forEach((ref, i) => {
-        if (!ref.current) return;
-        gsap.fromTo(
-          ref.current,
-          { opacity: 0, y: 25 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            delay: 0.3 + i * 0.12,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: section,
-              start: "top 85%",
-            },
-          },
-        );
-      });
-    }, section);
-
-    return () => ctx.revert();
-  }, []);
+  const navLinks = [
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+    { name: "Blog", href: "/blog" },
+  ];
 
   return (
     <footer
-      ref={sectionRef}
       id="footer"
-      className="relative  bg-background w-full border-t border-border/50"
+      className="w-full bg-background border-t border-border py-12"
     >
-      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-primary/40 to-transparent" />
-
-      <div className="container mx-auto max-w-3xl px-4 py-12 md:py-16">
-        <div className="flex flex-col items-center text-center gap-6">
-          {/* Heading */}
-          <div ref={headingRef} className="space-y-3 opacity-0">
-            <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">
-              Open for Work
-            </p>
-            <h3 className="text-2xl md:text-4xl font-bold leading-tight">
-              Let&apos;s build something useful and scalable.
-            </h3>
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-lg mx-auto">
-              Full-stack web development from idea to production.
+      <div className="container mx-auto max-w-4xl px-4">
+        <div className="flex flex-col items-center gap-8">
+          {/* Brand */}
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-foreground">Htet Hlaing Swan</h3>
+            <p className="text-sm text-muted-foreground mt-1">
+              Full-stack Engineer
             </p>
           </div>
 
-          {/* CTA */}
-          <a
-            ref={ctaRef}
-            href="mailto:htethlaingswan@gmail.com"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 opacity-0"
-          >
-            <Mail className="size-4" />
-            Start a Project
-          </a>
+          {/* Nav Links */}
+          <nav className="flex flex-wrap justify-center gap-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
 
-          {/* Contact info */}
-          <div
-            ref={infoRef}
-            className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs text-muted-foreground font-mono opacity-0"
-          >
-            <span>htethlaingswan@gmail.com</span>
-            <span className="hidden sm:inline">•</span>
-            <span>Yangon, Myanmar</span>
-            <span className="hidden sm:inline">•</span>
-            <span>+95 995 464 1112</span>
-          </div>
-
-          {/* Social icons */}
-          <div className="flex items-center gap-5">
+          {/* Social Links */}
+          <div className="flex gap-4">
             {socialLinks.map((social) => (
               <a
                 key={social.name}
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full border border-border/60 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all"
+                className="p-2 rounded-full border border-border/60 text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all"
                 aria-label={social.name}
               >
-                <social.icon className="size-4" />
+                <social.icon className="size-5" />
               </a>
             ))}
           </div>
-        </div>
-      </div>
 
-      {/* Bottom bar */}
-      <div ref={barRef} className="border-t border-border/40 py-5 opacity-0">
-        <div className="container mx-auto max-w-5xl px-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-[8px] sm:text-[6px] text-muted-foreground">
-          <p>
-            &lt;/&gt; with <span className="text-red-500">♥</span> by Htet
-            Hlaing Swan
-          </p>
-          <p>&copy; {currentYear} Htet Hlaing Swan. All rights reserved.</p>
+          {/* Divider */}
+          <div className="w-full h-px bg-border/30" />
+
+          {/* Copyright */}
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-2 w-full text-center">
+            <p className="text-xs text-muted-foreground">
+              &copy; {currentYear} Htet Hlaing Swan. All rights reserved.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Built with passion
+            </p>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
 
-export default Footer;
+export default EnhancedFooter;

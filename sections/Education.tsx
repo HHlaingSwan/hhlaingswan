@@ -3,6 +3,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
+import { GraduationCap } from "lucide-react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -121,7 +122,7 @@ const Education = () => {
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-border/70 -translate-x-1/2" />
           <div
             ref={timelineRef}
-            className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1.25 rounded-full bg-linear-to-b from-sky-400 via-indigo-500 to-fuchsia-500 origin-top -translate-x-1/2"
+            className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1.25 rounded-full bg-white origin-top -translate-x-1/2"
           />
 
           <div className="space-y-10">
@@ -129,7 +130,7 @@ const Education = () => {
               const isLeft = index % 2 === 0;
               return (
                 <div key={item.semester} className="relative">
-                  <div className="absolute left-4 md:left-1/2 top-0 size-4 rounded-full bg-primary -translate-x-1/2" />
+                  <div className="absolute left-4 md:left-1/2 top-0 size-8 rounded-full bg-white border-2 border-gray-300 flex items-center justify-center -translate-x-1/2"><GraduationCap className="size-4 text-gray-800" /></div>
 
                   <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start">
                     <motion.div
