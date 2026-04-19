@@ -13,14 +13,17 @@ const EnhancedFooter = () => {
       url: "https://www.linkedin.com/in/h-hlaing-swan-345956353",
       icon: Linkedin,
     },
-    { name: "Facebook", url: "https://www.facebook.com/h.hlaing.swan", icon: Facebook },
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/h.hlaing.swan",
+      icon: Facebook,
+    },
   ];
 
   const navLinks = [
     { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
-    { name: "Blog", href: "/blog" },
   ];
 
   return (
@@ -32,7 +35,9 @@ const EnhancedFooter = () => {
         <div className="flex flex-col items-center gap-8">
           {/* Brand */}
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-foreground">Htet Hlaing Swan</h3>
+            <h3 className="text-2xl font-bold text-foreground">
+              Htet Hlaing Swan
+            </h3>
             <p className="text-sm text-muted-foreground mt-1">
               Full-stack Engineer
             </p>
@@ -75,9 +80,7 @@ const EnhancedFooter = () => {
             <p className="text-xs text-muted-foreground">
               &copy; {currentYear} Htet Hlaing Swan. All rights reserved.
             </p>
-            <p className="text-xs text-muted-foreground">
-              Built with passion
-            </p>
+            <p className="text-xs text-muted-foreground">Built with passion</p>
           </div>
         </div>
       </div>

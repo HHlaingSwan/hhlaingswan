@@ -46,13 +46,11 @@ const Achievements = () => {
     <section id="achievements" className="py-20 md:py-24 bg-background">
       <div className="w-screen md:w-[85vw] mx-auto px-4 md:px-0">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-primary font-semibold mb-3">
+          <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold mb-3">
             Certifications
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
-            Achievements
-          </h2>
-          <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4"> Achievements</h2>
+          <p className="text-base text-muted-foreground">
             Explore my journey through various courses, certifications, and
             learning milestones that have shaped my expertise.
           </p>
@@ -62,7 +60,7 @@ const Achievements = () => {
           {certificates.map((certificate) => (
             <article
               key={certificate.id}
-              className="rounded-sm  overflow-hidden cursor-pointer scale-95"
+              className="rounded-sm overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
             >
               <div className="relative h-56  md:h-72">
                 <Image

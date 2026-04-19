@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Mail, Phone, MapPin, Send, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle2, Globe } from "lucide-react";
 
 const EnhancedContact = () => {
   const contactCards = [
@@ -30,13 +30,13 @@ const EnhancedContact = () => {
       href: "https://t.me/Hhs4438",
     },
     {
-      icon: <Clock className="size-5" />,
+      icon: <CheckCircle2 className="size-5" />,
       label: "Available",
       value: "Within 24 hours",
       href: null,
     },
     {
-      icon: <Clock className="size-5" />,
+      icon: <Globe className="size-5" />,
       label: "Time Zone",
       value: "GMT+6:30 (Myanmar)",
       href: null,
@@ -44,10 +44,7 @@ const EnhancedContact = () => {
   ];
 
   return (
-    <section
-      id="contact"
-      className="w-full px-4 bg-background py-20 md:py-24"
-    >
+    <section id="contact" className="w-full px-4 bg-background py-20 md:py-24">
       <div className="container mx-auto max-w-5xl px-0">
         {/* Header */}
         <div className="text-center mb-16">
@@ -55,7 +52,8 @@ const EnhancedContact = () => {
             Get In Touch
           </h2>
           <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
-            Have a project in mind or want to collaborate? Feel free to reach out.
+            Have a project in mind or want to collaborate? Feel free to reach
+            out.
           </p>
         </div>
 

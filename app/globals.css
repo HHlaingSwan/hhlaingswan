@@ -179,3 +179,8 @@
 .scrolling-logos-right:hover {
   animation-play-state: paused;
 }
+
+/* Safe area insets for mobile notches */
+.h-safe-area-inset-bottom {
+  height: env(safe-area-inset-bottom, 0px);
+}

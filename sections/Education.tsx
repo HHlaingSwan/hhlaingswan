@@ -106,13 +106,15 @@ const Education = () => {
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16 text-foreground max-w-3xl mx-auto">
-          <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-primary font-semibold mb-3">
+          <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold mb-3">
             My Education Path
           </p>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            {" "}
             Professional Diploma Roadmap
           </h2>
-          <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+          <p className="text-base text-muted-foreground">
+            {" "}
             Four semesters of structured training and credentials from NIIT
             University (India).
           </p>
@@ -130,7 +132,9 @@ const Education = () => {
               const isLeft = index % 2 === 0;
               return (
                 <div key={item.semester} className="relative">
-                  <div className="absolute left-4 md:left-1/2 top-0 size-8 rounded-full bg-white border-2 border-gray-300 flex items-center justify-center -translate-x-1/2"><GraduationCap className="size-4 text-gray-800" /></div>
+                  <div className="absolute left-4 md:left-1/2 top-0 size-8 rounded-full bg-white border-2 border-gray-300 flex items-center justify-center -translate-x-1/2">
+                    <GraduationCap className="size-4 text-gray-800" />
+                  </div>
 
                   <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start">
                     <motion.div
@@ -145,10 +149,10 @@ const Education = () => {
                       }`}
                     >
                       <div className="flex flex-wrap items-center gap-5 mb-4">
-                        <span className="text-[14px] uppercase tracking-[0.3em] text-amber-400 font-semibold">
+                        <span className="text-[14px] uppercase tracking-[0.3em] text-primary font-semibold">
                           {item.semester}
                         </span>
-                        <span className="text-xs text-amber-400">
+                        <span className="text-xs text-muted-foreground">
                           {item.institution}
                         </span>
                       </div>

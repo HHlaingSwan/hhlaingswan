@@ -77,13 +77,12 @@ const About = () => {
       <div className="container mx-auto px-4 md:px-8 max-w-6xl">
         <div className="space-y-12 md:space-y-20">
           <div ref={headingRef} className="text-center max-w-5xl   mx-auto">
-            <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-primary font-semibold mb-3 opacity-0">
+            <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold mb-3">
               Introduction
             </p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 opacity-0">
-              About Me
-            </h2>
-            <p className="text-sm md:text-lg text-muted-foreground leading-relaxed opacity-0">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4"> About Me</h2>
+
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed opacity-0">
               Full-Stack Engineer building fast, reliable apps with React,
               Next.js, and Node.js. I care deeply about performance and failure
               cases—clear loading states, graceful errors, careful validation,

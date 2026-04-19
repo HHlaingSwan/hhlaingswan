@@ -72,20 +72,25 @@ const Hero = () => {
         });
       }
 
-      // Circle reveal scroll animation
+      // Blur + fade transition for smooth inversion reveal
       if (circleRef.current) {
         gsap.fromTo(
           circleRef.current,
-          { clipPath: "circle(0% at 50% 50%)" },
           {
-            clipPath: "circle(150% at 50% 50%)",
-            ease: "none",
+            opacity: 0,
+            filter: "blur(30px) brightness(2)",
+          },
+          {
+            opacity: 1,
+            filter: "blur(0px) brightness(1)",
+            ease: "power2.out",
             scrollTrigger: {
               trigger: section,
               start: "top top",
-              end: "+=150%",
+              end: "+=80%",
               pin: true,
-              scrub: 1,
+              scrub: 0.5,
+              anticipatePin: 1,
             },
           },
         );
@@ -107,10 +112,10 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-linear-to-b from-foreground via-transparent to-foreground pointer-events-none" />
 
-      {/* Circle reveal overlay */}
+      {/* Blur + fade transition overlay */}
       <div
         ref={circleRef}
-        className="absolute inset-0 z-20 bg-background pointer-events-none"
+        className="absolute inset-0 z-20 bg-background pointer-events-none will-change-[filter,opacity]"
       />
 
       <div className="container mx-auto md:max-w-7xl relative z-10">
@@ -138,7 +143,6 @@ const Hero = () => {
                     <TypingAnimation
                       cursorStyle="block"
                       words={["Full-Stack Engineer"]}
-                      loop
                     />
                   </AuroraText>
                 </span>
@@ -173,29 +177,33 @@ const Hero = () => {
 
             <div
               ref={statsRef}
-              className="flex items-center gap-4 md:gap-8 pt-4"
+              className="flex items-center gap-6 md:gap-10 pt-6"
             >
-              <div>
-                <p className="text-xl md:text-2xl font-bold">
-                  <span data-count="2">0</span> +
+              <div className="text-center">
+                <p className="text-2xl md:text-3xl font-bold">
+                  <span data-count="2">0</span>+
                 </p>
-                <p className="text-xs md:text-sm text-background/60">Years</p>
+                <p className="text-xs md:text-sm text-background/60 mt-1">
+                  Years
+                </p>
               </div>
-              <div className="w-px h-10 md:h-12 bg-background/10" />
-              <div>
-                <p className="text-xl md:text-2xl font-bold">
-                  <span data-count="8">0</span> +
+              <div className="w-px h-12 md:h-14 bg-background/15" />
+              <div className="text-center">
+                <p className="text-2xl md:text-3xl font-bold">
+                  <span data-count="8">0</span>+
                 </p>
-                <p className="text-xs md:text-sm text-background/60">
+                <p className="text-xs md:text-sm text-background/60 mt-1">
                   Projects
                 </p>
               </div>
-              <div className="w-px h-10 md:h-12 bg-background/10" />
-              <div>
-                <p className="text-xl md:text-2xl font-bold">
-                  <span data-count="3">0</span> +
+              <div className="w-px h-12 md:h-14 bg-background/15" />
+              <div className="text-center">
+                <p className="text-2xl md:text-3xl font-bold">
+                  <span data-count="10">0</span>+
                 </p>
-                <p className="text-xs md:text-sm text-background/60">Tech</p>
+                <p className="text-xs md:text-sm text-background/60 mt-1">
+                  Tech Stack
+                </p>
               </div>
             </div>
           </div>
@@ -225,6 +233,35 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2, duration: 0.5 }}
+      >
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          className="flex flex-col items-center gap-2 text-background/40"
+        >
+          <span className="text-xs tracking-wider">SCROLL</span>
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
