@@ -53,17 +53,6 @@ const educationData = [
     ],
     institution: "NIIT University (India)",
   },
-  {
-    semester: "Semester 3",
-    title: "Professional Full-Stack Diploma",
-    topics: [
-      "Spring Boot",
-      "JUnit 5 (Java Testing)",
-      "REST API Design",
-      "SQL Performance Basics",
-    ],
-    institution: "NIIT University (India)",
-  },
 ];
 
 const Education = () => {

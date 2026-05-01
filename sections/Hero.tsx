@@ -4,8 +4,11 @@ import { AuroraText } from "@/components/ui/aurora-text";
 import { motion } from "framer-motion";
 import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight, Download } from "lucide-react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -16,6 +19,12 @@ const Hero = () => {
   const statsRef = useRef<HTMLDivElement>(null);
   const lottieRef = useRef<HTMLDivElement>(null);
   const circleRef = useRef<HTMLDivElement>(null);
+
+  // Morph refs for FLIP animation
+  const morphContainerRef = useRef<HTMLDivElement>(null);
+  const morphIntroRef = useRef<HTMLDivElement>(null);
+  const morphHeadingRef = useRef<HTMLDivElement>(null);
+  const morphDescRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     const section = sectionRef.current;
@@ -72,6 +81,41 @@ const Hero = () => {
         });
       }
 
+      // Creative zoom morph - Hero scales down to center, About scales up
+      const morphTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: "bottom center",
+          scrub: 0.5,
+        },
+      });
+
+      // Scale down entire Hero content to center
+      if (morphContainerRef.current) {
+        morphTimeline.to(morphContainerRef.current, {
+          scale: 0.8,
+          opacity: 0,
+          filter: "blur(10px)",
+          duration: 0.8,
+          ease: "power2.inOut",
+        });
+      }
+
+      // Scale down Lottie faster
+      if (lottieRef.current) {
+        morphTimeline.to(
+          lottieRef.current,
+          {
+            scale: 0,
+            opacity: 0,
+            duration: 0.6,
+            ease: "power2.inOut",
+          },
+          "-=0.6",
+        );
+      }
+
       // Blur + fade transition for smooth inversion reveal
       if (circleRef.current) {
         gsap.fromTo(
@@ -119,32 +163,39 @@ const Hero = () => {
       />
 
       <div className="container mx-auto md:max-w-7xl relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div
+          ref={morphContainerRef}
+          className="grid md:grid-cols-2 gap-12 items-center"
+        >
           <div className="space-y-8">
             <div>
               <p
                 ref={introRef}
                 className="text-sm md:text-lg text-background/60 opacity-0"
               >
-                Hi, I&apos;m{" "}
-                <span className="font-bold text-background">
-                  Htet Hlaing Swan
+                <span ref={morphIntroRef} className="inline-block">
+                  Hi, I&apos;m{" "}
+                  <span className="font-bold text-background">
+                    Htet Hlaing Swan
+                  </span>
+                  .
                 </span>
-                .
               </p>
 
               <h1
                 ref={headingRef}
                 className="text-2xl md:text-5xl text-background font-bold leading-tight opacity-0"
               >
-                I&apos;m a{" "}
-                <span className="inline-block">
-                  <AuroraText>
-                    <TypingAnimation
-                      cursorStyle="block"
-                      words={["Full-Stack Engineer"]}
-                    />
-                  </AuroraText>
+                <span ref={morphHeadingRef} className="inline-block">
+                  I&apos;m a{" "}
+                  <span className="inline-block">
+                    <AuroraText>
+                      <TypingAnimation
+                        cursorStyle="block"
+                        words={["Full-Stack Engineer"]}
+                      />
+                    </AuroraText>
+                  </span>
                 </span>
               </h1>
 
@@ -152,8 +203,10 @@ const Hero = () => {
                 ref={descRef}
                 className="text-background/60 text-base md:text-lg max-w-md opacity-0"
               >
-                Building elegant, scalable solutions with modern technologies.
-                Let&apos;s build something great together.
+                <span ref={morphDescRef} className="inline-block">
+                  Building elegant, scalable solutions with modern technologies.
+                  Let&apos;s build something great together.
+                </span>
               </p>
             </div>
 

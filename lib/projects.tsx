@@ -27,14 +27,14 @@ export const content: Project[] = [
     repoUrl: "https://github.com/HHlaingSwan/Arcane-Game",
     images: ["/images/arcaneMovie.png"],
   },
-  // {
-  //   title: "Chess Game with Java Swing",
-  //   description:
-  //     "Classic chess game with a challenging AI opponent, built using Java Swing for a smooth and interactive experience.",
-  //   url: "#",
-  //   repoUrl: "https://github.com/HHlaingSwan/java_chess_engine",
-  //   images: ["/images/chessGame.png"],
-  // },
+  {
+    title: "Chess Game with Java Swing",
+    description:
+      "Classic chess game with a challenging AI opponent, built using Java Swing for a smooth and interactive experience.",
+    url: "#",
+    repoUrl: "https://github.com/HHlaingSwan/java_chess_engine",
+    images: ["/images/chessGame.png"],
+  },
   {
     title: "Chat App with Socket.IO",
     description:
@@ -61,12 +61,16 @@ export const content: Project[] = [
     repoUrl: "https://github.com/HHlaingSwan/IMDB-Next",
     images: ["/images/movieApp.png"],
   },
-  // {
-  //   title: "Personal Assistant Bot with AI",
-  //   description:
-  //     "Telegram bot that handles expense tracking and AI-driven replies, built for fast chat-based workflows.",
-  //   url: "https://t.me/gogoTimeBot",
-  //   repoUrl: "https://github.com/HHlaingSwan/gogoTimeBot",
-  //   images: ["/images/personalBot.png"],
-  // },
+  {
+    title: "Cv Analyzer",
+    description:
+      "AI-powered CV analysis tool that evaluates resumes and provides feedback.",
+    highlights: [
+      "Built a clean UI with responsive layouts and reusable components.",
+      "Improved UX with loading states and error handling.",
+    ],
+    url: "https://cv-analyzer-theta-three.vercel.app",
+    repoUrl: "https://github.com/HHlaingSwan/Cv-Analyzer",
+    images: ["/images/cvAnalyzer.png"],
+  },
 ];
